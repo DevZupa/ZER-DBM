@@ -1,0 +1,96 @@
+
+.navbar-logo,
+.coming-soon .brand .logo,
+.login .login-header .brand .logo {
+    border-color: #F8504B #cc4946 #993734;
+}
+.navbar.navbar-inverse .navbar-brand,
+.sidebar .nav > li.active > a,
+.sidebar .nav > li.active > a:focus,
+.sidebar .nav > li.active > a:hover,
+.page-sidebar-minified .sidebar .nav > li.has-sub.active:focus > a,
+.page-sidebar-minified .sidebar .nav > li.has-sub.active:hover > a,
+.page-sidebar-minified .sidebar .nav > li.has-sub.active > a,
+.label.label-theme,
+.btn.btn-scroll-to-top {
+    background: #ff5b57;
+}
+.navbar.navbar-inverse .navbar-brand {
+    color: #fff !important;
+}
+.text-theme,
+.sidebar .sub-menu > li.active > a:before {
+    color: #ff5b57;
+}
+
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-header {
+        background: #ff5b57;
+    }
+}
+
+
+.zupa-info-list{
+    margin-top:20px;
+    font-size: 16px!important;
+    color: #fff;
+    font-weight: 300!important;
+}
+
+.zupa-info-list td{
+    font-size: 16px!important;
+    color: #fff;
+    font-weight: 300!important;
+}
+
+
+.margin-right-10{
+    margin-right:10px;
+}
+
+.zupa-server-button{
+    margin-top:10px !important;
+    padding: 5px 10px !important;
+    font-size: 12px;
+    line-height: 1.5 !important;
+    border-radius: 3px !important;
+    color:#000;
+    margin-left:10px;
+}
+
+.selectionBar{
+    background: rgba(0,0,0,.6);
+    color:#fff;
+    line-height:50px;
+    margin-top:-15px;
+    width:auto;
+    float:right;
+    padding-left:10px;
+}
+
+
+.selectionBar .switchery{
+    margin-top:-5px;
+}
+
+.selectionBar-container{
+
+}
+
+.no-gutter  {
+    padding-left:0;
+}
+
+.page-header{
+    margin-top:-10px;
+}
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+#zupa-map{
+    background-color: #62748D !important;
+}
+
+.width-sm{
+    width:500px !important;
+}
