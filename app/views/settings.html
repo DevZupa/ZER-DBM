@@ -12,7 +12,63 @@
 <!-- begin row -->
 <div class="row">
 
+    <div class="col-md-6">
+        <!-- begin panel -->
+        <div class="panel panel-inverse" >
+            <div class="panel-heading">
+                <div class="panel-heading-btn">
+                     </div>
+                <h4 class="panel-title">Servers</h4>
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Server</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
 
+                    <tr ng-repeat="server in serverssettings">
+                        <td>{{$index + 1}}</td>
+                        <td>{{server.name}}</td>
+                        <td><a class="btn btn-info"  ng-click="editServer($index)" ><i class="fa fa-edit"></i> Edit </a></td>
+                        <td><a class="btn btn-danger" ng-click="deleteServer($index)" ><i class="fa fa-times"></i> Delete </a></td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-6">
+    <div class="panel panel-inverse">
+        <div class="panel-heading">
+            <div class="panel-heading-btn">
+            </div>
+            <h4 class="panel-title">Global Settings</h4>
+        </div>
+        <div class="panel-body panel-form">
+            <form class="form-horizontal form-bordered">
+                <div class="form-group">
+                    <label class="control-label col-md-4 col-sm-4" for="sname">Max Cluster Radius in pixels * :</label>
+                    <div class="col-md-6 col-sm-6">
+                        <input class="form-control" type="number" id="sname" name="sname" placeholder="Required"  ng-model="clusterRad"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4 col-sm-4"></label>
+                    <div class="col-md-6 col-sm-6">
+                        <button type="button" class="btn btn-primary" ng-click="">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
 
 
 </div>

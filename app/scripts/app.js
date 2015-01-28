@@ -75,7 +75,7 @@ ERDBM.config(function ($routeProvider) {
         templateUrl: 'views/server/add.html',
         controller: 'ServerAddCtrl'
       })
-      .when('/server', {
+      .when('/server/:param', {
         templateUrl: 'views/server.html',
         controller: 'ServerCtrl'
       })
@@ -102,9 +102,6 @@ ERDBM.run(
         //bind that stupid $name to something more useable.
         var globalScope = $rootScope;
 
-        //define storage variables so my EDI sees them as a variable :)
-        globalScope.servers = [];
-        globalScope.selectedServer = null;
 
         // bind localstorage to global var.
         storage.bind(globalScope,'servers',{defaultValue: []});
@@ -118,14 +115,9 @@ ERDBM.run(
         storage.bind(globalScope,'imageBuilding',{defaultValue: 'images/walls.png'});
         storage.bind(globalScope,'imageStorage',{defaultValue: 'images/storage.png'});
 
-        storage.bind(globalScope,'serverLink',{defaultValue: "http://localhost/uk431/ZRDBM/"});
+        storage.bind(globalScope,'serverLink',{defaultValue: ""});
+        storage.bind(globalScope,'clusterRad',{defaultValue: "30"});
 
-        globalScope.serverLink = "http://37.187.135.190/uk431/ZRDBM/";
-
-        globalScope.servers = [
-            { name : "Zupa Epoch #1" , ip: "85.851.124.125" , port : "2502" , rpw : "redispass" , ri : "redisInstace" , rp : "redisPort", map:"Altis"},
-        //    { name : "Zupa Epoch #2" , ip: "85.851.124.125" , port : "2502" , rpw : "redispass" , ri : "redisInstace" , rp : "redisPort"}
-        ];
 
         // client check if the players needs to give in a server first.
         globalScope.hasServers = false;
@@ -136,11 +128,22 @@ ERDBM.run(
 
         // bind functions
         globalScope.changeServer = changeServer;
+        globalScope.deleteServer = deleteServer;
 
         // define functions
         function changeServer (index){
             globalScope.selectedServer = globalScope.servers[index];
-            $route.reload();
+            $location.path( "/" );
+        }
+
+        function deleteServer ( index){
+            globalScope.servers.splice(index, 1);
+            if(globalScope.servers.length > 0){
+                globalScope.hasServers = true;
+                changeServer(0);
+            }else{
+                $location.path('/server/add');
+            }
         }
 
         if(!globalScope.hasServers){

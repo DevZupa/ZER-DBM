@@ -16,24 +16,26 @@ angular.module('zepochRedisApp')
         var MC = $scope;
         var RS = $rootScope;
 
+
         MC.map = null;
 
-        MC.serverURL = RS.serverLink;
-		//MC.secretCode = CryptoJS.MD5(RS.secretPass);
+        MC.serverURL = RS.selectedServer['serverUrl'];
+	    MC.mapName = RS.selectedServer['map'];
 
-		MC.secretCode = CryptoJS.MD5("npgforever1991");
+		MC.secretCode = CryptoJS.MD5(RS.selectedServer['rpw']);
 	
-		MC.instance = "NPGA3EPOCH2";	
-	    MC.db = 1;
+		MC.instance = RS.selectedServer['ri'];
+	    MC.db = RS.selectedServer['dbi'];
 
-        MC.mapsize = 15400;
+        if(MC.mapName == "chernarus"){
+            MC.mapsize = 15400;
+        }
+        if(MC.mapName == "altis"){
+            MC.mapsize = 15400;
+        }
+
         MC.leafletsize = 8192;
-		
-        MC.x0 = -110;
-        MC.y0 = -90;
 
-        MC.lx = 0.007426086956521740; // 1 m to longitude
-        MC.ly = 0.005826086956521740; // 1 m to latitude
 
         MC.csm = [];
         MC.spuid = "";
@@ -48,7 +50,7 @@ angular.module('zepochRedisApp')
         MC.clusterStorage = false;
 
         MC.clusterAllTogether = false;
-        MC.clusterRadius = 30;
+        MC.clusterRadius = RS.clusterRad;
 
         storage.bind(MC, 'clusterAllTogether', {defaultValue: false});
         storage.bind(MC, 'clusterRadius', {defaultValue: 30});
@@ -184,7 +186,8 @@ angular.module('zepochRedisApp')
         MC.atmIcon = L.icon({
             iconUrl: 'images/atm.png',
             iconRetinaUrl: 'images/atm.png',
-
+            iconSize:[32,37],
+            iconAnchor: [16,37]
         });
 
         MC.carIcon = L.icon({
@@ -254,7 +257,7 @@ angular.module('zepochRedisApp')
                 MC.map.unproject([8192, 0], mapMaxZoom));
 
             MC.map.fitBounds(mapBounds);
-            L.tileLayer('map/chernarus/{z}/{x}/{y}.png', {
+            L.tileLayer('map/'+MC.mapName+'/{z}/{x}/{y}.png', {
                 minZoom: mapMinZoom, maxZoom: mapMaxZoom,
                 bounds: mapBounds,
                 attribution: 'Zupa',
@@ -721,7 +724,7 @@ angular.module('zepochRedisApp')
 
 	function getOnlinePlayers() {
 		
-        $http.post(MC.serverURL + 'server/getOnlinePlayers.php?date='+ new Date().getTime(),{secret: String(MC.secretCode) , instance: MC.instance, db : MC.db }).
+        $http.post(MC.serverURL + 'getOnlinePlayers.php?date='+ new Date().getTime(),{secret: String(MC.secretCode) , instance: MC.instance, db : MC.db }).
             success(function(dataOPlayers, status, headers, config) {
                 MC.onlinePlayers = dataOPlayers;
                 MC.playerCount = MC.onlinePlayers.length;
@@ -731,7 +734,7 @@ angular.module('zepochRedisApp')
             });
 			}
 function getPlayersData() {
-        $http.post(MC.serverURL + 'server/getPlayersData.php?date='+ new Date().getTime(),{secret: String(MC.secretCode) , instance: MC.instance, db : MC.db }).
+        $http.post(MC.serverURL + 'getPlayersData.php?date='+ new Date().getTime(),{secret: String(MC.secretCode) , instance: MC.instance, db : MC.db }).
             success(function(dataPlayers, status, headers, config) {
                 MC.players = dataPlayers;
                 fillPlayerMarkers();
@@ -741,7 +744,7 @@ function getPlayersData() {
             });
 			}
 function getVehicleData(){
-        $http.post(MC.serverURL + 'server/getVehicleData.php?date='+ new Date().getTime(),{secret: String(MC.secretCode) , instance: MC.instance, db : MC.db }).
+        $http.post(MC.serverURL + 'getVehicleData.php?date='+ new Date().getTime(),{secret: String(MC.secretCode) , instance: MC.instance, db : MC.db }).
             success(function(data, status, headers, config) {
                 filterVehicles(data);
                 fillVehicleMarkers();
@@ -751,7 +754,7 @@ function getVehicleData(){
             });
 }
 function getBuildingData(){
-        $http.post(MC.serverURL + 'server/getBuildingData.php?date='+ new Date().getTime(),{"secret": String(MC.secretCode) , "instance": MC.instance, "db" : MC.db }).
+        $http.post(MC.serverURL + 'getBuildingData.php?date='+ new Date().getTime(),{"secret": String(MC.secretCode) , "instance": MC.instance, "db" : MC.db }).
             success(function(data, status, headers, config) {
                 MC.buildings = data;
                 MC.buildingCount = MC.buildings.length;
@@ -764,7 +767,7 @@ function getBuildingData(){
 
 }
 function getStorageDate(){
-        $http.post(MC.serverURL + 'server/getStorageData.php?date='+ new Date().getTime(),{secret: String(MC.secretCode) , instance: MC.instance, db : MC.db }).
+        $http.post(MC.serverURL + 'getStorageData.php?date='+ new Date().getTime(),{secret: String(MC.secretCode) , instance: MC.instance, db : MC.db }).
             success(function(data, status, headers, config) {
 
                 filterLocks(data);

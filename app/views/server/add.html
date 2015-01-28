@@ -38,30 +38,43 @@
                         <div class="form-group">
                             <label class="control-label col-md-4 col-sm-4" for="Port">Port * :</label>
                             <div class="col-md-6 col-sm-6">
-                                <input class="form-control" type="number" id="Port" name="Port"  placeholder="Required" />
+                                <input class="form-control" type="number" id="Port" name="Port"  placeholder="Required" ng-model="newServer.port"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-4 col-sm-4" for="RPort">Redis Port * :</label>
                             <div class="col-md-6 col-sm-6">
-                                <input class="form-control" type="number" id="RPort" name="RPort"  placeholder="Required" />    </div>
+                                <input class="form-control" type="number" id="RPort" name="RPort"  placeholder="Required" ng-model="newServer.redisport"/>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-4 col-sm-4" for="RPassword">Redis Password * :</label>
                             <div class="col-md-6 col-sm-6">
-                                <input class="form-control" type="text" id="RPassword" name="RPassword" placeholder="Required" />
+                                <input class="form-control" type="text" id="RPassword" name="RPassword" placeholder="Required" ng-model="newServer.pass" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4 col-sm-4" for="RPassword">Redis Server Instance * :</label>
+                            <div class="col-md-6 col-sm-6">
+                                <input class="form-control" type="text" id="RPassword" name="Rinstance" placeholder="Required" ng-model="newServer.instance" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-4 col-sm-4" for="RDB">Redis DB number * :</label>
                             <div class="col-md-6 col-sm-6">
-                                <input class="form-control" type="number" id="RDB" name="RDB" placeholder="Required" />
+                                <input class="form-control" type="number" id="RDB" name="RDB" placeholder="Required" ng-model="newServer.db"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4 col-sm-4" for="RPassword">PPHP server url * :</label>
+                            <div class="col-md-6 col-sm-6">
+                                <input class="form-control" type="text" id="RPassword" name="Rinstance" placeholder="Required" ng-model="newServer.serverUrl" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-4 col-sm-4" for="RDB">Server Map * :</label>
                             <div class="col-md-6 col-sm-6">
-                                <select class="form-control selectpicker" >
+                                <select class="form-control selectpicker" ng-model="newServer.map">
                                     <option value="altis">Altis</option>
                                     <option value="chernarus">chernarus</option>
                                 </select>
