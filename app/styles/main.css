@@ -88,7 +88,7 @@
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
 #zupa-map{
-    background-color: #62748D !important;
+  /*  background-color: #62748D !important;*/
 }
 
 .width-sm{

@@ -22,6 +22,8 @@ var ERDBM = angular
         'ui.bootstrap'
   ]);
 
+
+
 // does the uri routing to pages/controllers
 ERDBM.config(function ($routeProvider) {
     $routeProvider
@@ -85,6 +87,10 @@ ERDBM.config(function ($routeProvider) {
         templateUrl: 'views/map.html',
         controller: 'MapCtrl'
       })
+      .when('/map2', {
+        templateUrl: 'views/map2.html',
+        controller: 'Map2Ctrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -114,7 +120,7 @@ ERDBM.run(
 
         storage.bind(globalScope,'serverLink',{defaultValue: "http://localhost/uk431/ZRDBM/"});
 
-        globalScope.serverLink = "";
+        globalScope.serverLink = "http://37.187.135.190/uk431/ZRDBM/";
 
         globalScope.servers = [
             { name : "Zupa Epoch #1" , ip: "85.851.124.125" , port : "2502" , rpw : "redispass" , ri : "redisInstace" , rp : "redisPort", map:"Altis"},

@@ -17,7 +17,6 @@ angular.module('zepochRedisApp')
         var RS = $rootScope;
 
         MC.map = null;
-        MC.oms = null;
 
         MC.serverURL = RS.serverLink;
 		//MC.secretCode = CryptoJS.MD5(RS.secretPass);
@@ -25,7 +24,10 @@ angular.module('zepochRedisApp')
 		MC.secretCode = CryptoJS.MD5("npgforever1991");
 	
 		MC.instance = "NPGA3EPOCH2";	
-	    MC.db = 1;		
+	    MC.db = 1;
+
+        MC.mapsize = 15400;
+        MC.leafletsize = 8192;
 		
         MC.x0 = -110;
         MC.y0 = -90;
@@ -37,11 +39,54 @@ angular.module('zepochRedisApp')
         MC.spuid = "";
         MC.selectedKind = "Player";
 
+        MC.togleSettings = true;
+
+        MC.clusterPlayer = false;
+        MC.clusterVehicle = false;
+        MC.clusterBuilding = true;
+        MC.clusterLock = false;
+        MC.clusterStorage = false;
+
+        MC.clusterAllTogether = false;
+        MC.clusterRadius = 30;
+
+        storage.bind(MC, 'clusterAllTogether', {defaultValue: false});
+        storage.bind(MC, 'clusterRadius', {defaultValue: 30});
+
         storage.bind(MC, 'showPlayers', {defaultValue: true});
         storage.bind(MC, 'showVehicles', {defaultValue: false});
         storage.bind(MC, 'showBuildings', {defaultValue: false});
         storage.bind(MC, 'showLocks', {defaultValue: false});
         storage.bind(MC, 'showStorages', {defaultValue: false});
+
+
+        storage.bind(MC, 'clusterPlayer', {defaultValue: false});
+        storage.bind(MC, 'clusterVehicle', {defaultValue: false});
+        storage.bind(MC, 'clusterBuilding', {defaultValue: true});
+        storage.bind(MC, 'clusterLock', {defaultValue: false});
+        storage.bind(MC, 'clusterStorage', {defaultValue: false});
+
+
+
+        MC.$watch("clusterAllTogether", function(newValue, oldValue) {
+            doAllMarkers();
+        });
+
+        MC.$watch("clusterPlayer", function(newValue, oldValue) {
+            doAllMarkers();
+        });
+        MC.$watch("clusterVehicle", function(newValue, oldValue) {
+            doAllMarkers();
+        });
+        MC.$watch("clusterBuilding", function(newValue, oldValue) {
+            doAllMarkers();
+        });
+        MC.$watch("clusterLock", function(newValue, oldValue) {
+            doAllMarkers();
+        });
+        MC.$watch("clusterStorage", function(newValue, oldValue) {
+            doAllMarkers();
+        });
 
         MC.$watch("showPlayers", function(newValue, oldValue) {
             doAllMarkers();
@@ -79,8 +124,82 @@ angular.module('zepochRedisApp')
         MC.lockMarkers = [];
         MC.storageMarkers = [];
 
+        MC.allMarkersToCluster = [];
+
+        MC.playerLayer = null;
+        MC.vehicleLayer = null;
+        MC.buildingLayer = null;
+        MC.lockLayer = null;
+        MC.storageLayer = null;
+
+        MC.globalLayer = null;
+
         MC.fillDataWindow = fillDataWindow;
         MC.showInfo = false;
+
+
+        MC.buildingIcon = L.icon({
+            iconUrl: 'images/walls.png',
+            iconRetinaUrl: 'images/walls.png',
+            iconSize:[32,37],
+            iconAnchor: [16,37]
+        });
+
+        MC.doorIcon = L.icon({
+            iconUrl: 'images/door.png',
+            iconRetinaUrl: 'images/door.png',
+            iconSize:[32,37],
+            iconAnchor: [16,37]
+        });
+
+        MC.heliIcon = L.icon({
+            iconUrl: 'images/heli.png',
+            iconRetinaUrl: 'images/heli.png',
+            iconSize:[32,37],
+            iconAnchor: [16,37]
+        });
+
+        MC.shipIcon = L.icon({
+            iconUrl: 'images/ship.png',
+            iconRetinaUrl: 'images/ship.png',
+            iconSize:[32,37],
+            iconAnchor: [16,37]
+        });
+
+        MC.storageIcon = L.icon({
+            iconUrl: 'images/storage.png',
+            iconRetinaUrl: 'images/storage.png',
+            iconSize:[32,37],
+            iconAnchor: [16,37]
+        });
+
+
+        MC.lockIcon = L.icon({
+            iconUrl: 'images/lock.png',
+            iconRetinaUrl: 'images/lock.png',
+            iconSize:[32,37],
+            iconAnchor: [16,37]
+        });
+
+        MC.atmIcon = L.icon({
+            iconUrl: 'images/atm.png',
+            iconRetinaUrl: 'images/atm.png',
+
+        });
+
+        MC.carIcon = L.icon({
+            iconUrl: 'images/car.png',
+            iconRetinaUrl: 'images/car.png',
+            iconSize:[32,37],
+            iconAnchor: [16,37]
+        });
+
+        MC.maleIcon = L.icon({
+            iconUrl: 'images/male.png',
+            iconRetinaUrl: 'images/male.png',
+            iconSize:[32,37],
+            iconAnchor: [16,37]
+        });
 
         function fillDataWindow(type, id) {
             MC.showInfo = true;
@@ -117,112 +236,81 @@ angular.module('zepochRedisApp')
             }
 
 
-
-
-
             MC.$apply();
         }
 
-        var repeatOnXAxis = false; // Do we need to repeat the image on the X-axis? Most likely you'll want to set this to false
-        var blankTilePath = 'map/altis/empty.png'; // Path to a blank tile when repeat is set to false
-        var maxZoom = 5; // Maximum zoom level. Set this to the first number of the last tile generated (eg. 5_31_31 -> 5)
-        var allowedBounds = new google.maps.LatLngBounds(
-            new google.maps.LatLng(70.33956792419954, 178.01171875),
-            new google.maps.LatLng(83.86483689701898, -88.033203125)
-        );
 
-        function getNormalizedCoord(coord, zoom) {
-            if (!repeatOnXAxis) return coord;
-            var y = coord.y;
-            var x = coord.x;
-            var tileRange = 1 << zoom;
-            if (y < 0 || y >= tileRange) {
-                return null;
-            }
-            if (x < 0 || x >= tileRange) {
-                x = (x % tileRange + tileRange) % tileRange;
-            }
-            return {
-                x: x,
-                y: y
-            };
+        function init() {
+            var mapMinZoom = 0;
+            var mapMaxZoom = 5;
+            MC.map = L.map('zupa-map', {
+                maxZoom: mapMaxZoom,
+                minZoom: mapMinZoom,
+                crs: L.CRS.Simple
+            }).setView([0, 0], mapMaxZoom);
+
+            var mapBounds = new L.LatLngBounds(
+                MC.map.unproject([0, 8192], mapMaxZoom),
+                MC.map.unproject([8192, 0], mapMaxZoom));
+
+            MC.map.fitBounds(mapBounds);
+            L.tileLayer('map/chernarus/{z}/{x}/{y}.png', {
+                minZoom: mapMinZoom, maxZoom: mapMaxZoom,
+                bounds: mapBounds,
+                attribution: 'Zupa',
+                noWrap: true
+            }).addTo(  MC.map);
+
         }
-
-        function newMapInit(){
-            var customMapType = new google.maps.ImageMapType({
-                getTileUrl: function(coord, zoom) {
-                    var normalizedCoord = getNormalizedCoord(coord, zoom);
-                    if(normalizedCoord && (normalizedCoord.x < Math.pow(2, zoom)) && (normalizedCoord.x > -1) && (normalizedCoord.y < Math.pow(2, zoom)) && (normalizedCoord.y > -1)) {
-                        return 'map/altis/' + zoom + '_' + normalizedCoord.x + '_' + normalizedCoord.y + '.png';
-                    } else {
-                        return blankTilePath;
-                    }
-                },
-                tileSize: new google.maps.Size(256, 256),
-                minZoom:2,
-                maxZoom: maxZoom,
-                name: 'Arma 3 Map'
-            });
-
-            // Basic options for our map
-            var myOptions = {
-                center: new google.maps.LatLng(0, 0),
-                zoom: 2,
-                minZoom: 0,
-                streetViewControl: false,
-                mapTypeControl: false,
-                mapTypeControlOptions: {
-                    mapTypeIds: ["custom"]
-                }
-            };
-
-            MC.map = new google.maps.Map(document.getElementById('zupa-map'), myOptions);
-
-            MC.map.mapTypes.set('custom', customMapType);
-            MC.map.setMapTypeId('custom');
-
-            MC.oms = new OverlappingMarkerSpiderfier( MC.map);
-
-            google.maps.event.addListener(MC.map, 'click', function( event ){
-                alert( "Latitude: "+event.latLng.lat()+" "+", longitude: "+event.latLng.lng() );
-            });
-        }
-
-
-
 
         function removePlayerMarkers(){
             angular.forEach(MC.playerMarkers, function (value, key) {
-                MC.oms.removeMarker(value);
-                value.setMap(null);
-
+                MC.map.removeLayer(value);
             });
+            if( MC.playerLayer != null)
+            {
+                MC.playerLayer.clearLayers();
+            }
         }
 
         function removeBuildingMarkers(){
             angular.forEach(MC.buildingMarkers, function (value, key) {
-                MC.oms.removeMarker(value);
-                value.setMap(null);
+                MC.map.removeLayer(value);
             });
+
+            if( MC.buildingLayer != null)
+            {
+                MC.buildingLayer.clearLayers();
+            }
         }
 
         function removeVehicleMarkers(){
             angular.forEach(MC.vehicleMarkers, function (value, key) {
-                MC.oms.removeMarker(value);
-                value.setMap(null);
+                MC.map.removeLayer(value);
             });
+
+            if( MC.vehicleLayer != null)
+            {
+                MC.vehicleLayer.clearLayers();
+            }
         }
         function removeStorageMarkers(){
             angular.forEach(MC.storageMarkers, function (value, key) {
-                MC.oms.removeMarker(value);
-                value.setMap(null);
+                MC.map.removeLayer(value);
             });
+            if( MC.storageLayer != null)
+            {
+                MC.storageLayer.clearLayers();
+            }
         }
         function removeLockMarkers(){
             angular.forEach(MC.lockMarkers, function (value, key) {
-                MC.oms.removeMarker(value);
-                value.setMap(null);
+                MC.map.removeLayer(value);
             });
+            if( MC.lockLayer != null)
+            {
+                MC.lockLayer.clearLayers();
+            }
         }
 
         function filterLocks(data){
@@ -284,11 +372,30 @@ angular.module('zepochRedisApp')
             removeStorageMarkers();
             removeVehicleMarkers();
 
+            removeGlobalCluster();
+
+            MC.playerMarkers = [];
+            MC.onlinePlayerMarkers = [];
+            MC.vehicleMarkers = [];
+            MC.buildingMarkers = [];
+            MC.lockMarkers = [];
+            MC.storageMarkers = [];
+
             fillPlayerMarkers();
             fillVehicleMarkers();
             fillBuildingMarkers();
             fillLockMarkers();
             fillStorageMarkers();
+        }
+
+        function  removeGlobalCluster() {
+           //TODO  MC.map.removeLayer(MC.allMarkersToCluster);
+
+            MC.allMarkersToCluster = [];
+            if( MC.globalLayer != null)
+            {
+                MC.globalLayer.clearLayers();
+            }
         }
 
         function fillPlayerMarkers() {
@@ -313,27 +420,34 @@ angular.module('zepochRedisApp')
 
                 if (continueMarker) {
 
-                    var x = MC.x0 + ( xgame * MC.lx );
-                    var y = MC.y0 + ( ygame * MC.ly );
+                    var x = xgame / MC.mapsize * MC.leafletsize ;
+                    var y = MC.leafletsize - (ygame / MC.mapsize * MC.leafletsize);
 
 
-                    var marker = new google.maps.Marker({
-                        position: new google.maps.LatLng(y, x),
-                        title: "" + value.Name + " - " + value.PUID,
-                        icon: RS.imageOnMale,
-                        ztype: 1, //player
-                        zid: key // index
-                    });
+                    var marker = L.marker(MC.map.unproject([x, y],MC.map.getMaxZoom()),{icon: MC.maleIcon});
 
                     MC.playerMarkers.push(marker);
-                    marker.setMap(MC.map);
-                    MC.oms.addMarker(marker);
 
-                    google.maps.event.addListener(marker, 'click', function () {
-                        fillDataWindow(marker.ztype, marker.zid);
-                    });
+                    var popupContent = '<div>' +
+                        '' + JSON.stringify(value) +
+                        '</div>'
+
+                    marker.bindPopup(popupContent);
+                    if (!MC.clustervehicle) {
+                          marker.addTo(MC.map);
+                    };
+
                 }
             });
+                if (MC.clusterPlayer && !MC.clusterAllTogether) {
+                    MC.playerLayer = L.markerClusterGroup({chunkedLoading: true, maxClusterRadius : MC.clusterRadius});
+                    MC.playerLayer.addLayers(MC.playerMarkers);
+                    MC.map.addLayer(  MC.playerLayer);
+                }
+
+                if( MC.clusterAllTogether && MC.clusterPlayer ){
+                    MC.allMarkersToCluster = MC.allMarkersToCluster.concat( MC.playerMarkers);
+                }
         }else{
                 removePlayerMarkers();
             }
@@ -342,6 +456,8 @@ angular.module('zepochRedisApp')
 
         function fillVehicleMarkers() {
             if(MC.showVehicles) {
+
+
             angular.forEach(MC.vehicles, function (value, key) {
 
                 var xgame = 0;
@@ -365,29 +481,49 @@ angular.module('zepochRedisApp')
 
                 if (continueMarker) {
 
-                    var x = MC.x0 + ( xgame * MC.lx );
-                    var y = MC.y0 + ( ygame * MC.ly );
+                    var x = xgame / MC.mapsize * MC.leafletsize ;
+                    var y = MC.leafletsize - (ygame / MC.mapsize * MC.leafletsize);
+
+                    var marker = null;
+
+                    if(value[0].indexOf("heli") > -1 || value[0].indexOf("mosquito") > -1 || value[0].indexOf("Heli") > -1)
+                    {
+                        marker = L.marker(MC.map.unproject([x, y],MC.map.getMaxZoom()),{icon: MC.heliIcon});
+                    }else{
+                        if(value[0].indexOf("boat") > -1 || value[0].indexOf("Boat") > -1 || value[0].indexOf("Ship") > -1 || value[0].indexOf("ship") > -1 || value[0].indexOf("jetski") > -1)
+                        {
+                            marker = L.marker(MC.map.unproject([x, y],MC.map.getMaxZoom()),{icon: MC.shipIcon});
+                        }else {
+                            marker = L.marker(MC.map.unproject([x, y], MC.map.getMaxZoom()), {icon: MC.carIcon});
+                        }
+                    }
 
 
-                    var marker = new google.maps.Marker({
-                        position: new google.maps.LatLng(y, x),
-                        title: "" + value.Name + " - " + value.OID,
-                        icon: RS.imageCar,
-                        ztype: 2, //car
-                        zid: key
-                    });
 
                     MC.vehicleMarkers.push(marker);
-                    marker.setMap(MC.map);
-                    MC.oms.addMarker(marker);
 
+                    var popupContent = '<div>' +
+                        '' + JSON.stringify(value) +
+                        '</div>'
 
-                    google.maps.event.addListener(marker, 'click', function () {
-                        fillDataWindow(marker.ztype, marker.zid);
-                    });
+                    marker.bindPopup(popupContent);
+                    if (!MC.clusterVehicle) {
+                         marker.addTo(MC.map);
+                    }
+
                 }
 
             });
+                if (MC.clusterVehicle && !MC.clusterAllTogether) {
+                    MC.vehicleLayer = L.markerClusterGroup({chunkedLoading: true, maxClusterRadius : MC.clusterRadius});
+                    MC.vehicleLayer.addLayers(MC.vehicleMarkers);
+                    MC.map.addLayer(MC.vehicleLayer);
+                }
+
+                if( MC.clusterAllTogether && MC.clusterVehicle){
+                    MC.allMarkersToCluster = MC.allMarkersToCluster.concat( MC.vehicleMarkers);
+                }
+
         }else{
                 removeVehicleMarkers();
             }
@@ -418,27 +554,43 @@ angular.module('zepochRedisApp')
 
                 if (continueMarker) {
 
-                    var x = MC.x0 + ( xgame * MC.lx );
-                    var y = MC.y0 + ( ygame * MC.ly );
+                    var x = xgame / MC.mapsize * MC.leafletsize ;
+                    var y = MC.leafletsize - (ygame / MC.mapsize * MC.leafletsize);
 
-
-                    var marker = new google.maps.Marker({
-                        position: new google.maps.LatLng(y, x),
-                        title: "" + value.Name + " - " + value.OID,
-                        icon: RS.imageBuilding,
-                        ztype: 3, //car
-                        zid: key
-                    });
+                    var marker = null;
+                    if(value[0].indexOf("door") > -1 || value[0].indexOf("Door") > -1 || value[0].indexOf("garage") > -1 || value[0].indexOf("Garage") > -1) {
+                        marker = L.marker(MC.map.unproject([x, y], MC.map.getMaxZoom()), {icon: MC.doorIcon});
+                    }else{
+                        marker = L.marker(MC.map.unproject([x, y], MC.map.getMaxZoom()), {icon: MC.buildingIcon});
+                    }
 
                     MC.buildingMarkers.push(marker);
-                    marker.setMap(MC.map);
-                    MC.oms.addMarker(marker);
 
+                    var popupContent = '<div>' +
+                        '' + JSON.stringify(value) +
+                        '</div>'
+
+                    marker.bindPopup(popupContent);
+                    if (!MC.clusterBuilding) {
+                          marker.addTo(MC.map);
+                    }
+
+
+/*
                     google.maps.event.addListener(marker, 'click', function () {
                         fillDataWindow(marker.ztype, marker.zid);
                     });
+                    */
                 }
             });
+                if (MC.clusterBuilding && !MC.clusterAllTogether) {
+                    MC.buildingLayer = L.markerClusterGroup({chunkedLoading: true, maxClusterRadius : MC.clusterRadius});
+                    MC.buildingLayer.addLayers(MC.buildingMarkers);
+                    MC.map.addLayer( MC.buildingLayer);
+                }
+                if( MC.clusterAllTogether && MC.clusterBuilding ){
+                    MC.allMarkersToCluster = MC.allMarkersToCluster.concat( MC.buildingMarkers);
+                }
         }else{
                 removeBuildingMarkers();
             }
@@ -469,27 +621,36 @@ angular.module('zepochRedisApp')
 
                     if (continueMarker) {
 
-                        var x = MC.x0 + ( xgame * MC.lx );
-                        var y = MC.y0 + ( ygame * MC.ly );
+                        var x = xgame / MC.mapsize * MC.leafletsize;
+                        var y = MC.leafletsize - (ygame / MC.mapsize * MC.leafletsize);
 
-                        var marker = new google.maps.Marker({
-                            position: new google.maps.LatLng(y, x),
-                            title: "" + value.Name + " - " + value.OID,
-                            icon: RS.imageLock,
-                            ztype: 4, //car
-                            zid: key
-                        });
+
+                        var marker = L.marker(MC.map.unproject([x, y], MC.map.getMaxZoom()), {icon: MC.lockIcon});
 
                         MC.lockMarkers.push(marker);
-                        marker.setMap(MC.map);
-                        MC.oms.addMarker(marker);
 
-                        google.maps.event.addListener(marker, 'click', function () {
-                            fillDataWindow(marker.ztype, marker.zid);
-                        });
+                        var popupContent = '<div>' +
+                            '' + JSON.stringify(value) +
+                            '</div>'
+
+                        marker.bindPopup(popupContent);
+
+                        if (!MC.clusterLock){
+                            marker.addTo(MC.map);
+                        }
+
                     }
 
                 });
+                if (MC.clusterLock && !MC.clusterAllTogether) {
+                    MC.lockLayer = L.markerClusterGroup({chunkedLoading: true, maxClusterRadius : MC.clusterRadius});
+                    MC.lockLayer.addLayers(MC.lockMarkers);
+                    MC.map.addLayer(MC.lockLayer);
+                }
+
+                if( MC.clusterAllTogether && MC.clusterLock){
+                    MC.allMarkersToCluster = MC.allMarkersToCluster.concat( MC.lockMarkers);
+                }
             }else{
                 removeLockMarkers();
             }
@@ -519,27 +680,38 @@ angular.module('zepochRedisApp')
 
                     if (continueMarker) {
 
-                        var x = MC.x0 + ( xgame * MC.lx );
-                        var y = MC.y0 + ( ygame * MC.ly );
+                        var x = xgame / MC.mapsize * MC.leafletsize ;
+                        var y = MC.leafletsize - (ygame / MC.mapsize * MC.leafletsize);
 
-                        var marker = new google.maps.Marker({
-                            position: new google.maps.LatLng(y, x),
-                            title: "" + value.Name + " - " + value.OID,
-                            icon: RS.imageStorage,
-                            ztype: 5, //car
-                            zid: key
-                        });
+
+                        var marker = L.marker(MC.map.unproject([x, y],MC.map.getMaxZoom()),{icon: MC.storageIcon});
 
                         MC.storageMarkers.push(marker);
-                        marker.setMap(MC.map);
-                        MC.oms.addMarker(marker);
 
-                        google.maps.event.addListener(marker, 'click', function () {
-                            fillDataWindow(marker.ztype, marker.zid);
-                        });
+                        var popupContent = '<div>' +
+                            '' + JSON.stringify(value) +
+                            '</div>'
+
+                        marker.bindPopup(popupContent);
+
+
+                        if(!MC.clusterStorage) {
+                             marker.addTo(MC.map);
+                        }
+
                     }
 
                 });
+                if(MC.clusterStorage &&  !MC.clusterAllTogether) {
+                    MC.storageLayer = L.markerClusterGroup({ chunkedLoading: true, maxClusterRadius : MC.clusterRadius});
+                    MC.storageLayer.addLayers(MC.storageMarkers);
+                    MC.map.addLayer(MC.storageLayer);
+                }
+
+                if( MC.clusterAllTogether && MC.clusterStorage){
+                    MC.allMarkersToCluster = MC.allMarkersToCluster.concat( MC.storageMarkers);
+                }
+
             }else{
                 removeStorageMarkers();
             }
@@ -575,11 +747,11 @@ function getVehicleData(){
                 fillVehicleMarkers();
             }).
             error(function(data, status, headers, config) {
-                alert("Could not connect to php backend - Vehicles Data");
+               // alert("Could not connect to php backend - Vehicles Data");
             });
 }
 function getBuildingData(){
-        $http.post(MC.serverURL + 'server/getBuildingData.php?date='+ new Date().getTime(),{secret: String(MC.secretCode) , instance: MC.instance, db : MC.db }).
+        $http.post(MC.serverURL + 'server/getBuildingData.php?date='+ new Date().getTime(),{"secret": String(MC.secretCode) , "instance": MC.instance, "db" : MC.db }).
             success(function(data, status, headers, config) {
                 MC.buildings = data;
                 MC.buildingCount = MC.buildings.length;
@@ -588,6 +760,8 @@ function getBuildingData(){
             error(function(data, status, headers, config) {
                 //  alert("Could not connect to php backend - Vehicles Data");
             });
+
+
 }
 function getStorageDate(){
         $http.post(MC.serverURL + 'server/getStorageData.php?date='+ new Date().getTime(),{secret: String(MC.secretCode) , instance: MC.instance, db : MC.db }).
@@ -602,8 +776,8 @@ function getStorageDate(){
                 //  alert("Could not connect to php backend - Vehicles Data");
             });
 			}
-			
-		newMapInit();
+
+        init();
 		getStorageDate();
 		getBuildingData();
 		getVehicleData();

@@ -1,6 +1,6 @@
 <!doctype html>
 <html class="no-js">
-  <head>
+<head>
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
@@ -8,236 +8,244 @@
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
-      <link href="styles/jquery-ui.min.css" rel="stylesheet" />
-      <link href="styles/myBootstrap.min.css" rel="stylesheet" />
-      <link href="styles/kendo.common-material.min.css" rel="stylesheet" />
-      <link href="styles/kendo.common-bootstrap.core.min.css" rel="stylesheet" />
-      <link href="styles/kendo.material.min.css" rel="stylesheet" />
-      <link href="styles/kendo.material.mobile.min.css" rel="stylesheet" />
-
+    <link href="styles/jquery-ui.min.css" rel="stylesheet" />
+    <link href="styles/myBootstrap.min.css" rel="stylesheet" />
+    <link href="styles/kendo.common-material.min.css" rel="stylesheet" />
+    <link href="styles/kendo.common-bootstrap.core.min.css" rel="stylesheet" />
+    <link href="styles/kendo.material.min.css" rel="stylesheet" />
+    <link href="styles/kendo.material.mobile.min.css" rel="stylesheet" />
+    <link href="libs/leaflet.css" rel="stylesheet" />
+    <link rel="stylesheet" href="bower_components/leaflet.markercluster/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="bower_components/leaflet.markercluster/dist/MarkerCluster.Default.css" />
     <!-- bower:css -->
-      <link href="bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
-      <link href="bower_components/switchery/dist/switchery.min.css" rel="stylesheet" />
+    <link href="bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="bower_components/switchery/dist/switchery.min.css" rel="stylesheet" />
     <!-- endbower -->
     <!-- endbuild -->
-      <!-- build:css(.tmp) styles/main.css -->
-      <link rel="stylesheet" href="styles/main.css">
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-	<script src="http://crypto-js.googlecode.com/svn/tags/3.0.2/build/rollups/md5.js"></script>
-  </head>
-  <body ng-app="zepochRedisApp">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <!-- begin #page-loader -->
-  <!--<div id="page-loader" class="fade in"><span class="spinner"></span></div>-->
-    <!-- end #page-loader -->
+</head>
+<body ng-app="zepochRedisApp">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<!-- begin #page-loader -->
+<!--<div id="page-loader" class="fade in"><span class="spinner"></span></div>-->
+<!-- end #page-loader -->
 
-    <!-- begin #page-container -->
-    <div id="page-container" class="page-sidebar-fixed page-header-fixed">
-        <!-- begin #header -->
-        <div id="header" class="header navbar navbar-inverse navbar-fixed-top">
-            <!-- begin container-fluid -->
-            <div class="container-fluid">
-                <!-- begin mobile sidebar expand / collapse button -->
-                <div class="navbar-header">
-                    <a href="#/" class="navbar-brand" style="text-align: center">Epoch Redis DBM 1.0</a>
-                    <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <!-- end mobile sidebar expand / collapse button -->
-
-                <ul class="nav navbar-nav navbar-left">
-                    <li ng-repeat="server in servers" >
-                        <a ng-click="changeServer($index)" class="zupa-server-button btn btn-white  btn-sm "><i class="fa fa-database"></i> {{server.name}}</a>
-                    </li>
-                    <li>
-                        <a href="#/server/add" class="zupa-server-button btn btn-white btn-sm "><i class="fa fa-plus"></i> Add Server</a>
-                    </li>
-
-                </ul>
-
-                <!-- begin header navigation right -->
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown navbar-user">
-                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-                            <span class="fa fa-user fa-1x"> </span>
-                            <span class="hidden-xs" style="padding-left:10px;"> Admin</span> <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu animated fadeInLeft">
-                            <li class="arrow"></li>
-                            <li><a href="javascript:;">Setting</a></li>
-                            <li class="divider"></li>
-                            <li><a href="javascript:;">Log Out</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <!-- end header navigation right -->
+<!-- begin #page-container -->
+<div id="page-container" class="page-sidebar-fixed page-header-fixed">
+    <!-- begin #header -->
+    <div id="header" class="header navbar navbar-inverse navbar-fixed-top">
+        <!-- begin container-fluid -->
+        <div class="container-fluid">
+            <!-- begin mobile sidebar expand / collapse button -->
+            <div class="navbar-header">
+                <a href="#/" class="navbar-brand" style="text-align: center">Epoch Redis DBM 1.0</a>
+                <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
-            <!-- end container-fluid -->
-        </div>
-        <!-- end #header -->
+            <!-- end mobile sidebar expand / collapse button -->
 
-        <!-- begin #sidebar -->
-        <div id="sidebar" class="sidebar">
+            <ul class="nav navbar-nav navbar-left">
+                <li ng-repeat="server in servers" >
+                    <a ng-click="changeServer($index)" class="zupa-server-button btn btn-white  btn-sm "><i class="fa fa-database"></i> {{server.name}}</a>
+                </li>
+                <li>
+                    <a href="#/server/add" class="zupa-server-button btn btn-white btn-sm "><i class="fa fa-plus"></i> Add Server</a>
+                </li>
+
+            </ul>
+
+            <!-- begin header navigation right -->
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown navbar-user">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="fa fa-user fa-1x"> </span>
+                        <span class="hidden-xs" style="padding-left:10px;"> Admin</span> <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInLeft">
+                        <li class="arrow"></li>
+                        <li><a href="javascript:;">Setting</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:;">Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- end header navigation right -->
+        </div>
+        <!-- end container-fluid -->
+    </div>
+    <!-- end #header -->
+
+    <!-- begin #sidebar -->
+    <div id="sidebar" class="sidebar">
         <!-- begin sidebar scrollbar -->
         <div data-scrollbar="true" data-height="100%">
-        <!-- begin sidebar user -->
-        <ul class="nav">
-            <li class="nav-profile">
-                <div class="image">
-                    <img src="http://epochmod.com/epoch_logo.png" alt="" />
-                </div>
-                <div class="info">
-                    Zupa
-                    <small>Developments</small>
-                </div>
-            </li>
-        </ul>
-        <!-- end sidebar user -->
-        <!-- begin sidebar nav -->
-        <ul class="nav">
-        <li class="nav-header">Navigation</li>
-        <li class="active" id="dashboard">
-            <a href="#/" >
-                <b class="fa fa-caret-right pull-right"></b>
-                <i class="fa fa-laptop"></i>
-                <span>Dashboard</span>
-            </a>
-        </li>
-        <li id="players">
-            <a href="#/players">
-                <span class="pull-right fa fa-caret-right"></span>
-                <i class="fa fa-users"></i>
-                <span>Players</span>
-            </a>
+            <!-- begin sidebar user -->
+            <ul class="nav">
+                <li class="nav-profile">
+                    <div class="image">
+                        <img src="http://epochmod.com/epoch_logo.png" alt="" />
+                    </div>
+                    <div class="info">
+                        Zupa
+                        <small>Developments</small>
+                    </div>
+                </li>
+            </ul>
+            <!-- end sidebar user -->
+            <!-- begin sidebar nav -->
+            <ul class="nav">
+                <li class="nav-header">Navigation</li>
 
-        </li >
-            <li id="banks">
-                <a href="#/banks">
-                    <span class="pull-right fa fa-caret-right"></span>
-                    <i class="fa fa-bank"></i>
-                    <span>Banks</span>
-                </a>
-            </li>
-        <li id="vehicles">
-            <a href="#/vehicles">
-                <b class="fa fa-caret-right pull-right"></b>
-                <i class="fa fa-car"></i>
-                <span>Vehicles</span>
-            </a>
+               <li class="active" id="dashboard">
+                   <a href="#/" >
+                       <b class="fa fa-caret-right pull-right"></b>
+                       <i class="fa fa-laptop"></i>
+                       <span>Dashboard</span>
+                   </a>
+               </li>
+                <!--   <li id="players">
+                   <a href="#/players">
+                       <span class="pull-right fa fa-caret-right"></span>
+                       <i class="fa fa-users"></i>
+                       <span>Players</span>
+                   </a>
 
-        </li>
-        <li id="buildings">
-            <a href="#/buildings">
-                <b class="fa fa-caret-right pull-right"></b>
-                <i class="fa fa-home"></i>
-                <span>Buildings</span>
-            </a>
+               </li >
+               <li id="banks">
+                   <a href="#/banks">
+                       <span class="pull-right fa fa-caret-right"></span>
+                       <i class="fa fa-bank"></i>
+                       <span>Banks</span>
+                   </a>
+               </li>
+               <li id="vehicles">
+                   <a href="#/vehicles">
+                       <b class="fa fa-caret-right pull-right"></b>
+                       <i class="fa fa-car"></i>
+                       <span>Vehicles</span>
+                   </a>
 
-        </li>
-        <li id="traders">
-            <a href="#/traders">
-                <b class="fa fa-caret-right pull-right"></b>
-                <i class="fa fa-th"></i>
-                <span>Traders</span>
-            </a>
-        </li>
-        <li id="map">
-            <a href="#/map">
-                <b class="fa fa-caret-right pull-right"></b>
-                <i class="fa fa-map-marker"></i>
-                <span>Map</span>
-            </a>
-        </li>
-        <li id="deathlogs">
-            <a href="#/deathlogs">
-                <b class="fa fa-caret-right pull-right"></b>
-                <i class="fa fa-bars"></i>
-                <span>Death Logs</span>
-            </a>
-        </li>
-        <li id="adminlogs">
-                <a href="#/adminlogs">
-                    <b class="fa fa-caret-right pull-right"></b>
-                    <i class="fa fa-user-md"></i>
-                    <span>Admin Logs</span>
-                </a>
-        </li>
-            <li id="settings">
-                <a href="#/settings">
-                    <b class="fa fa-caret-right pull-right"></b>
-                    <i class="fa fa-gears"></i>
-                    <span>ER-DBM Settings</span>
-                </a>
-            </li>
-        </ul>
-        <!-- end sidebar nav -->
+               </li>
+               <li id="buildings">
+                   <a href="#/buildings">
+                       <b class="fa fa-caret-right pull-right"></b>
+                       <i class="fa fa-home"></i>
+                       <span>Buildings</span>
+                   </a>
+
+               </li>
+               <li id="traders">
+                   <a href="#/map2">
+                       <b class="fa fa-caret-right pull-right"></b>
+                       <i class="fa fa-th"></i>
+                       <span>Traders</span>
+                   </a>
+               </li>
+               -->
+                <li id="map">
+                    <a href="#/map">
+                        <b class="fa fa-caret-right pull-right"></b>
+                        <i class="fa fa-map-marker"></i>
+                        <span>Map</span>
+                    </a>
+                </li>
+                <!--
+                <li id="deathlogs">
+                    <a href="#/deathlogs">
+                        <b class="fa fa-caret-right pull-right"></b>
+                        <i class="fa fa-bars"></i>
+                        <span>Death Logs</span>
+                    </a>
+                </li>
+                <li id="adminlogs">
+                    <a href="#/adminlogs">
+                        <b class="fa fa-caret-right pull-right"></b>
+                        <i class="fa fa-user-md"></i>
+                        <span>Admin Logs</span>
+                    </a>
+                </li>
+                -->
+                <li id="settings">
+                    <a href="#/settings">
+                        <b class="fa fa-caret-right pull-right"></b>
+                        <i class="fa fa-gears"></i>
+                        <span>ER-DBM Settings</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- end sidebar nav -->
         </div>
         <!-- end sidebar scrollbar -->
-        </div>
-        <div class="sidebar-bg"></div>
-        <!-- end #sidebar -->
-        <!-- begin #content -->
-        <div id="content" class="content">
-             <div ng-view=""></div>
-        </div>
     </div>
+    <div class="sidebar-bg"></div>
+    <!-- end #sidebar -->
+    <!-- begin #content -->
+    <div id="content" class="content">
+        <div ng-view=""></div>
+    </div>
+</div>
 
 
-    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
-    <!-- build:js(.) scripts/oldieshim.js -->
-    <!--[if lt IE 9]>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.js"></script>
-    <![endif]-->
-    <!-- endbuild -->
+<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+<!-- build:js(.) scripts/oldieshim.js -->
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.js"></script>
+<![endif]-->
+<!-- endbuild -->
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/angularLocalStorage/src/angularLocalStorage.js"></script>
-    <script src="http://cdn.kendostatic.com/2014.3.1119/js/kendo.all.min.js"></script>
-   <!-- <script src='bower_components/lodash/dist/lodash.min.js'></script>
-    <script src='bower_components/angular-google-maps/dist/angular-google-maps.min.js'></script>
-   <script src="bower_components/gmap3/dist/gmap3.min.js"></script>-->
-    <script src="bower_components/switchery/dist/switchery.min.js"></script>
-    <script src="bower_components/ng-switchery/src/ng-switchery.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
 
-    <!-- endbower -->
-    <!-- endbuild -->
 
-    <script src="scripts/oms.min.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+<script src="bower_components/angularLocalStorage/src/angularLocalStorage.js"></script>
+<script src="http://cdn.kendostatic.com/2014.3.1119/js/kendo.all.min.js"></script>
+<script src="bower_components/switchery/dist/switchery.min.js"></script>
+<script src="bower_components/ng-switchery/src/ng-switchery.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/controllers/players.js"></script>
-        <script src="scripts/controllers/banks.js"></script>
-        <script src="scripts/controllers/player.js"></script>
-        <script src="scripts/controllers/deathlogs.js"></script>
-        <script src="scripts/controllers/adminlogs.js"></script>
-        <script src="scripts/controllers/vehicles.js"></script>
-        <script src="scripts/controllers/buildings.js"></script>
-        <script src="scripts/controllers/settings.js"></script>
-        <script src="scripts/controllers/server/add.js"></script>
-        <script src="scripts/controllers/server.js"></script>
-        <script src="scripts/controllers/traders.js"></script>
-        <script src="scripts/controllers/map.js"></script>
-        <!-- endbuild -->
+
+<script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+<script src="bower_components/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+<script src="scripts/oms.min.js"></script>
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/about.js"></script>
+<script src="scripts/controllers/players.js"></script>
+<script src="scripts/controllers/banks.js"></script>
+<script src="scripts/controllers/player.js"></script>
+<script src="scripts/controllers/deathlogs.js"></script>
+<script src="scripts/controllers/adminlogs.js"></script>
+<script src="scripts/controllers/vehicles.js"></script>
+<script src="scripts/controllers/buildings.js"></script>
+<script src="scripts/controllers/settings.js"></script>
+<script src="scripts/controllers/server/add.js"></script>
+<script src="scripts/controllers/server.js"></script>
+<script src="scripts/controllers/traders.js"></script>
+<script src="scripts/controllers/map.js"></script>
+<script src="scripts/controllers/map2.js"></script>
+<!-- endbuild -->
 </body>
 </html>
