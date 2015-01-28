@@ -28,10 +28,10 @@ angular.module('zepochRedisApp')
 	    MC.db = RS.selectedServer['dbi'];
 
         if(MC.mapName == "chernarus"){
-            MC.mapsize = 15400;
+            MC.mapsize = RS.chernarusSize;
         }
         if(MC.mapName == "altis"){
-            MC.mapsize = 15400;
+            MC.mapsize = RS.altisSize;
         }
 
         MC.leafletsize = 8192;
@@ -200,6 +200,13 @@ angular.module('zepochRedisApp')
         MC.maleIcon = L.icon({
             iconUrl: 'images/male.png',
             iconRetinaUrl: 'images/male.png',
+            iconSize:[32,37],
+            iconAnchor: [16,37]
+        });
+
+        MC.femaleIcon = L.icon({
+            iconUrl: 'images/female.png',
+            iconRetinaUrl: 'images/female.png',
             iconSize:[32,37],
             iconAnchor: [16,37]
         });
@@ -426,9 +433,12 @@ angular.module('zepochRedisApp')
                     var x = xgame / MC.mapsize * MC.leafletsize ;
                     var y = MC.leafletsize - (ygame / MC.mapsize * MC.leafletsize);
 
-
-                    var marker = L.marker(MC.map.unproject([x, y],MC.map.getMaxZoom()),{icon: MC.maleIcon});
-
+                    var marker = null;
+                    if( JSON.stringify(value).indexOf("Epoch_Male_F") > -1) {
+                         marker = L.marker(MC.map.unproject([x, y],MC.map.getMaxZoom()),{icon: MC.maleIcon});
+                    }else{
+                         marker = L.marker(MC.map.unproject([x, y],MC.map.getMaxZoom()),{icon: MC.femaleIcon});
+                    }
                     MC.playerMarkers.push(marker);
 
                     var popupContent = '<div>' +

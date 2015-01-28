@@ -116,7 +116,11 @@ ERDBM.run(
         storage.bind(globalScope,'imageStorage',{defaultValue: 'images/storage.png'});
 
         storage.bind(globalScope,'serverLink',{defaultValue: ""});
-        storage.bind(globalScope,'clusterRad',{defaultValue: "30"});
+        storage.bind(globalScope,'clusterRad',{defaultValue: 30});
+
+
+        storage.bind(globalScope,'chernarusSize',{defaultValue: 15400});
+        storage.bind(globalScope,'altisSize',{defaultValue: 30000});
 
 
         // client check if the players needs to give in a server first.

@@ -1,20 +1,19 @@
 <?php
 header('Access-Control-Allow-Origin: *');
-/**
- * Created by PhpStorm.
- * User: jwindmolders
- * Date: 9/12/2014
- * Time: 11:06
- */
+header("Access-Control-Allow-Methods: GET, POST");
+header('Access-Control-Allow-Credentials: true');
+        
 error_reporting(0);
 ini_set('display_errors',0);
 
 $postdata = file_get_contents("php://input");
-$request = json_decode($postdata);
+$thepost = json_decode($postdata,true);
 
-$password = request -> secret;
-$instance = request -> instance;
-$db = request -> db;
+
+
+$password = $thepost["secret"];
+$instance = $thepost["instance"];
+$db = $thepost["db"];
 
 require 'Predis/Autoloader.php';
 
@@ -26,10 +25,10 @@ if ( md5($myRedisPass) == $password ) {
 Predis\Autoloader::register();
 
 $client = new Predis\Client([
-    'host'   => '127.0.0.1',
-    'password' => "npgforever1991",
-	'port' => 6379,
-	'database' => 1
+    'host'   => $myRedisHost,
+    'password' => $myRedisPass,
+	'port' => $myRedisPort,
+	'database' => $db
 ]);
 
 $buildingData = '[';
@@ -37,6 +36,7 @@ $buildingData = '[';
 $firstLoop = true;
 
 $buildings = $client-> keys('Building:'.$instance.':*');
+
 
 foreach($buildings as $op) {
 

@@ -2,17 +2,1387 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f61c2f6-5de1-4fc2-a9ec-80db667856ad" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/server/add.html" afterPath="$PROJECT_DIR$/app/views/server/add.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/server/add.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/server/add.js" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\0_0_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\1_0_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\1_0_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\1_1_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\1_1_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\2_0_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\2_0_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\2_0_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\2_0_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\2_1_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\2_1_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\2_1_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\2_1_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\2_2_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\2_2_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\2_2_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\2_2_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\2_3_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\2_3_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\2_3_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\2_3_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_0_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_0_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_0_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_0_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_0_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_0_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_0_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_0_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_1_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_1_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_1_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_1_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_1_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_1_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_1_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_1_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_2_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_2_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_2_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_2_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_2_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_2_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_2_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_2_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_3_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_3_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_3_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_3_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_3_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_3_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_3_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_3_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_4_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_4_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_4_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_4_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_4_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_4_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_4_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_4_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_5_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_5_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_5_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_5_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_5_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_5_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_5_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_5_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_6_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_6_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_6_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_6_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_6_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_6_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_6_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_6_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_7_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_7_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_7_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_7_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_7_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_7_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_7_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\3_7_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_0_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_0_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_0_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_0_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_0_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_0_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_0_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_0_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_0_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_0_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_0_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_0_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_0_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_0_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_0_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_0_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_10_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_10_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_10_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_10_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_10_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_10_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_10_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_10_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_10_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_10_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_10_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_10_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_10_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_10_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_10_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_10_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_11_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_11_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_11_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_11_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_11_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_11_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_11_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_11_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_11_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_11_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_11_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_11_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_11_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_11_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_11_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_11_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_12_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_12_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_12_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_12_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_12_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_12_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_12_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_12_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_12_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_12_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_12_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_12_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_12_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_12_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_12_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_12_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_13_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_13_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_13_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_13_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_13_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_13_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_13_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_13_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_13_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_13_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_13_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_13_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_13_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_13_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_13_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_13_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_14_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_14_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_14_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_14_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_14_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_14_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_14_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_14_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_14_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_14_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_14_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_14_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_14_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_14_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_14_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_14_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_15_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_15_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_15_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_15_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_15_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_15_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_15_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_15_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_15_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_15_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_15_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_15_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_15_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_15_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_15_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_15_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_1_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_1_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_1_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_1_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_1_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_1_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_1_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_1_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_1_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_1_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_1_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_1_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_1_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_1_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_1_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_1_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_2_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_2_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_2_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_2_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_2_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_2_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_2_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_2_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_2_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_2_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_2_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_2_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_2_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_2_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_2_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_2_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_3_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_3_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_3_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_3_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_3_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_3_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_3_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_3_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_3_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_3_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_3_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_3_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_3_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_3_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_3_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_3_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_4_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_4_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_4_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_4_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_4_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_4_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_4_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_4_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_4_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_4_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_4_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_4_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_4_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_4_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_4_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_4_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_5_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_5_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_5_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_5_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_5_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_5_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_5_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_5_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_5_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_5_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_5_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_5_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_5_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_5_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_5_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_5_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_6_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_6_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_6_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_6_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_6_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_6_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_6_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_6_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_6_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_6_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_6_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_6_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_6_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_6_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_6_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_6_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_7_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_7_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_7_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_7_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_7_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_7_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_7_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_7_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_7_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_7_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_7_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_7_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_7_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_7_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_7_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_7_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_8_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_8_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_8_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_8_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_8_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_8_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_8_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_8_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_8_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_8_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_8_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_8_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_8_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_8_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_8_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_8_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_9_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_9_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_9_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_9_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_9_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_9_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_9_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_9_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_9_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_9_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_9_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_9_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_9_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_9_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_9_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\4_9_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_0_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_10_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_11_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_12_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_13_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_14_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_15_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_16_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_17_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_18_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_19_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_1_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_20_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_21_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_22_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_23_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_24_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_25_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_26_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_27_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_28_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_29_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_2_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_30_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_31_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_3_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_4_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_5_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_6_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_7_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_8_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_0.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_10.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_11.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_12.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_13.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_14.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_15.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_16.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_17.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_18.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_19.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_20.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_21.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_22.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_23.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_24.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_25.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_26.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_27.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_28.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_29.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_30.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_31.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_4.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_5.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_7.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_8.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\5_9_9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\empty.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonas\Documents\GitHub\ZER-DBM\app\map\altis\index.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Thumbs.db" afterPath="$PROJECT_DIR$/app/Thumbs.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/Thumbs.db" afterPath="$PROJECT_DIR$/app/images/Thumbs.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/server/config.php" afterPath="$PROJECT_DIR$/app/server/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/server/getBuildingData.php" afterPath="$PROJECT_DIR$/app/server/getBuildingData.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/server/getOnlinePlayers.php" afterPath="$PROJECT_DIR$/app/server/getOnlinePlayers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/server/getPlayersData.php" afterPath="$PROJECT_DIR$/app/server/getPlayersData.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/server/getStorageData.php" afterPath="$PROJECT_DIR$/app/server/getStorageData.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/server/getVehicleData.php" afterPath="$PROJECT_DIR$/app/server/getVehicleData.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.css" afterPath="$PROJECT_DIR$/app/styles/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/map.html" afterPath="$PROJECT_DIR$/app/views/map.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/map.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/server.html" afterPath="$PROJECT_DIR$/app/views/server.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/server.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/settings.html" afterPath="$PROJECT_DIR$/app/views/settings.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/settings.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/settings.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ZER-DBM.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +1404,7 @@
     <favorites_list name="ZER-DBM" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.53377736">
+    <splitter split-orientation="horizontal" split-proportion="0.5303668">
       <split-first>
         <leaf>
           <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
@@ -49,7 +1419,7 @@
           <file leaf-file-name="settings.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/scripts/controllers/settings.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="28" column="9" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+                <state line="23" column="41" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
                   <folding />
                 </state>
               </provider>
@@ -73,10 +1443,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="settings.html" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="settings.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/settings.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="59" column="11" selection-start="2210" selection-end="2210" vertical-scroll-proportion="-20.807692" vertical-offset="462" max-vertical-offset="1343">
+                <state line="67" column="96" selection-start="2719" selection-end="2719" vertical-scroll-proportion="0.75714284" vertical-offset="503" max-vertical-offset="1547">
                   <folding />
                 </state>
               </provider>
@@ -93,10 +1463,19 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="map.html" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="map.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/map.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="66" column="0" selection-start="5539" selection-end="5539" vertical-scroll-proportion="0.58921695" vertical-offset="663" max-vertical-offset="3315">
+                <state line="66" column="0" selection-start="5539" selection-end="5539" vertical-scroll-proportion="-17.653847" vertical-offset="663" max-vertical-offset="3315">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/styles/main.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="27" column="27" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1887">
                   <folding />
                 </state>
               </provider>
@@ -115,10 +1494,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="141" column="46" selection-start="4137" selection-end="4137" vertical-scroll-proportion="0.0" vertical-offset="1830" max-vertical-offset="2924">
+                <state line="122" column="43" selection-start="3512" selection-end="3521" vertical-scroll-proportion="0.4977778" vertical-offset="1626" max-vertical-offset="2992">
                   <folding />
                 </state>
               </provider>
@@ -127,16 +1506,16 @@
           <file leaf-file-name="add.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/scripts/controllers/server/add.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="25" column="0" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0" vertical-offset="130" max-vertical-offset="1003">
+                <state line="24" column="0" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="map.js" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="map.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/scripts/controllers/map.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="26" selection-start="537" selection-end="537" vertical-scroll-proportion="0.34987894" vertical-offset="119" max-vertical-offset="13515">
+                <state line="33" column="38" selection-start="823" selection-end="823" vertical-scroll-proportion="-13.730769" vertical-offset="204" max-vertical-offset="13685">
                   <folding />
                 </state>
               </provider>
@@ -157,26 +1536,26 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/styles/main.css" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/server.js" />
         <option value="$PROJECT_DIR$/app/views/server/add.html" />
         <option value="$PROJECT_DIR$/app/views/server.html" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/map.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/server/add.js" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/settings.js" />
-        <option value="$PROJECT_DIR$/app/scripts/app.js" />
-        <option value="$PROJECT_DIR$/app/views/settings.html" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/views/map.html" />
+        <option value="$PROJECT_DIR$/app/styles/main.css" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/settings.js" />
+        <option value="$PROJECT_DIR$/app/scripts/app.js" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/map.js" />
+        <option value="$PROJECT_DIR$/app/views/settings.html" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="47" />
-    <option name="y" value="37" />
-    <option name="width" value="1869" />
-    <option name="height" value="995" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -395,7 +1774,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="47" y="37" width="1869" height="995" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -403,7 +1782,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11871894" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11448349" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -435,36 +1814,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/map/altis/0_0_0.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/map/altis/1_0_0.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/map/altis/1_0_1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/map/altis/1_1_0.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/myBootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="887">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="23" selection-start="1829" selection-end="1829" vertical-scroll-proportion="0.0" vertical-offset="1008" max-vertical-offset="1887">
           <folding />
         </state>
       </provider>
@@ -476,13 +1828,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/server/add.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0" vertical-offset="130" max-vertical-offset="1003">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/server.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="86" column="26" selection-start="4608" selection-end="4940" vertical-scroll-proportion="-20.807692" vertical-offset="921" max-vertical-offset="1700">
@@ -490,30 +1835,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="9" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="21" selection-start="444" selection-end="453" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/settings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="11" selection-start="2210" selection-end="2210" vertical-scroll-proportion="-20.807692" vertical-offset="462" max-vertical-offset="1343">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="46" selection-start="4137" selection-end="4137" vertical-scroll-proportion="0.0" vertical-offset="1830" max-vertical-offset="2924">
           <folding />
         </state>
       </provider>
@@ -527,13 +1851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="26" selection-start="537" selection-end="537" vertical-scroll-proportion="0.34987894" vertical-offset="119" max-vertical-offset="13515">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/map2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="23" selection-start="462" selection-end="462" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="3128">
@@ -541,9 +1858,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="27" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1887">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/map.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="0" selection-start="5539" selection-end="5539" vertical-scroll-proportion="0.58921695" vertical-offset="663" max-vertical-offset="3315">
+        <state line="66" column="0" selection-start="5539" selection-end="5539" vertical-scroll-proportion="-17.653847" vertical-offset="663" max-vertical-offset="3315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/server/add.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0" vertical-offset="130" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="38" selection-start="823" selection-end="823" vertical-scroll-proportion="-13.730769" vertical-offset="204" max-vertical-offset="13685">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="41" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="43" selection-start="3512" selection-end="3521" vertical-scroll-proportion="0.4977778" vertical-offset="1626" max-vertical-offset="2992">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/settings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="96" selection-start="2719" selection-end="2719" vertical-scroll-proportion="0.75714284" vertical-offset="503" max-vertical-offset="1547">
           <folding />
         </state>
       </provider>

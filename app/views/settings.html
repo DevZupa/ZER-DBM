@@ -55,7 +55,19 @@
                 <div class="form-group">
                     <label class="control-label col-md-4 col-sm-4" for="sname">Max Cluster Radius in pixels * :</label>
                     <div class="col-md-6 col-sm-6">
-                        <input class="form-control" type="number" id="sname" name="sname" placeholder="Required"  ng-model="clusterRad"/>
+                        <input class="form-control" type="number" id="sname" name="sname" ng-model="$parent.clusterRad"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4 col-sm-4" for="sname">Chernarus Map Size :</label>
+                    <div class="col-md-6 col-sm-6">
+                        <input class="form-control" type="number" id="sname" name="sname" ng-model="$parent.chernarusSize"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4 col-sm-4" for="sname">Altis Map Size :</label>
+                    <div class="col-md-6 col-sm-6">
+                        <input class="form-control" type="number" id="sname" name="sname" ng-model="$parent.altisSize"/>
                     </div>
                 </div>
                 <div class="form-group">

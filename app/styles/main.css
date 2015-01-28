@@ -13,19 +13,19 @@
 .page-sidebar-minified .sidebar .nav > li.has-sub.active > a,
 .label.label-theme,
 .btn.btn-scroll-to-top {
-    background: #000080;
+    background: #cd0a0a;
 }
 .navbar.navbar-inverse .navbar-brand {
     color: #fff !important;
 }
 .text-theme,
 .sidebar .sub-menu > li.active > a:before {
-    color: #000080;
+    color: #cd0a0a;
 }
 
 @media (max-width: 767px) {
     .navbar-inverse .navbar-header {
-        background: #000080;
+        background: #cd0a0a;
     }
 }
 
