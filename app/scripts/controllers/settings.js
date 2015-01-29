@@ -21,11 +21,18 @@ ERDBM
 
         SC.editServer = editServer;
 
+        SC.saveMap = saveMap;
+
         SC.clusterRadius = RC.clusterRad;
 
+        SC.newMap = {};
 
         function editServer(index){
             $location.path( "/server/" + index);
+        }
+
+        function saveMap(){
+            RC.maps.push(SC.newMap);
         }
 
   });

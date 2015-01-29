@@ -119,8 +119,17 @@ ERDBM.run(
         storage.bind(globalScope,'clusterRad',{defaultValue: 30});
 
 
-        storage.bind(globalScope,'chernarusSize',{defaultValue: 15400});
-        storage.bind(globalScope,'altisSize',{defaultValue: 30000});
+        storage.bind(globalScope,'chernarusSizeX',{defaultValue: 15400});
+        storage.bind(globalScope,'chernarusSizeY',{defaultValue: 15400});
+        storage.bind(globalScope,'altisSizeX',{defaultValue: 30000});
+        storage.bind(globalScope,'altisSizeY',{defaultValue: 30000});
+
+        globalScope.defaultMaps = [
+            {name: "chernarus", x:15400, y:15400},
+            {name: "altis", x:30000, y:3000}
+        ];
+
+        storage.bind(globalScope,'maps',{defaultValue:  globalScope.defaultMaps});
 
 
         // client check if the players needs to give in a server first.

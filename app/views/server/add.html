@@ -74,9 +74,8 @@
                         <div class="form-group">
                             <label class="control-label col-md-4 col-sm-4" for="RDB">Server Map * :</label>
                             <div class="col-md-6 col-sm-6">
-                                <select class="form-control selectpicker" ng-model="newServer.map">
-                                    <option value="altis">Altis</option>
-                                    <option value="chernarus">chernarus</option>
+                                <select class="form-control selectpicker" ng-model="newServer.map"
+                                        ng-options="opt.name as opt.name for opt in $parent.maps">
                                 </select>
                             </div>
                         </div>
