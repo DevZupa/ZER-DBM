@@ -27,12 +27,17 @@ angular.module('zepochRedisApp')
 		MC.instance = RS.selectedServer['ri'];
 	    MC.db = RS.selectedServer['dbi'];
 
-        if(MC.mapName == "chernarus"){
-            MC.mapsize = RS.chernarusSize;
-        }
-        if(MC.mapName == "altis"){
-            MC.mapsize = RS.altisSize;
-        }
+        MC.mapsizeX = 0;
+        MC.mapsizeY = 0;
+
+        angular.forEach(RS.maps, function(value, key) {
+           if( value.name == MC.mapName){
+               MC.mapsizeX = value.x;
+               MC.mapsizeY = value.y;
+           }
+        });
+
+
 
         MC.leafletsize = 8192;
 
@@ -430,8 +435,8 @@ angular.module('zepochRedisApp')
 
                 if (continueMarker) {
 
-                    var x = xgame / MC.mapsize * MC.leafletsize ;
-                    var y = MC.leafletsize - (ygame / MC.mapsize * MC.leafletsize);
+                    var x = xgame / MC.mapsizeX * MC.leafletsize ;
+                    var y = MC.leafletsize - (ygame / MC.mapsizeY * MC.leafletsize);
 
                     var marker = null;
                     if( JSON.stringify(value).indexOf("Epoch_Male_F") > -1) {
@@ -494,8 +499,8 @@ angular.module('zepochRedisApp')
 
                 if (continueMarker) {
 
-                    var x = xgame / MC.mapsize * MC.leafletsize ;
-                    var y = MC.leafletsize - (ygame / MC.mapsize * MC.leafletsize);
+                    var x = xgame / MC.mapsizeX * MC.leafletsize ;
+                    var y = MC.leafletsize - (ygame / MC.mapsizeY * MC.leafletsize);
 
                     var marker = null;
 
@@ -567,8 +572,8 @@ angular.module('zepochRedisApp')
 
                 if (continueMarker) {
 
-                    var x = xgame / MC.mapsize * MC.leafletsize ;
-                    var y = MC.leafletsize - (ygame / MC.mapsize * MC.leafletsize);
+                    var x = xgame / MC.mapsizeX * MC.leafletsize ;
+                    var y = MC.leafletsize - (ygame / MC.mapsizeY * MC.leafletsize);
 
                     var marker = null;
                     if(value[0].indexOf("door") > -1 || value[0].indexOf("Door") > -1 || value[0].indexOf("garage") > -1 || value[0].indexOf("Garage") > -1) {
@@ -634,8 +639,8 @@ angular.module('zepochRedisApp')
 
                     if (continueMarker) {
 
-                        var x = xgame / MC.mapsize * MC.leafletsize;
-                        var y = MC.leafletsize - (ygame / MC.mapsize * MC.leafletsize);
+                        var x = xgame / MC.mapsizeX * MC.leafletsize;
+                        var y = MC.leafletsize - (ygame / MC.mapsizeY * MC.leafletsize);
 
 
                         var marker = L.marker(MC.map.unproject([x, y], MC.map.getMaxZoom()), {icon: MC.lockIcon});
@@ -693,8 +698,8 @@ angular.module('zepochRedisApp')
 
                     if (continueMarker) {
 
-                        var x = xgame / MC.mapsize * MC.leafletsize ;
-                        var y = MC.leafletsize - (ygame / MC.mapsize * MC.leafletsize);
+                        var x = xgame / MC.mapsizeX * MC.leafletsize ;
+                        var y = MC.leafletsize - (ygame / MC.mapsizeY * MC.leafletsize);
 
 
                         var marker = L.marker(MC.map.unproject([x, y],MC.map.getMaxZoom()),{icon: MC.storageIcon});

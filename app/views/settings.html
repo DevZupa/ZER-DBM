@@ -6,7 +6,7 @@
 </ol>
 <!-- end breadcrumb -->
 <!-- begin page-header -->
-<h1 class="page-header">ER - DBM Settings <small>   </small></h1>
+<h1 class="page-header">ZR - DBM Settings <small>   </small></h1>
 <!-- end page-header -->
 
 <!-- begin row -->
@@ -19,6 +19,10 @@
                 <div class="panel-heading-btn">
                      </div>
                 <h4 class="panel-title">Servers</h4>
+            </div>
+            <div class="alert alert-success fade in">
+                <i class="fa fa-database fa-2x pull-left"></i>
+                <p>You can edit and delete servers here. Add a server with the top bar button.</p>
             </div>
             <div class="panel-body">
                 <table class="table table-striped">
@@ -47,6 +51,16 @@
                 </div>
                 <h4 class="panel-title">Maps</h4>
             </div>
+            <div class="alert alert-success fade in">
+                <i class="fa fa-globe fa-2x pull-left"></i>
+                <p>Add your own maps to this list. Be sure to have the same name as a folder with the correct tiles in the webapp this "map" folder.
+                Don't forget to define the right x and y ingame coords for the mapsizes.
+                </p>
+            </div>
+            <div class="alert alert-info fade in" style="border-radius:0px;">
+                <i class="fa fa-globe fa-2x pull-left"></i>
+                <p>Be sure your image is 8192 px width :) and use a tool like Maptiler to tile it in custom squares with no Mercurator coordinates system.</p>
+            </div>
             <div class="panel-body">
                 <table class="table table-striped">
                     <thead>
@@ -60,29 +74,25 @@
 
                     <tr ng-repeat="map in maps">
                         <td>{{$index + 1}}</td>
-                        <td><input class="form-control" type="number" ng-model="map.name"/></td>
+                        <td><input class="form-control" type="text" ng-model="map.name"/></td>
                         <td><input class="form-control" type="number" ng-model="map.x"/></td>
                         <td><input class="form-control" type="number" ng-model="map.y"/></td>
                         <td><a class="btn btn-danger" ng-click="deleteMap($index)" ><i class="fa fa-times"></i> Delete </a></td>
                     </tr>
-
-
                     <tr >
                         <td>NEW</td>
-                        <td> <input class="form-control" type="number"  ng-model="newMap.name"/></td>
+                        <td> <input class="form-control" type="text"  ng-model="newMap.name"/></td>
                         <td> <input class="form-control" type="number" ng-model="newMap.x"/></td>
                         <td> <input class="form-control" type="number"  ng-model="newMap.y"/></td>
-                        <td><a class="btn btn-danger" ng-click="saveMap()" ><i class="fa fa-plus"></i> ADD </a></td>
+                        <td><a class="btn btn-success" ng-click="saveMap()" ><i class="fa fa-plus"></i> Add </a></td>
                     </tr>
-
                 </table>
-
                 <p>
-                    Add your own maps to this list. Be sure to have the same name as a folder with the correct tiles in the webapp this "map" folder.
-                    Don't forget to define the right x and y ingame coords for the mapsizes.
-                </p>
+                      </p>
             </div>
+
         </div>
+
 
     </div>
 
@@ -94,10 +104,14 @@
             </div>
             <h4 class="panel-title">Global Settings</h4>
         </div>
+        <div class="alert alert-info fade in">
+            <i class="fa fa-database fa-2x pull-left"></i>
+            <p>Some global app settings that needs filling in. Default is always good ;)</p>
+        </div>
         <div class="panel-body panel-form">
             <form class="form-horizontal form-bordered">
                 <div class="form-group">
-                    <label class="control-label col-md-4 col-sm-4" for="scluster">Max Cluster Radius in pixels * :</label>
+                    <label class="control-label col-md-4 col-sm-4" for="scluster">Cluster radius in px:</label>
                     <div class="col-md-6 col-sm-6">
                         <input class="form-control" type="number" id="scluster" name="scluster" ng-model="$parent.clusterRad"/>
                     </div>
@@ -105,8 +119,7 @@
                 <div class="form-group">
                     <label class="control-label col-md-4 col-sm-4"></label>
                     <div class="col-md-6 col-sm-6">
-                        <button type="button" class="btn btn-primary" ng-click="">Save</button>
-                    </div>
+                       Everything saves real time. No save buttons needed. </div>
                 </div>
             </form>
         </div>

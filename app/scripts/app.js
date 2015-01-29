@@ -142,6 +142,7 @@ ERDBM.run(
         // bind functions
         globalScope.changeServer = changeServer;
         globalScope.deleteServer = deleteServer;
+        globalScope.deleteMap = deleteMap
 
         // define functions
         function changeServer (index){
@@ -157,6 +158,10 @@ ERDBM.run(
             }else{
                 $location.path('/server/add');
             }
+        }
+
+        function deleteMap (index){
+            globalScope.maps.splice(index, 1);
         }
 
         if(!globalScope.hasServers){

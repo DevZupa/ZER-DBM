@@ -33,6 +33,7 @@ ERDBM
 
         function saveMap(){
             RC.maps.push(SC.newMap);
+            SC.newMap = {};
         }
 
   });
