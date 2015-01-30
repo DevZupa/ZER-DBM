@@ -125,11 +125,26 @@ ERDBM.run(
         storage.bind(globalScope,'altisSizeY',{defaultValue: 30000});
 
         globalScope.defaultMaps = [
-            {name: "chernarus", x:15400, y:15400},
-            {name: "altis", x:30000, y:3000}
+            {name: "chernarus", x:15400, y:15400, offsetX : 0, offsetY:0},
+            {name: "altis", x:30000, y:3000, offsetX : 0, offsetY:0}
         ];
 
-        storage.bind(globalScope,'maps',{defaultValue:  globalScope.defaultMaps});
+        globalScope.mapiconsdef = [
+            {image: "walls.png", name: "wall/floor", x:32, y:37},
+            {image: "door.png", name: "door", x:32, y:37},
+            {image: "heli.png", name: "heli", x:32, y:37},
+            {image: "ship.png", name: "boat", x:32, y:37},
+            {image: "car.png", name: "vehicle", x:32, y:37},
+            {image: "atm.png", name: "atm", x:32, y:37},
+            {image: "storage.png", name: "storage", x:32, y:37},
+            {image: "lock.png", name: "lockbox", x:32, y:37},
+            {image: "male.png", name: "male", x:32, y:37},
+            {image: "female.png", name: "female", x:32, y:37}
+
+        ];
+
+       storage.bind(globalScope,'maps',{defaultValue:  globalScope.defaultMaps});
+       storage.bind(globalScope,'mapicons',{defaultValue:  globalScope.mapiconsdef});
 
 
         // client check if the players needs to give in a server first.

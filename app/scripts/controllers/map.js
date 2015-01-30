@@ -30,10 +30,15 @@ angular.module('zepochRedisApp')
         MC.mapsizeX = 0;
         MC.mapsizeY = 0;
 
+        MC.offsetX = 0;
+        MC.offsetY = 0;
+
         angular.forEach(RS.maps, function(value, key) {
            if( value.name == MC.mapName){
                MC.mapsizeX = value.x;
                MC.mapsizeY = value.y;
+               MC.offsetX =  value.offsetX;
+               MC.offsetY =  value.offsetY;
            }
         });
 
@@ -146,74 +151,74 @@ angular.module('zepochRedisApp')
 
 
         MC.buildingIcon = L.icon({
-            iconUrl: 'images/walls.png',
-            iconRetinaUrl: 'images/walls.png',
-            iconSize:[32,37],
-            iconAnchor: [16,37]
+            iconUrl: 'images/'+RS.mapicons[0].image,
+            iconRetinaUrl: 'images/'+RS.mapicons[0].image,
+            iconSize:[RS.mapicons[0].x,RS.mapicons[0].y],
+            iconAnchor: [RS.mapicons[0].x/2,RS.mapicons[0].y]
         });
 
         MC.doorIcon = L.icon({
-            iconUrl: 'images/door.png',
-            iconRetinaUrl: 'images/door.png',
-            iconSize:[32,37],
-            iconAnchor: [16,37]
+            iconUrl: 'images/'+RS.mapicons[1].image,
+            iconRetinaUrl: 'images/'+RS.mapicons[1].image,
+            iconSize:[RS.mapicons[1].x,RS.mapicons[1].y],
+            iconAnchor: [RS.mapicons[1].x/2,RS.mapicons[1].y]
         });
 
         MC.heliIcon = L.icon({
-            iconUrl: 'images/heli.png',
-            iconRetinaUrl: 'images/heli.png',
-            iconSize:[32,37],
-            iconAnchor: [16,37]
+            iconUrl:'images/'+ RS.mapicons[2].image,
+            iconRetinaUrl:'images/'+ RS.mapicons[2].image,
+            iconSize:[RS.mapicons[2].x,RS.mapicons[2].y],
+            iconAnchor: [RS.mapicons[2].x/2,RS.mapicons[2].y]
         });
 
         MC.shipIcon = L.icon({
-            iconUrl: 'images/ship.png',
-            iconRetinaUrl: 'images/ship.png',
-            iconSize:[32,37],
-            iconAnchor: [16,37]
+            iconUrl: 'images/'+RS.mapicons[3].image,
+            iconRetinaUrl:'images/'+ RS.mapicons[3].image,
+            iconSize:[RS.mapicons[3].x,RS.mapicons[3].y],
+            iconAnchor: [RS.mapicons[3].x/2,RS.mapicons[3].y]
         });
 
         MC.storageIcon = L.icon({
-            iconUrl: 'images/storage.png',
-            iconRetinaUrl: 'images/storage.png',
-            iconSize:[32,37],
-            iconAnchor: [16,37]
+            iconUrl: 'images/'+RS.mapicons[6].image,
+            iconRetinaUrl: 'images/'+RS.mapicons[6].image,
+            iconSize:[RS.mapicons[6].x,RS.mapicons[6].y],
+            iconAnchor: [RS.mapicons[6].x/2,RS.mapicons[6].y]
         });
 
 
         MC.lockIcon = L.icon({
-            iconUrl: 'images/lock.png',
-            iconRetinaUrl: 'images/lock.png',
-            iconSize:[32,37],
-            iconAnchor: [16,37]
+            iconUrl: 'images/'+RS.mapicons[7].image,
+            iconRetinaUrl:'images/'+ RS.mapicons[7].image,
+            iconSize:[RS.mapicons[7].x,RS.mapicons[7].y],
+            iconAnchor: [RS.mapicons[7].x/2,RS.mapicons[7].y]
         });
 
         MC.atmIcon = L.icon({
-            iconUrl: 'images/atm.png',
-            iconRetinaUrl: 'images/atm.png',
-            iconSize:[32,37],
-            iconAnchor: [16,37]
+            iconUrl: 'images/'+RS.mapicons[5].image,
+            iconRetinaUrl: 'images/'+RS.mapicons[5].image,
+            iconSize:[RS.mapicons[5].x,RS.mapicons[5].y],
+            iconAnchor: [RS.mapicons[5].x/2,RS.mapicons[5].y]
         });
 
         MC.carIcon = L.icon({
-            iconUrl: 'images/car.png',
-            iconRetinaUrl: 'images/car.png',
-            iconSize:[32,37],
-            iconAnchor: [16,37]
+            iconUrl: 'images/'+RS.mapicons[4].image,
+            iconRetinaUrl: 'images/'+RS.mapicons[4].image,
+            iconSize:[RS.mapicons[4].x,RS.mapicons[4].y],
+            iconAnchor: [RS.mapicons[4].x/2,RS.mapicons[4].y]
         });
 
         MC.maleIcon = L.icon({
-            iconUrl: 'images/male.png',
-            iconRetinaUrl: 'images/male.png',
-            iconSize:[32,37],
-            iconAnchor: [16,37]
+            iconUrl: 'images/'+RS.mapicons[8].image,
+            iconRetinaUrl: 'images/'+RS.mapicons[8].image,
+            iconSize:[RS.mapicons[8].x,RS.mapicons[8].y],
+            iconAnchor: [RS.mapicons[8].x/2,RS.mapicons[8].y]
         });
 
         MC.femaleIcon = L.icon({
-            iconUrl: 'images/female.png',
-            iconRetinaUrl: 'images/female.png',
-            iconSize:[32,37],
-            iconAnchor: [16,37]
+            iconUrl: 'images/'+RS.mapicons[9].image,
+            iconRetinaUrl: 'images/'+RS.mapicons[9].image,
+            iconSize:[RS.mapicons[9].x,RS.mapicons[9].y],
+            iconAnchor: [RS.mapicons[9].x/2,RS.mapicons[9].y]
         });
 
         function fillDataWindow(type, id) {
@@ -435,8 +440,8 @@ angular.module('zepochRedisApp')
 
                 if (continueMarker) {
 
-                    var x = xgame / MC.mapsizeX * MC.leafletsize ;
-                    var y = MC.leafletsize - (ygame / MC.mapsizeY * MC.leafletsize);
+                    var x = (xgame - MC.offsetX) / MC.mapsizeX * MC.leafletsize ;
+                    var y = MC.leafletsize - ((ygame - MC.offsetY)  / MC.mapsizeY * MC.leafletsize);
 
                     var marker = null;
                     if( JSON.stringify(value).indexOf("Epoch_Male_F") > -1) {
@@ -499,8 +504,8 @@ angular.module('zepochRedisApp')
 
                 if (continueMarker) {
 
-                    var x = xgame / MC.mapsizeX * MC.leafletsize ;
-                    var y = MC.leafletsize - (ygame / MC.mapsizeY * MC.leafletsize);
+                    var x = (xgame - MC.offsetX) / MC.mapsizeX * MC.leafletsize ;
+                    var y = MC.leafletsize - ((ygame - MC.offsetY)  / MC.mapsizeY * MC.leafletsize);
 
                     var marker = null;
 
@@ -572,8 +577,8 @@ angular.module('zepochRedisApp')
 
                 if (continueMarker) {
 
-                    var x = xgame / MC.mapsizeX * MC.leafletsize ;
-                    var y = MC.leafletsize - (ygame / MC.mapsizeY * MC.leafletsize);
+                    var x = (xgame - MC.offsetX) / MC.mapsizeX * MC.leafletsize ;
+                    var y = MC.leafletsize - ((ygame - MC.offsetY)  / MC.mapsizeY * MC.leafletsize);
 
                     var marker = null;
                     if(value[0].indexOf("door") > -1 || value[0].indexOf("Door") > -1 || value[0].indexOf("garage") > -1 || value[0].indexOf("Garage") > -1) {
@@ -639,8 +644,8 @@ angular.module('zepochRedisApp')
 
                     if (continueMarker) {
 
-                        var x = xgame / MC.mapsizeX * MC.leafletsize;
-                        var y = MC.leafletsize - (ygame / MC.mapsizeY * MC.leafletsize);
+                        var x = (xgame - MC.offsetX) / MC.mapsizeX * MC.leafletsize;
+                        var y = MC.leafletsize - ((ygame - MC.offsetY)  / MC.mapsizeY * MC.leafletsize);
 
 
                         var marker = L.marker(MC.map.unproject([x, y], MC.map.getMaxZoom()), {icon: MC.lockIcon});
@@ -698,8 +703,8 @@ angular.module('zepochRedisApp')
 
                     if (continueMarker) {
 
-                        var x = xgame / MC.mapsizeX * MC.leafletsize ;
-                        var y = MC.leafletsize - (ygame / MC.mapsizeY * MC.leafletsize);
+                        var x = (xgame - MC.offsetX) / MC.mapsizeX * MC.leafletsize ;
+                        var y = MC.leafletsize - ((ygame - MC.offsetY) / MC.mapsizeY * MC.leafletsize);
 
 
                         var marker = L.marker(MC.map.unproject([x, y],MC.map.getMaxZoom()),{icon: MC.storageIcon});

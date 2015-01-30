@@ -64,7 +64,7 @@
             <!-- begin header navigation right -->
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown navbar-user">
-                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                    <a ng-show="servers.length > 0" class="dropdown-toggle" data-toggle="dropdown">
                         <span class="fa fa-database fa-1x"> </span>
                         <span class="" style="padding-left:10px;"> {{selectedServer.name}}</span>
                     </a>
@@ -82,8 +82,8 @@
         <!-- begin sidebar scrollbar -->
         <div data-scrollbar="true" data-height="100%">
             <!-- begin sidebar user -->
-            <ul class="nav">
-                <li class="nav-profile">
+            <ul class="z-hide nav ">
+                <li class="nav-profile " >
                     <div class="image">
                         <img src="http://epochmod.com/epoch_logo.png" alt="" />
                     </div>
@@ -96,82 +96,82 @@
             <!-- end sidebar user -->
             <!-- begin sidebar nav -->
             <ul class="nav">
-                <li class="nav-header">Navigation</li>
+                <li class="z-hide nav-header">Navigation</li>
 
                <li class="active" id="dashboard">
                    <a href="#/" >
-                       <b class="fa fa-caret-right pull-right"></b>
+                       <b class="fa fa-caret-right pull-right z-hide"></b>
                        <i class="fa fa-laptop"></i>
-                       <span>Dashboard</span>
+                       <span class="z-hide">Dashboard</span>
                    </a>
                </li>
                 <!--   <li id="players">
                    <a href="#/players">
-                       <span class="pull-right fa fa-caret-right"></span>
+                       <span class=" z-hide pull-right fa fa-caret-right"></span>
                        <i class="fa fa-users"></i>
-                       <span>Players</span>
+                       <span class="z-hide">Players</span>
                    </a>
 
                </li >
                <li id="banks">
                    <a href="#/banks">
-                       <span class="pull-right fa fa-caret-right"></span>
+                       <span class=" z-hide pull-right fa fa-caret-right"></span>
                        <i class="fa fa-bank"></i>
-                       <span>Banks</span>
+                       <span class="z-hide">Banks</span>
                    </a>
                </li>
                <li id="vehicles">
                    <a href="#/vehicles">
-                       <b class="fa fa-caret-right pull-right"></b>
+                       <b class=" z-hide fa fa-caret-right pull-right"></b>
                        <i class="fa fa-car"></i>
-                       <span>Vehicles</span>
+                       <span class="z-hide">Vehicles</span>
                    </a>
 
                </li>
                <li id="buildings">
                    <a href="#/buildings">
-                       <b class="fa fa-caret-right pull-right"></b>
+                       <b class="z-hide fa fa-caret-right pull-right"></b>
                        <i class="fa fa-home"></i>
-                       <span>Buildings</span>
+                       <span class="z-hide">Buildings</span>
                    </a>
 
                </li>
                <li id="traders">
                    <a href="#/map2">
-                       <b class="fa fa-caret-right pull-right"></b>
+                       <b class="z-hide fa fa-caret-right pull-right"></b>
                        <i class="fa fa-th"></i>
-                       <span>Traders</span>
+                       <span class="z-hide">Traders</span>
                    </a>
                </li>
                -->
                 <li id="map">
                     <a href="#/map">
-                        <b class="fa fa-caret-right pull-right"></b>
+                        <b class="z-hide fa fa-caret-right pull-right"></b>
                         <i class="fa fa-map-marker"></i>
-                        <span>Map</span>
+                        <span class="z-hide">Map</span>
                     </a>
                 </li>
                 <!--
                 <li id="deathlogs">
                     <a href="#/deathlogs">
-                        <b class="fa fa-caret-right pull-right"></b>
+                        <b class="z-hide fa fa-caret-right pull-right"></b>
                         <i class="fa fa-bars"></i>
-                        <span>Death Logs</span>
+                        <span class="z-hide">Death Logs</span>
                     </a>
                 </li>
                 <li id="adminlogs">
                     <a href="#/adminlogs">
-                        <b class="fa fa-caret-right pull-right"></b>
+                        <b class="z-hide fa fa-caret-right pull-right"></b>
                         <i class="fa fa-user-md"></i>
-                        <span>Admin Logs</span>
+                        <span class="z-hide">Admin Logs</span>
                     </a>
                 </li>
                 -->
                 <li id="settings">
                     <a href="#/settings">
-                        <b class="fa fa-caret-right pull-right"></b>
+                        <b class="z-hide fa fa-caret-right pull-right"></b>
                         <i class="fa fa-gears"></i>
-                        <span>ZR-DBM Settings</span>
+                        <span class="z-hide">ZR-DBM Settings</span>
                     </a>
                 </li>
             </ul>

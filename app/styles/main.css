@@ -105,3 +105,31 @@
     font-size: 18px;
     line-height: 30px;
 }
+
+@media (max-width: 767px) {
+    .sidebar {
+        position: fixed;
+        width: 40px;
+        padding-top: 0;
+        z-index: 1030;
+        left:0;
+        overflow: hidden;
+    }
+    .content, .page-sidebar-minifed .content {
+        margin-left: 40px !important;
+    }
+
+    .navbar{
+        margin-left:40px;
+    }
+    .z-hide{
+        display:none;
+    }
+
+    .sidebar .nav>li>a {
+        padding: 8px 10px;
+        line-height: 20px;
+        color: #a8acb1;
+    }
+}
+

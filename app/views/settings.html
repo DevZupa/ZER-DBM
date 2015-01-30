@@ -24,7 +24,7 @@
                 <i class="fa fa-database fa-2x pull-left"></i>
                 <p>You can edit and delete servers here. Add a server with the top bar button.</p>
             </div>
-            <div class="panel-body">
+            <div class="panel-body panel-form">
                 <table class="table table-striped">
                     <thead>
                     <tr>
@@ -61,7 +61,7 @@
                 <i class="fa fa-globe fa-2x pull-left"></i>
                 <p>Be sure your image is 8192 px width :) and use a tool like Maptiler to tile it in custom squares with no Mercurator coordinates system.</p>
             </div>
-            <div class="panel-body">
+            <div class="panel-body panel-form">
                 <table class="table table-striped">
                     <thead>
                     <tr>
@@ -71,19 +71,33 @@
                         <th>Y</th>
                         <th>Delete</th>
                     </tr>
-
-                    <tr ng-repeat="map in maps">
+                    <tbody ng-repeat="map in maps">
+                    <tr >
                         <td>{{$index + 1}}</td>
                         <td><input class="form-control" type="text" ng-model="map.name"/></td>
                         <td><input class="form-control" type="number" ng-model="map.x"/></td>
                         <td><input class="form-control" type="number" ng-model="map.y"/></td>
                         <td><a class="btn btn-danger" ng-click="deleteMap($index)" ><i class="fa fa-times"></i> Delete </a></td>
                     </tr>
+                    <tr>
+                        <td></td>
+                        <td>Offset</td>
+                        <td><input class="form-control" type="number" ng-model="map.offsetX"/></td>
+                        <td><input class="form-control" type="number" ng-model="map.offsetY"/></td>
+                    </tr>
+                    </tbody>
                     <tr >
                         <td>NEW</td>
                         <td> <input class="form-control" type="text"  ng-model="newMap.name"/></td>
                         <td> <input class="form-control" type="number" ng-model="newMap.x"/></td>
                         <td> <input class="form-control" type="number"  ng-model="newMap.y"/></td>
+                        <td></td>
+                    </tr>
+                    <tr >
+                        <td></td>
+                        <td>Offset</td>
+                        <td> <input class="form-control" type="number" ng-model="newMap.offsetX"/></td>
+                        <td> <input class="form-control" type="number"  ng-model="newMap.offsetY"/></td>
                         <td><a class="btn btn-success" ng-click="saveMap()" ><i class="fa fa-plus"></i> Add </a></td>
                     </tr>
                 </table>
@@ -98,34 +112,66 @@
 
 
     <div class="col-md-6">
-    <div class="panel panel-inverse">
-        <div class="panel-heading">
-            <div class="panel-heading-btn">
+        <div class="panel panel-inverse">
+            <div class="panel-heading">
+                <div class="panel-heading-btn">
+                </div>
+                <h4 class="panel-title">Global Settings</h4>
             </div>
-            <h4 class="panel-title">Global Settings</h4>
-        </div>
-        <div class="alert alert-info fade in">
-            <i class="fa fa-database fa-2x pull-left"></i>
-            <p>Some global app settings that needs filling in. Default is always good ;)</p>
-        </div>
-        <div class="panel-body panel-form">
-            <form class="form-horizontal form-bordered">
-                <div class="form-group">
-                    <label class="control-label col-md-4 col-sm-4" for="scluster">Cluster radius in px:</label>
-                    <div class="col-md-6 col-sm-6">
-                        <input class="form-control" type="number" id="scluster" name="scluster" ng-model="$parent.clusterRad"/>
+            <div class="alert alert-info fade in">
+                <i class="fa fa-gear fa-2x pull-left"></i>
+                <p>Some global app settings that needs filling in. Default is always good ;)</p>
+            </div>
+            <div class="panel-body panel-form">
+                <form class="form-horizontal form-bordered">
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4" for="scluster">Cluster radius in px:</label>
+                        <div class="col-md-6 col-sm-6">
+                            <input class="form-control" type="number" id="scluster" name="scluster" ng-model="$parent.clusterRad"/>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-md-4 col-sm-4"></label>
-                    <div class="col-md-6 col-sm-6">
-                       Everything saves real time. No save buttons needed. </div>
-                </div>
-            </form>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4"></label>
+                        <div class="col-md-6 col-sm-6">
+                           Everything saves real time. No save buttons needed. </div>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
 
-</div>
+        <div class="panel panel-inverse">
+            <div class="panel-heading">
+                <div class="panel-heading-btn">
+                </div>
+                <h4 class="panel-title">Map Icon Settings</h4>
+            </div>
+            <div class="alert alert-info fade in">
+                <i class="fa fa-file-image-o fa-2x pull-left"></i>
+                <p>Specify your map images, place the images in your image folder! </p>
+            </div>
+            <div class="panel-body panel-form">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>IMG</th>
+                        <th>Name</th>
+                        <th>Width</th>
+                        <th>Height</th>
+                        <th>File</th>
+                    </tr>
+
+                    <tr ng-repeat="icon in $parent.mapicons">
+                        <td><img ng-src='images/{{icon.image}}' style="max-width: 95%;"/></td>
+                        <td>{{icon.name}}</td>
+                        <td><input class="form-control" type="number" ng-model="icon.x"/></td>
+                        <td><input class="form-control" type="number" ng-model="icon.y"/></td>
+                        <td><input class="form-control" type="text" ng-model="icon.image"/></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
 
 
 </div>
