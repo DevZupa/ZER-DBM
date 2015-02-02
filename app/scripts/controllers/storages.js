@@ -69,7 +69,12 @@ ERDBM
                     if(data[0].indexOf("LockBoxProxy_EPOCH") > -1) {
                         vehicle.type = "lock";
                     }else {
-                        vehicle.type = "storage";
+                        if(data[0].indexOf("StorageShelf_EPOCH") > -1) {
+                            vehicle.type = "shelve";
+                        }else {
+                            vehicle.type = "storage";
+                        }
+
                     }
 
                     vehicle.owner = data[5][0];

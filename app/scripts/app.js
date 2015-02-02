@@ -151,7 +151,8 @@ ERDBM.run(
             {image: "storage.png", name: "storage", x:32, y:37},
             {image: "lock.png", name: "lockbox", x:32, y:37},
             {image: "male.png", name: "male", x:32, y:37},
-            {image: "female.png", name: "female", x:32, y:37}
+            {image: "female.png", name: "female", x:32, y:37},
+            {image: "shelve.png", name: "shelve", x:32, y:37}
         ];
 
        storage.bind(globalScope,'mapRefresh',{defaultValue:  60});
@@ -159,7 +160,10 @@ ERDBM.run(
        storage.bind(globalScope,'mapicons',{defaultValue:  globalScope.mapiconsdef});
        storage.bind(globalScope,'leafletsize',{defaultValue:  8192});
 
-       globalScope.maps =  globalScope.defaultMaps;
+
+        if(globalScope.mapicons.length < 11){
+            globalScope.mapicons = globalScope.mapiconsdef;
+        }
 
         // client check if the players needs to give in a server first.
         globalScope.hasServers = false;

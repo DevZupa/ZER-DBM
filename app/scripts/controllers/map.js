@@ -176,11 +176,18 @@ angular.module('zepochRedisApp')
         });
 
         MC.storageIcon = L.icon({
+            iconUrl: 'images/'+RS.mapicons[10].image,
+            iconRetinaUrl: 'images/'+RS.mapicons[10].image,
+            iconSize:[RS.mapicons[6].x,RS.mapicons[10].y],
+            iconAnchor: [RS.mapicons[6].x/2,RS.mapicons[10].y]
+        });
+        MC.tentIcon = L.icon({
             iconUrl: 'images/'+RS.mapicons[6].image,
             iconRetinaUrl: 'images/'+RS.mapicons[6].image,
             iconSize:[RS.mapicons[6].x,RS.mapicons[6].y],
             iconAnchor: [RS.mapicons[6].x/2,RS.mapicons[6].y]
         });
+
 
 
         MC.lockIcon = L.icon({
@@ -714,9 +721,11 @@ angular.module('zepochRedisApp')
                         var x = (xgame - MC.offsetX) / MC.mapsizeX * MC.leafletsize ;
                         var y = MC.leafletsize - ((ygame - MC.offsetY) / MC.mapsizeY * MC.leafletsize);
 
-
-                        var marker = L.marker(MC.map.unproject([x, y],MC.map.getMaxZoom()),{icon: MC.storageIcon});
-
+                        if(value[0].indexOf("StorageShelf_EPOCH") > -1 ) {
+                            var marker = L.marker(MC.map.unproject([x, y], MC.map.getMaxZoom()), {icon: MC.storageIcon});
+                        }else{
+                            var marker = L.marker(MC.map.unproject([x, y], MC.map.getMaxZoom()), {icon: MC.tentIcon});
+                        }
                         MC.storageMarkers.push(marker);
 
                         var popupContent = '<div>' +
