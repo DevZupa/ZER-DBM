@@ -110,7 +110,7 @@ ERDBM.config(function ($routeProvider) {
   });
 
 ERDBM.run(
-    function($rootScope,storage,$route,$location) {
+    function($rootScope,storage,$location,$route) {
 
         //bind that stupid $name to something more useable.
         var globalScope = $rootScope;
@@ -180,7 +180,8 @@ ERDBM.run(
         // define functions
         function changeServer (index){
             globalScope.selectedServer = globalScope.servers[index];
-            $location.path( "/" );
+            $route.reload();
+
         }
 
         function deleteServer ( index){
