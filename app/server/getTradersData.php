@@ -26,6 +26,8 @@ if ( md5($myRedisPass) == $password ) {
 Predis\Autoloader::register();
 
 $client = new Predis\Client([
+    
+    'scheme' => 'tcp',
     'host'   => $myRedisHost,
     'password' => $myRedisPass,
 	'port' => $myRedisPort,

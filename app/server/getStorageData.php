@@ -26,6 +26,7 @@ if ( md5($myRedisPass) == $password ) {
 Predis\Autoloader::register();
 
 $client = new Predis\Client([
+    'scheme' => 'tcp',
    'host'   => $myRedisHost,
     'password' => $myRedisPass,
 	'port' => $myRedisPort,
@@ -44,9 +45,9 @@ foreach($storages as $op) {
     $storageD = $client-> get($op);
 
     if($storageData == '['){
-        $storageData = $storageData . $storageD;
+        $storageData = $storageData .'["'.$op.'",'.$storageD .']';
     }else{
-        $storageData = $storageData . ',' .$storageD;
+        $storageData = $storageData . ',["'.$op.'",'.$storageD .']';
     }
     
 }

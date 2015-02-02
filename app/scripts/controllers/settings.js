@@ -19,9 +19,14 @@ ERDBM
 
         SC.serverssettings = RC.servers;
 
+        SC.importObject = "";
+
         SC.editServer = editServer;
+        SC.exportServer = exportServer;
 
         SC.saveMap = saveMap;
+
+        SC.importServer = importServer;
 
         SC.clusterRadius = RC.clusterRad;
 
@@ -34,6 +39,17 @@ ERDBM
         function saveMap(){
             RC.maps.push(SC.newMap);
             SC.newMap = {};
+        }
+
+        function importServer(){
+            RC.servers.push(JSON.parse(SC.importObject));
+            SC.importObject = "";
+        }
+
+        function exportServer(index){
+            SC.master = angular.copy(SC.serverssettings[index]);
+            delete SC.master.$$hashKey;
+            SC.importObject = JSON.stringify(SC.master);
         }
 
   });

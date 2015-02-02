@@ -1,0 +1,72 @@
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="page-header">Building - {{key}} <small> - {{selectedServer.ip}} : {{selectedServer.port}} - {{selectedServer.name}}</small></h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+<div class="panel panel-inverse">
+    <div class="panel-heading">
+        <div class="panel-heading-btn">
+        </div>
+        <h4 class="panel-title">Building details.</h4>
+    </div>
+    <div class="alert alert-info fade in">
+        <i class="fa fa-gear fa-2x pull-left"></i>
+        <p>{{showMessage}}</p>
+    </div>
+    <div class="panel-body panel-form">
+        <form class="form-horizontal form-bordered">
+            <div class="form-group">
+                <label class="control-label col-md-2 col-sm-2" >Name</label>
+                <div class="col-md-8 col-sm-8">
+                    {{player.name}}
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2 col-sm-2" >Key</label>
+                <div class="col-md-8 col-sm-8">
+                    {{key}}
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2 col-sm-2" >X Coordinate</label>
+                <div class="col-md-8 col-sm-8">
+                    {{player.x}}
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2 col-sm-2" >Y Coordinate</label>
+                <div class="col-md-8 col-sm-8">
+                    {{player.y}}
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2 col-sm-2" >Repair data</label>
+                <div class="col-md-8 col-sm-8">
+                    {{player.medical}} {{player.medical2}}
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2 col-sm-2" >Gear</label>
+                <div class="col-md-8 col-sm-8">
+                    {{player.gear}}
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2 col-sm-2" >Owner</label>
+                <div class="col-md-8 col-sm-8">
+                    <a ng-click="seePlayer('{{player.owner}}')" class="btn btn-success m-r-5"><i class="fa fa-search"></i> {{player.owner}}</a>
+
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+</div>
+</div>

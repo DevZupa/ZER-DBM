@@ -18,6 +18,7 @@ angular.module('zepochRedisApp')
         var RS = $rootScope;
 
         SAC.addServer = addServer;
+        SAC.importServer = importServer;
 
         SAC.newServer = {
             serverUrl : "server/"
@@ -46,6 +47,12 @@ angular.module('zepochRedisApp')
             $location.path( "/settings" );
 
         };
+
+        function importServer(){
+            RS.servers.push(JSON.parse(SAC.importObject));
+            SAC.importObject = "";
+            $location.path( "/settings" );
+        }
 
 
 

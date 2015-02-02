@@ -10,10 +10,10 @@
             <div class="stats-icon"><i class="fa fa-group"></i></div>
             <div class="stats-info">
                 <h4>ONLINE PLAYERS</h4>
-                <p>2</p>
+                <p>{{onlinePlayers}}</p>
             </div>
             <div class="stats-link">
-                <a href="javascript:;">Player View <i class="fa fa-arrow-circle-o-right"></i></a>
+                <a ng-click="changeLoc('/map')">Map View <i class="fa fa-arrow-circle-o-right"></i></a>
             </div>
         </div>
     </div>
@@ -24,10 +24,10 @@
             <div class="stats-icon"><i class="fa fa-car"></i></div>
             <div class="stats-info">
                 <h4>CURRENT VEHICLES</h4>
-                <p>165</p>
+                <p>{{vehicles}}</p>
             </div>
             <div class="stats-link">
-                <a href="javascript:;">Vehicle View <i class="fa fa-arrow-circle-o-right"></i></a>
+                <a ng-click="changeLoc('/vehicles')">Vehicle View <i class="fa fa-arrow-circle-o-right"></i></a>
             </div>
         </div>
     </div>
@@ -38,10 +38,10 @@
             <div class="stats-icon"><i class="fa fa-building-o"></i></div>
             <div class="stats-info">
                 <h4>CURRENT BUILDINGS</h4>
-                <p>1242</p>
+                <p>{{buildings}}</p>
             </div>
             <div class="stats-link">
-                <a href="javascript:;">Buildings View <i class="fa fa-arrow-circle-o-right"></i></a>
+                <a ng-click="changeLoc('/buildings')">Buildings View <i class="fa fa-arrow-circle-o-right"></i></a>
             </div>
         </div>
     </div>
@@ -52,10 +52,10 @@
             <div class="stats-icon"><i class="fa fa-child"></i></div>
             <div class="stats-info">
                 <h4>UNIQUE PLAYERS</h4>
-                <p>120</p>
+                <p>{{players}}</p>
             </div>
             <div class="stats-link">
-                <a href="javascript:;">Players View <i class="fa fa-arrow-circle-o-right"></i></a>
+                <a ng-click="changeLoc('/players')">Players View <i class="fa fa-arrow-circle-o-right"></i></a>
             </div>
         </div>
     </div>
@@ -63,7 +63,7 @@
 </div>
 
 <div class="row">
-    <!-- begin col-3 -->
+    <!-- begin col-3
     <div class="col-md-3 col-sm-6">
         <div class="widget widget-stats bg-green">
             <div class="stats-icon"><i class="fa fa-bank"></i></div>
@@ -83,10 +83,10 @@
             <div class="stats-icon"><i class="fa fa-gift"></i></div>
             <div class="stats-info">
                 <h4>TRADERS</h4>
-                <p>50</p>
+                <p>{{traders}}</p>
             </div>
             <div class="stats-link">
-                <a href="javascript:;">Trader View <i class="fa fa-arrow-circle-o-right"></i></a>
+                <a ng-click="changeLoc('/traders')">Trader View <i class="fa fa-arrow-circle-o-right"></i></a>
             </div>
         </div>
     </div>
@@ -100,12 +100,12 @@
                 <p>1</p>
             </div>
             <div class="stats-link">
-                <a href="javascript:;">Map View <i class="fa fa-arrow-circle-o-right"></i></a>
+                <a ng-click="changeLoc('/map')">Map View <i class="fa fa-arrow-circle-o-right"></i></a>
             </div>
         </div>
     </div>
     <!-- end col-3 -->
-    <!-- begin col-3 -->
+    <!-- begin col-3
     <div class="col-md-3 col-sm-6">
         <div class="widget widget-stats bg-red">
             <div class="stats-icon"><i class="fa fa-thumbs-down "></i></div>

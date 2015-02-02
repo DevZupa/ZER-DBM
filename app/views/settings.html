@@ -32,6 +32,7 @@
                         <th>Server</th>
                         <th>Edit</th>
                         <th>Delete</th>
+                        <th>Export Data</th>
                     </tr>
 
                     <tr ng-repeat="server in serverssettings">
@@ -39,6 +40,12 @@
                         <td>{{server.name}}</td>
                         <td><a class="btn btn-info"  ng-click="editServer($index)" ><i class="fa fa-edit"></i> Edit </a></td>
                         <td><a class="btn btn-danger" ng-click="deleteServer($index)" ><i class="fa fa-times"></i> Delete </a></td>
+                        <td><a class="btn btn-warning" ng-click="exportServer($index)" ><i class="fa  fa-arrow-right"></i> Export </a></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4"><input class="form-control" type="text" ng-model="importObject"/></td>
+                        <td><a class="btn btn-success" ng-click="importServer()" ><i class="fa fa-arrow-left"></i> Import </a></td>
                     </tr>
 
                 </table>
@@ -59,7 +66,7 @@
             </div>
             <div class="alert alert-info fade in" style="border-radius:0px;">
                 <i class="fa fa-globe fa-2x pull-left"></i>
-                <p>Be sure your image is 8192 px width :) and use a tool like Maptiler to tile it in custom squares with no Mercurator coordinates system.</p>
+                <p>Be sure your image is 8192 px width  and use a tool like Maptiler to tile it in custom squares with no Mercurator coordinates system.</p>
             </div>
             <div class="panel-body panel-form">
                 <table class="table table-striped">
@@ -102,7 +109,7 @@
                     </tr>
                 </table>
                 <p>
-                      </p>
+                </p>
             </div>
 
         </div>
@@ -128,6 +135,18 @@
                         <label class="control-label col-md-4 col-sm-4" for="scluster">Cluster radius in px:</label>
                         <div class="col-md-6 col-sm-6">
                             <input class="form-control" type="number" id="scluster" name="scluster" ng-model="$parent.clusterRad"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4" for="maptime">Map refresh Timer:</label>
+                        <div class="col-md-6 col-sm-6">
+                            <input class="form-control" type="number" id="maptime" name="maptime" ng-model="$parent.mapRefresh"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4" for="mapleafletsize">Leaflet Size:</label>
+                        <div class="col-md-6 col-sm-6">
+                            <input class="form-control" type="number" id="mapleafletsize" name="mapleafletsize" ng-model="$parent.leafletsize"/>
                         </div>
                     </div>
                     <div class="form-group">

@@ -8,7 +8,7 @@
  * Controller of the zepochRedisApp
  */
 angular.module('zepochRedisApp')
-  .controller('MapCtrl', function ($scope,storage,$http,$rootScope) {
+  .controller('MapCtrl', function ($scope,storage,$http,$rootScope,$interval) {
         $(".nav li").removeClass("active");
 
         $("#map").addClass("active");
@@ -42,10 +42,7 @@ angular.module('zepochRedisApp')
            }
         });
 
-
-
-        MC.leafletsize = 8192;
-
+        MC.leafletsize = RS.leafletsize;
 
         MC.csm = [];
         MC.spuid = "";
@@ -335,6 +332,9 @@ angular.module('zepochRedisApp')
 
         function filterLocks(data){
                 angular.forEach(data, function (value, key) {
+
+                    value = value[1];
+
                     if (typeof value !== 'undefined') {
                         if (typeof value[0] !== 'undefined') {
                             if (typeof value[1] !== 'undefined') {
@@ -354,6 +354,8 @@ angular.module('zepochRedisApp')
         }
 
         function filterVehicles(data){
+
+
             angular.forEach(data, function (value, key) {
                 if (typeof value !== 'undefined') {
                     if (typeof value[0] !== 'undefined') {
@@ -370,6 +372,8 @@ angular.module('zepochRedisApp')
 
         function filterBuildings(data){
             angular.forEach(data, function (value, key) {
+                value = value[1];
+
                 if (typeof value !== 'undefined') {
                     if (typeof value[0] !== 'undefined') {
                         if (typeof value[1] !== 'undefined') {
@@ -483,6 +487,8 @@ angular.module('zepochRedisApp')
 
             angular.forEach(MC.vehicles, function (value, key) {
 
+                value = value[1];
+
                 var xgame = 0;
                 var ygame = 0;
 
@@ -555,6 +561,8 @@ angular.module('zepochRedisApp')
         function fillBuildingMarkers() {
             if(MC.showBuildings) {
             angular.forEach(MC.buildings, function (value, key) {
+
+                value = value[1];
 
                 var xgame = 0;
                 var ygame = 0;
@@ -742,10 +750,11 @@ angular.module('zepochRedisApp')
 
     
 
-	function getOnlinePlayers() {
+        function getOnlinePlayers() {
 		
-        $http.post(MC.serverURL + 'getOnlinePlayers.php?date='+ new Date().getTime(),{secret: String(MC.secretCode) , instance: MC.instance, db : MC.db }).
+            $http.post(MC.serverURL + 'getOnlinePlayers.php?date='+ new Date().getTime(),{secret: String(MC.secretCode) , instance: MC.instance, db : MC.db }).
             success(function(dataOPlayers, status, headers, config) {
+                MC.onlinePlayers = [];
                 MC.onlinePlayers = dataOPlayers;
                 MC.playerCount = MC.onlinePlayers.length;
             }).
@@ -753,31 +762,36 @@ angular.module('zepochRedisApp')
                 //    alert("Could not connect to php backend - Online Players");
             });
 			}
-function getPlayersData() {
-        $http.post(MC.serverURL + 'getPlayersData.php?date='+ new Date().getTime(),{secret: String(MC.secretCode) , instance: MC.instance, db : MC.db }).
+        function getPlayersData() {
+         $http.post(MC.serverURL + 'getPlayersData.php?date='+ new Date().getTime(),{secret: String(MC.secretCode) , instance: MC.instance, db : MC.db }).
             success(function(dataPlayers, status, headers, config) {
                 MC.players = dataPlayers;
                 fillPlayerMarkers();
+                removePlayerMarkers();
             }).
             error(function(data, status, headers, config) {
                 //   alert("Could not connect to php backend - Players Data");
             });
 			}
-function getVehicleData(){
-        $http.post(MC.serverURL + 'getVehicleData.php?date='+ new Date().getTime(),{secret: String(MC.secretCode) , instance: MC.instance, db : MC.db }).
+        function getVehicleData(){
+          $http.post(MC.serverURL + 'getVehicleData.php?date='+ new Date().getTime(),{secret: String(MC.secretCode) , instance: MC.instance, db : MC.db }).
             success(function(data, status, headers, config) {
+                MC.vehicles = [];
                 filterVehicles(data);
+                removeVehicleMarkers();
                 fillVehicleMarkers();
             }).
             error(function(data, status, headers, config) {
                // alert("Could not connect to php backend - Vehicles Data");
             });
-}
-function getBuildingData(){
-        $http.post(MC.serverURL + 'getBuildingData.php?date='+ new Date().getTime(),{"secret": String(MC.secretCode) , "instance": MC.instance, "db" : MC.db }).
+        }
+        function getBuildingData(){
+          $http.post(MC.serverURL + 'getBuildingData.php?date='+ new Date().getTime(),{"secret": String(MC.secretCode) , "instance": MC.instance, "db" : MC.db }).
             success(function(data, status, headers, config) {
+                MC.buildings = [];
                 MC.buildings = data;
                 MC.buildingCount = MC.buildings.length;
+                removeBuildingMarkers();
                 fillBuildingMarkers();
             }).
             error(function(data, status, headers, config) {
@@ -785,13 +799,15 @@ function getBuildingData(){
             });
 
 
-}
-function getStorageDate(){
-        $http.post(MC.serverURL + 'getStorageData.php?date='+ new Date().getTime(),{secret: String(MC.secretCode) , instance: MC.instance, db : MC.db }).
+        }
+        function getStorageDate(){
+            $http.post(MC.serverURL + 'getStorageData.php?date='+ new Date().getTime(),{secret: String(MC.secretCode) , instance: MC.instance, db : MC.db }).
             success(function(data, status, headers, config) {
-
+                MC.locks = [];
+                MC.storage = [];
                 filterLocks(data);
-
+                removeLockMarkers();
+                removeStorageMarkers();
                 fillStorageMarkers();
                 fillLockMarkers();
             }).
@@ -800,10 +816,25 @@ function getStorageDate(){
             });
 			}
 
+        MC.loadAllData = loadAllData;
+
+        function loadAllData(){
+            getStorageDate();
+            getBuildingData();
+            getVehicleData();
+            getPlayersData();
+            getOnlinePlayers();
+        }
+
+        if( RS.mapRefresh != 0){
+            MC.refreshInterval = $interval( MC.loadAllData, RS.mapRefresh * 1000);
+            MC.$on('$destroy', function() {
+                $interval.cancel(MC.refreshInterval);
+            });
+        }
+
         init();
-		getStorageDate();
-		getBuildingData();
-		getVehicleData();
-		getPlayersData();
-		getOnlinePlayers();
+        loadAllData();
+
+
     });

@@ -1,51 +1,93 @@
 <div class="row">
     <div class="col-md-12">
-        <h1 class="page-header">Players <small> - {{selectedServer.ip}} : {{selectedServer.port}} - {{selectedServer.name}}</small></h1>
+        <h1 class="page-header">Player <small> - {{selectedServer.ip}} : {{selectedServer.port}} - {{selectedServer.name}}</small></h1>
     </div>
 </div>
+
 <div class="row">
     <div class="col-md-12">
         <div class="panel panel-inverse" style="margin-bottom:0;">
             <div class="panel-heading">
-                <div class="panel-heading-btn">
-                    <!--
-                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
-                    -->
-                </div>
-
                 <form class="form-inline">
-                    <h4 class="panel-title">Players
-                        <div class="form-group m-r-10">
-                            <input type="search" class="form-control input-sm" ng-model="search" ng-change="filter()" placeholder="filter" style="margin-left:10px;">
-                        </div>
+                    <h4 class="panel-title">Players Sex
+                        <i class="fa fa-spinner fa-2x fa-spin" ng-show="loadingData"></i><span ng-show="loadingData">  Loading players.</span>
+                    </h4>
                 </form>
-                </h4>
+
             </div>
-            <div class="panel-body">
+            <div class="alert alert-warning fade in">
+                <i class="fa fa-exclamation-triangle fa-2x pull-left"></i>
+                <p>Only players that have an alive character will get shown in this list.
+                </p>
+            </div>
+            <div class="panel-body panel-form">
                 <table class="table-striped table">
                     <tr>
-                        <th>Name</th>
-                        <th>PUID</th>
                         <th>Sex</th>
-                        <th style="width:50px;">Edit</th>
+                        <th>#</th>
                     </tr>
-                    <tr ng-repeat="player in filtered = (players | filter:search) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
-                        <td>{{player.name}}</td>
-                        <td>{{player.puid}}</td>
-                        <td>{{player.sex}}</td>
-                        <td><a href="javascript:;" ng-click="edit(player.puid)" class="btn btn-info m-r-5"><i class="fa fa-edit"></i> Edit</a></td>
+                    <tr>
+                        <td><img src="images/male.png" /></td>
+                        <td>{{males}}</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/female.png" /></td>
+                        <td>{{females}}</td>
                     </tr>
                 </table>
 
-                <pagination data-boundary-links="true" data-num-pages="noOfPages" data-current-page="currentPage" max-size="maxSize" class="pagination-small" data-previous-text="&laquo;" data-next-text="&raquo;"></pagination>
 
             </div>
         </div>
     </div>
+</div>
 
-
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-inverse" style="margin-bottom:0;">
+            <div class="panel-heading">
+                <form class="form-inline">
+                    <h4 class="panel-title">{{playersCount}} Players
+                        <div class="form-group m-r-10">
+                            <input type="search" class="form-control input-sm" ng-model="search"  placeholder="filter" style="margin-left:10px;">
+                            <input type="number" class="form-control input-sm" ng-model="pageSize"  placeholder="pagesize" style="margin-left:10px;" min="1" max="200">
+                        </div>
+                        <i class="fa fa-spinner fa-2x fa-spin" ng-show="loadingData"></i>  <span ng-show="loadingData">Loading players.</span>
+                        <span><a ng-click="refreshData()" class="btn btn-info btn-sm" style="margin-top:10px;" > <i class="fa fa-refresh" > Refresh Data</i></a></span>
+                    </h4>
+                </form>
+            </div>
+            <div class="alert alert-warning fade in">
+                <i class="fa fa-exclamation-triangle fa-2x pull-left"></i>
+                <p>Only players that have an alive character will get shown in this list.
+                </p>
+            </div>
+            <div class="panel-body panel-form">
+                <table class="table-striped table">
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>PUID</th>
+                        <th>Sex</th>
+                        <th>Position</th>
+                        <th>Uniform</th>
+                        <th style="width:50px;">View</th>
+                    </tr>
+                    <tr dir-paginate="player in players | filter:search | itemsPerPage: pageSize" current-page="currentPage">
+                        <td>{{$index}}</td>
+                        <td>{{player.name}}</td>
+                        <td>{{player.PUID}}</td>
+                        <td><img src="images/male.png" ng-show="player.sex == 'male'"/><img src="images/female.png" ng-show="player.sex == 'female'"/></td>
+                        <td>{{player.x}} / {{player.y}}</td>
+                        <td>{{player.uniform}}</td>
+                        <td><a ng-click="edit(player.PUID)" class="btn btn-info m-r-5"><i class="fa fa-edit"></i> View</a></td>
+                    </tr>
+                </table>
+                <div style="margin:auto;text-align: center">
+                <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="bower_components/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 

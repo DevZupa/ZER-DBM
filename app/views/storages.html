@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-12">
-        <h1 class="page-header">Buildings <small> - {{selectedServer.ip}} : {{selectedServer.port}} - {{selectedServer.name}}</small></h1>
+        <h1 class="page-header">Storages <small> - {{selectedServer.ip}} : {{selectedServer.port}} - {{selectedServer.name}}</small></h1>
     </div>
 </div>
 
@@ -9,11 +9,11 @@
         <div class="panel panel-inverse" style="margin-bottom:0;">
             <div class="panel-heading">
                 <form class="form-inline">
-                    <h4 class="panel-title">Buildings Types
-                        <i class="fa fa-spinner fa-spin fa-2x" ng-show="loadingData"> </i> <span ng-show="loadingData">Loading Buildings.</span>
+                    <h4 class="panel-title">Storages Types
+                        <i class="fa fa-spinner fa-spin fa-2x" ng-show="loadingData"> </i> <span ng-show="loadingData">Loading Storages.</span>
 
                     </h4>
-                </form>
+                      </form>
 
             </div>
             <div class="panel-body panel-form">
@@ -25,16 +25,13 @@
                         <th>Amount</th>
 
                     </tr>
-                    <tr ng-repeat="vehicle in buildingsTypes">
+                    <tr ng-repeat="vehicle in storagesTypes">
                         <td>{{vehicle.name}}</td>
                         <td>{{vehicle.type}}</td>
-                        <td><img src="images/door.png" ng-show="vehicle.type == 'door'"/><img src="images/walls.png" ng-show="vehicle.type == 'wall'"/></td>
+                        <td><img src="images/lock.png" ng-show="vehicle.type == 'lock'"/><img src="images/storage.png" ng-show="vehicle.type != 'lock'"/></td>
                         <td>{{vehicle.ammount}}</td>
                     </tr>
                 </table>
-
-
-
             </div>
         </div>
     </div>
@@ -43,12 +40,12 @@
         <div class="panel panel-inverse" style="margin-bottom:0;">
             <div class="panel-heading">
                 <form class="form-inline">
-                    <h4 class="panel-title">{{storagesCount}} Buildings
+                    <h4 class="panel-title">{{vehiclesCount}} Storages
                         <div class="form-group m-r-10">
                             <input type="search" class="form-control input-sm" ng-model="search"  placeholder="filter" style="margin-left:10px;">
                             <input type="number" class="form-control input-sm" ng-model="pageSize"  placeholder="pagesize" style="margin-left:10px;" min="1" max="200">
                         </div>
-                        <i class="fa fa-spinner fa-spin fa-2x" ng-show="loadingData"> </i> <span ng-show="loadingData">Loading Buildings.</span>
+                        <i class="fa fa-spinner fa-spin fa-2x" ng-show="loadingData"> </i> <span ng-show="loadingData">Loading Storages.</span>
                         <span> <a ng-click="refreshData()" class="btn btn-info btn-sm" style="margin-top:10px;"> <i class="fa fa-refresh" > Refresh Data</i></a></span>
                     </h4>
                 </form>
@@ -65,19 +62,19 @@
 
                         <th style="width:50px;">View</th>
                     </tr>
-                    <tr dir-paginate="vehicle in buildings | filter:search | itemsPerPage: pageSize" current-page="currentPage">
+                    <tr dir-paginate="vehicle in storages | filter:search | itemsPerPage: pageSize" current-page="currentPage">
                         <td>{{$index + 1}}</td>
                         <td>{{vehicle.name}}</td>
                         <td>{{vehicle.type}}</td>
-                        <td><img src="images/door.png" ng-show="vehicle.type == 'door'"/><img src="images/walls.png" ng-show="vehicle.type == 'wall'"/></td>
+                        <td><img src="images/lock.png" ng-show="vehicle.type == 'lock'"/><img src="images/storage.png" ng-show="vehicle.type != 'lock'"/></td>
                         <td><a ng-click="seePlayer('{{vehicle.owner}}')" class="btn btn-success m-r-5"><i class="fa fa-search"></i> {{vehicle.owner}}</a></td>
 
                         <td><a ng-click="edit('{{vehicle.key}}')" class="btn btn-info m-r-5"><i class="fa fa-edit"></i> View</a></td>
                     </tr>
                 </table>
                 <div style="margin:auto;text-align: center">
-                    <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="bower_components/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
-                </div>
+                <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="bower_components/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
+</div>
             </div>
         </div>
     </div>

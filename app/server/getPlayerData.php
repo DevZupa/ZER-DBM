@@ -15,6 +15,7 @@ $request = json_decode($postdata);
 $password = $request -> secret;
 $instance = $request -> instance;
 $db = $request -> db;
+$puid = $request -> puid;
 
 require 'Predis/Autoloader.php';
 
@@ -26,42 +27,18 @@ if ( md5($myRedisPass) == $password ) {
 Predis\Autoloader::register();
 
 $client = new Predis\Client([
-    'host'   => $myRedisHost,
+    'scheme' => 'tcp',
+   'host'   => $myRedisHost,
     'password' => $myRedisPass,
 	'port' => $myRedisPort,
 	'database' => $db
 ]);
 
+$playerD = $client-> get('Player:'.$puid);
+$playerData = $playerData . $playerD;
 
-$vehicleData = '[';
-
-$firstLoop = true;
-
-$vehicles = $client-> keys('Vehicle:'.$instance.':*');
-
-foreach($vehicles as $op) {
-
-    $vehicleD = $client-> get($op);
-
-    if($vehicleD != '[]'){
-
-        if($vehicleData == '['){
-            $vehicleData = $vehicleData . '["'.$op.'",'.$vehicleD .']';
-        }else{
-            $vehicleData = $vehicleData . ',["'.$op.'",'.$vehicleD .']';
-        }
-    }
-
-
-}
-
-
-
-$vehicleData = $vehicleData . ']';
-
-
-echo $vehicleData;
+echo $playerData;
 
 }else{
-echo "[wrong pass]";
+echo "[Wrong Pass]";
 }

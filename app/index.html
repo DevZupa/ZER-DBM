@@ -105,21 +105,21 @@
                        <span class="z-hide">Dashboard</span>
                    </a>
                </li>
-                <!--   <li id="players">
+                 <li id="players">
                    <a href="#/players">
                        <span class=" z-hide pull-right fa fa-caret-right"></span>
                        <i class="fa fa-users"></i>
                        <span class="z-hide">Players</span>
                    </a>
-
                </li >
+                <!--
                <li id="banks">
                    <a href="#/banks">
                        <span class=" z-hide pull-right fa fa-caret-right"></span>
                        <i class="fa fa-bank"></i>
                        <span class="z-hide">Banks</span>
                    </a>
-               </li>
+               </li>-->
                <li id="vehicles">
                    <a href="#/vehicles">
                        <b class=" z-hide fa fa-caret-right pull-right"></b>
@@ -136,14 +136,23 @@
                    </a>
 
                </li>
+                <li id="storages">
+                    <a href="#/storages">
+                        <b class="z-hide fa fa-caret-right pull-right"></b>
+                        <i class="fa fa-lock"></i>
+                        <span class="z-hide">Storages</span>
+                    </a>
+
+                </li>
+                <!--
                <li id="traders">
-                   <a href="#/map2">
+                   <a href="#/traders">
                        <b class="z-hide fa fa-caret-right pull-right"></b>
                        <i class="fa fa-th"></i>
                        <span class="z-hide">Traders</span>
                    </a>
-               </li>
-               -->
+               </li>-->
+
                 <li id="map">
                     <a href="#/map">
                         <b class="z-hide fa fa-caret-right pull-right"></b>
@@ -217,12 +226,11 @@
 <script src="bower_components/ng-switchery/src/ng-switchery.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-
+<script src="bower_components/angular-utils-pagination/dirPagination.js"></script>
 
 <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
 <script src="bower_components/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
-<script src="scripts/oms.min.js"></script>
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
@@ -240,7 +248,10 @@
 <script src="scripts/controllers/server.js"></script>
 <script src="scripts/controllers/traders.js"></script>
 <script src="scripts/controllers/map.js"></script>
-<script src="scripts/controllers/map2.js"></script>
+<script src="scripts/controllers/vehicle.js"></script>
+<script src="scripts/controllers/buiding.js"></script>
+<script src="scripts/controllers/storages.js"></script>
+<script src="scripts/controllers/storage.js"></script>
 <!-- endbuild -->
 </body>
 </html>

@@ -25,6 +25,7 @@ if ( md5($myRedisPass) == $password ) {
 Predis\Autoloader::register();
 
 $client = new Predis\Client([
+    'scheme' => 'tcp',
     'host'   => $myRedisHost,
     'password' => $myRedisPass,
 	'port' => $myRedisPort,
@@ -43,9 +44,9 @@ foreach($buildings as $op) {
     $buildingD = $client-> get($op);
 
     if($buildingData == '['){
-        $buildingData = $buildingData . $buildingD;
+        $buildingData = $buildingData . '["'.$op.'",'.$buildingD .']';
     }else{
-        $buildingData = $buildingData . ',' .$buildingD;
+        $buildingData = $buildingData . ',["'.$op.'",'.$buildingD .']';
     }
 
 }
@@ -56,6 +57,6 @@ $buildingData = $buildingData . ']';
 echo $buildingData;
 
 }else{
-echo "[".md5($myRedisPass)." = ".$password."]";
+echo "['wrong pass']";
 }
 

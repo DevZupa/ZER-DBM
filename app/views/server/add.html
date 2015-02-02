@@ -10,6 +10,29 @@
     <h1 class="page-header">Add a new Server <small>  </small></h1>
     <!-- end page-header -->
 
+ <div class="row">
+     <div class="col-md-12">
+    <div class="panel panel-inverse" >
+        <div class="panel-heading">
+            <div class="panel-heading-btn">
+            </div>
+            <h4 class="panel-title">Import Server</h4>
+        </div>
+        <div class="alert alert-success fade in">
+            <i class="fa fa-database fa-2x pull-left"></i>
+            <p>You can import a server if you got the exported data, paste it here and press Import.</p>
+        </div>
+        <div class="panel-body panel-form">
+            <table class="table table-striped">
+                <tr>
+                    <td ><input class="form-control" type="text" ng-model="importObject"/></td>
+                    <td><a class="btn btn-success" ng-click="importServer()" ><i class="fa fa-arrow-left"></i> Import </a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+         </div>
+</div>
     <!-- begin row -->
     <div class="row">
         <!-- begin col-6 -->
@@ -19,7 +42,7 @@
                 <div class="panel-heading">
                     <div class="panel-heading-btn">
                     </div>
-                    <h4 class="panel-title">Add a server</h4>
+                    <h4 class="panel-title">Add a new server</h4>
                 </div>
                 <div class="panel-body panel-form">
                     <form class="form-horizontal form-bordered">
@@ -86,6 +109,9 @@
                             </div>
                         </div>
                     </form>
+
+
+
                 </div>
             </div>
             <!-- end panel -->

@@ -33,29 +33,13 @@
                     <input  ng-click="doAllMarkers()" ng-model="clusterStorage" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"   />
                     <span class=" m-l-5 m-r-20 fa fa-asterisk"> Cluster ALL Together</span>
                     </div>
-                    <a ng-click="togleSettings = !togleSettings;" class="btn btn-xs btn-icon btn-circle btn-danger" style="margin-right:5px;" data-click="panel-collapse"><i class="fa fa-minus"></i></a>  <input ng-click="doAllMarkers()"  ng-model="clusterAllTogether" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"  />
+                    <a ng-click="togleSettings = !togleSettings;" class="btn btn-xs btn-icon btn-circle btn-danger" style="margin-right:5px;" data-click="panel-collapse"><i class="fa fa-minus"></i>
+                    </a>
+                    <a ng-click="loadAllData()"  class="btn btn-info btn-sm" > <i class="fa fa-refresh"></i> Refresh </a>
                     </div>
             </div>
 
         </h1>
-        <!-- end page-header -->
-<!--
-        <div class="btn-group map-btn pull-right">
-            <button type="button" class="btn btn-sm btn-inverse" id="map-theme-text">Default Theme</button>
-            <button type="button" class="btn btn-sm btn-inverse dropdown-toggle" data-toggle="dropdown">
-                <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" id="map-theme-selection">
-                <li class="active"><a href="javascript:;" data-map-theme="default">Default</a></li>
-                <li><a href="javascript:;" data-map-theme="flat">Flat</a></li>
-                <li><a href="javascript:;" data-map-theme="turquoise-water">Turquoise Water</a></li>
-                <li><a href="javascript:;" data-map-theme="icy-blue">Icy Blue</a></li>
-                <li><a href="javascript:;" data-map-theme="cobalt">Cobalt</a></li>
-                <li><a href="javascript:;" data-map-theme="old-dry-mud">Old Dry Mud</a></li>
-                <li><a href="javascript:;" data-map-theme="dark-red">Dark Red</a></li>
-            </ul>
-        </div>
-        -->
     </div>
     <div class="map">
         <div id="zupa-map" class="height-full width-full" style="z-index:-1;"></div>
@@ -182,9 +166,5 @@
                 </table>
             </div>
         </div>
-
     </div>
 </div>
-
-
-<!-- end #content -->

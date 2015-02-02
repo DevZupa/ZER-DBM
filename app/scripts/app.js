@@ -18,8 +18,9 @@ var ERDBM = angular
     'ngTouch',
     'angularLocalStorage',
     'kendo.directives',
-      'NgSwitchery',
-        'ui.bootstrap'
+    'NgSwitchery',
+    'ui.bootstrap',
+    'angularUtils.directives.dirPagination'
   ]);
 
 
@@ -43,10 +44,6 @@ ERDBM.config(function ($routeProvider) {
         templateUrl: 'views/banks.html',
         controller: 'BanksCtrl'
       })
-      .when('/player', {
-        templateUrl: 'views/player.html',
-        controller: 'PlayerCtrl'
-      })
       .when('/deathlogs', {
         templateUrl: 'views/deathlogs.html',
         controller: 'DeathlogsCtrl'
@@ -59,6 +56,10 @@ ERDBM.config(function ($routeProvider) {
         templateUrl: 'views/vehicles.html',
         controller: 'VehiclesCtrl'
       })
+        .when('/storages', {
+            templateUrl: 'views/storages.html',
+            controller: 'StoragesCtrl'
+        })
       .when('/buildings', {
         templateUrl: 'views/buildings.html',
         controller: 'BuildingsCtrl'
@@ -79,6 +80,22 @@ ERDBM.config(function ($routeProvider) {
         templateUrl: 'views/server.html',
         controller: 'ServerCtrl'
       })
+        .when('/player/:param', {
+            templateUrl: 'views/player.html',
+            controller: 'PlayerCtrl'
+        })
+        .when('/vehicle/:key', {
+            templateUrl: 'views/vehicle.html',
+            controller: 'VehicleCtrl'
+        })
+        .when('/building/:key', {
+            templateUrl: 'views/building.html',
+            controller: 'BuildCtrl'
+        })
+        .when('/storage/:key', {
+            templateUrl: 'views/storage.html',
+            controller: 'StorageCtrl'
+        })
       .when('/traders', {
         templateUrl: 'views/traders.html',
         controller: 'TradersCtrl'
@@ -86,10 +103,6 @@ ERDBM.config(function ($routeProvider) {
       .when('/map', {
         templateUrl: 'views/map.html',
         controller: 'MapCtrl'
-      })
-      .when('/map2', {
-        templateUrl: 'views/map2.html',
-        controller: 'Map2Ctrl'
       })
       .otherwise({
         redirectTo: '/'
@@ -102,11 +115,13 @@ ERDBM.run(
         //bind that stupid $name to something more useable.
         var globalScope = $rootScope;
 
+        globalScope.players = [];
+        globalScope.vehicles = [];
+        globalScope.vehiclesTypes = {};
 
         // bind localstorage to global var.
         storage.bind(globalScope,'servers',{defaultValue: []});
         storage.bind(globalScope,'selectedServer',{defaultValue: null});
-
         storage.bind(globalScope,'imageOnMale',{defaultValue: 'images/male.png'});
         storage.bind(globalScope,'imageCar',{defaultValue: 'images/car.png'});
         storage.bind(globalScope,'imageHeli',{defaultValue: 'images/heli.png'});
@@ -114,19 +129,16 @@ ERDBM.run(
         storage.bind(globalScope,'imageLock',{defaultValue: 'images/lock.png'});
         storage.bind(globalScope,'imageBuilding',{defaultValue: 'images/walls.png'});
         storage.bind(globalScope,'imageStorage',{defaultValue: 'images/storage.png'});
-
         storage.bind(globalScope,'serverLink',{defaultValue: ""});
         storage.bind(globalScope,'clusterRad',{defaultValue: 30});
 
-
-        storage.bind(globalScope,'chernarusSizeX',{defaultValue: 15400});
-        storage.bind(globalScope,'chernarusSizeY',{defaultValue: 15400});
-        storage.bind(globalScope,'altisSizeX',{defaultValue: 30000});
-        storage.bind(globalScope,'altisSizeY',{defaultValue: 30000});
-
         globalScope.defaultMaps = [
             {name: "chernarus", x:15400, y:15400, offsetX : 0, offsetY:0},
-            {name: "altis", x:30000, y:3000, offsetX : 0, offsetY:0}
+            {name: "altis", x:30700, y:30500, offsetX : 0, offsetY:-3300},
+            {name: "stratis", x:8192, y:8192, offsetX : 0, offsetY:0},
+            {name: "takistan", x:12800, y:12800, offsetX : 0, offsetY:0},
+            {name: "namalsk", x:12800, y:12800, offsetX : 0, offsetY:0},
+            {name: "bornholm", x:22528, y:22528, offsetX : 0, offsetY:0}
         ];
 
         globalScope.mapiconsdef = [
@@ -140,12 +152,14 @@ ERDBM.run(
             {image: "lock.png", name: "lockbox", x:32, y:37},
             {image: "male.png", name: "male", x:32, y:37},
             {image: "female.png", name: "female", x:32, y:37}
-
         ];
 
+       storage.bind(globalScope,'mapRefresh',{defaultValue:  60});
        storage.bind(globalScope,'maps',{defaultValue:  globalScope.defaultMaps});
        storage.bind(globalScope,'mapicons',{defaultValue:  globalScope.mapiconsdef});
+       storage.bind(globalScope,'leafletsize',{defaultValue:  8192});
 
+       globalScope.maps =  globalScope.defaultMaps;
 
         // client check if the players needs to give in a server first.
         globalScope.hasServers = false;
@@ -182,8 +196,6 @@ ERDBM.run(
         if(!globalScope.hasServers){
             $location.path('/server/add');
         }
-
-
 
     }
 );
