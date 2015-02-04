@@ -8,7 +8,7 @@
  * Controller of the zepochRedisApp
  */
 ERDBM
-  .controller('StorageCtrl', function ($scope,$rootScope,$http,$location,$routeParams) {
+  .controller('StorageCtrl',["$scope","$rootScope","$http","$location","$routeParams", function ($scope,$rootScope,$http,$location,$routeParams) {
         $(".nav li").removeClass("active");
 
         $("#storages").addClass("active");
@@ -55,4 +55,4 @@ ERDBM
             $location.path('/player/'+ PC.player.owner);
 
         }
-  });
+  }]);

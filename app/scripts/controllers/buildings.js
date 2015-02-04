@@ -8,7 +8,7 @@
  * Controller of the zepochRedisApp
  */
 ERDBM
-  .controller('BuildingsCtrl', function ($scope,$rootScope,$location,$http) {
+  .controller('BuildingsCtrl',["$scope","$rootScope","$location","$http",function ($scope,$rootScope,$location,$http) {
         $(".nav li").removeClass("active");
 
         $("#buildings").addClass("active");
@@ -23,6 +23,43 @@ ERDBM
 
         PC.walls = 0;
         PC.doors= 0;
+        PC.foundation = 0;
+
+        PC.data = [];
+
+        PC.options =  {
+
+            // Sets the chart to be responsive
+            responsive: true,
+
+            //Boolean - Whether we should show a stroke on each segment
+            segmentShowStroke : true,
+
+            //String - The colour of each segment stroke
+            segmentStrokeColor : '#fff',
+
+            //Number - The width of each segment stroke
+            segmentStrokeWidth : 2,
+
+            //Number - The percentage of the chart that we cut out of the middle
+            percentageInnerCutout : 50, // This is 0 for Pie charts
+
+            //Number - Amount of animation steps
+            animationSteps : 100,
+
+            //String - Animation easing effect
+            animationEasing : 'easeOutBounce',
+
+            //Boolean - Whether we animate the rotation of the Doughnut
+            animateRotate : true,
+
+            //Boolean - Whether we animate scaling the Doughnut from the centre
+            animateScale : false,
+
+            //String - A legend template
+            legendTemplate : '<ul class="tc-chart-js-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
+
+        };
 
         function getData(){
             $http.post(RS.selectedServer['serverUrl'] + 'getBuildingData.php?date='+ new Date().getTime(),{"secret": String(CryptoJS.MD5(RS.selectedServer['rpw'])) , "instance": RS.selectedServer['ri'], "db" : RS.selectedServer['dbi'] }).
@@ -77,8 +114,15 @@ ERDBM
 
                             PC.doors++;
                         }else {
-                            vehicle.type = "wall";
-                            PC.walls++;
+
+                            if(data[0].indexOf("Foundation_EPOCH")>-1){
+                                vehicle.type = "wall";
+                                PC.foundation++;
+                            }
+                            else {
+                                    vehicle.type = "wall";
+                                    PC.walls++;
+                                }
                         }
 
 
@@ -100,6 +144,29 @@ ERDBM
                 }
                 counter++;
             });
+
+
+
+            PC.data = [
+                {
+                    value: PC.foundation,
+                    color: getRandomColor(),
+                    highlight: '#FF3333',
+                    label: 'Foundation'
+                },
+                {
+                    value: PC.walls,
+                    color: getRandomColor(),
+                    highlight: '#FF70B8',
+                    label: 'Walls & Floors'
+                },
+                {
+                    value: PC.doors,
+                    color: getRandomColor(),
+                    highlight: '#FF70B8',
+                    label: 'Doors'
+                }
+            ];
         }
 
         PC.edit = edit;
@@ -115,6 +182,14 @@ ERDBM
 
         }
 
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF'.split('');
+            var color = '#';
+            for (var i = 0; i < 6; i++ ) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
 
 
-    });
+    }]);

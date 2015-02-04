@@ -8,7 +8,7 @@
  * Controller of the zepochRedisApp
  */
 ERDBM
-  .controller('VehicleCtrl', function ($scope,$rootScope,$http,$location,$routeParams) {
+  .controller('VehicleCtrl',["$scope","$rootScope","$http","$location","$routeParams", function ($scope,$rootScope,$http,$location,$routeParams) {
         $(".nav li").removeClass("active");
 
         $("#vehicles").addClass("active");
@@ -47,4 +47,4 @@ ERDBM
                 return {};
             }
         }
-  });
+  }]);

@@ -1,5 +1,4 @@
 'use strict';
-
 /**
  * @ngdoc overview
  * @name zepochRedisApp
@@ -20,13 +19,11 @@ var ERDBM = angular
     'kendo.directives',
     'NgSwitchery',
     'ui.bootstrap',
-    'angularUtils.directives.dirPagination'
+    'angularUtils.directives.dirPagination',
+        'toaster',
+        'tc.chartjs'
   ]);
-
-
-
-// does the uri routing to pages/controllers
-ERDBM.config(function ($routeProvider) {
+ERDBM.config(["$routeProvider",function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -73,7 +70,7 @@ ERDBM.config(function ($routeProvider) {
         controller: 'SettingsCtrl'
       })
       .when('/server/add', {
-        templateUrl: 'views/server/add.html',
+        templateUrl: 'views/add.html',
         controller: 'ServerAddCtrl'
       })
       .when('/server/:param', {
@@ -104,16 +101,41 @@ ERDBM.config(function ($routeProvider) {
         templateUrl: 'views/map.html',
         controller: 'MapCtrl'
       })
+        .when('/map', {
+        templateUrl: 'views/map.html',
+        controller: 'MapCtrl'
+      })
+        .when('/login', {
+            templateUrl: 'views/login.html',
+            controller: 'AuthCtrl'
+        })
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }]);
 
-ERDBM.run(
-    function($rootScope,storage,$location,$route) {
+ERDBM.run(["$rootScope","storage","$location","$route","Data",
+    function($rootScope,storage,$location,$route,Data) {
 
-        //bind that stupid $name to something more useable.
         var globalScope = $rootScope;
+
+        globalScope.$on("$routeChangeStart", function (event, next, current) {
+            globalScope.authenticated = false;
+            Data.get('session').then(function (results) {
+                if (results.uid) {
+                    globalScope.authenticated = true;
+                    globalScope.uid = results.uid;
+                    globalScope.name = results.name;
+                    globalScope.email = results.email;
+                } else {
+                     //   if($location.path()!= "/login"){
+                      //           $location.path("/login");
+                      //  }
+                }
+            })
+        });
+
+
 
         globalScope.players = [];
         globalScope.vehicles = [];
@@ -175,7 +197,7 @@ ERDBM.run(
         // bind functions
         globalScope.changeServer = changeServer;
         globalScope.deleteServer = deleteServer;
-        globalScope.deleteMap = deleteMap
+        globalScope.deleteMap = deleteMap;
 
         // define functions
         function changeServer (index){
@@ -199,18 +221,76 @@ ERDBM.run(
         }
 
         if(!globalScope.hasServers){
-            $location.path('/server/add');
+            if($location.path() != "/login") {
+                $location.path('/server/add');
+            }
         }
 
-    }
-);
 
-ERDBM.filter('startFrom', function() {
-    return function(input, start) {
-        if(input) {
-            start = +start; //parse to int
-            return input.slice(start);
+    }]);
+
+ERDBM.factory("Data", ['$http', 'toaster',
+    function ($http, toaster) { // This service connects to our REST API
+
+        var serviceBase = 'server/';
+
+        var obj = {};
+        obj.toast = function (data) {
+            toaster.pop(data.status, "", data.message, 10000, 'trustedHtml');
         }
-        return [];
+        obj.get = function (q) {
+            return $http.get(serviceBase + q).then(function (results) {
+                return results.data;
+            },function(results){
+                return {};
+            });
+        };
+        obj.post = function (q, object) {
+            return $http.post(serviceBase + q, object).then(function (results) {
+                return results.data;
+            },function(results){
+                return {};
+            });
+        };
+        obj.put = function (q, object) {
+            return $http.put(serviceBase + q, object).then(function (results) {
+                return results.data;
+            },function(results){
+                return {};
+            });
+        };
+        obj.delete = function (q) {
+            return $http.delete(serviceBase + q).then(function (results) {
+                return results.data;
+            },function(results){
+                return {};
+            });
+        };
+
+        return obj;
+    }]);
+
+ERDBM.directive('focus', function() {
+    return function(scope, element) {
+        element[0].focus();
     }
 });
+
+ERDBM.directive('passwordMatch', [function () {
+    return {
+        restrict: 'A',
+        scope:true,
+        require: 'ngModel',
+        link: function (scope, elem , attrs,control) {
+            var checker = function () {
+                var e1 = scope.$eval(attrs.ngModel);
+                var e2 = scope.$eval(attrs.passwordMatch);
+                if(e2!=null)
+                    return e1 == e2;
+            };
+            scope.$watch(checker, function (n) {
+                control.$setValidity("passwordNoMatch", n);
+            });
+        }
+    };
+}]);

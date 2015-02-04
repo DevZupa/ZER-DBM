@@ -8,8 +8,8 @@
  * Controller of the zepochRedisApp
  */
 ERDBM
-  .controller('AboutCtrl', function ($scope) {
+  .controller('AboutCtrl',["$scope", function ($scope) {
 
 
 
-  });
+  }]);

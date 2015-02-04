@@ -8,7 +8,7 @@
  * Controller of the zepochRedisApp
  */
 ERDBM
-  .controller('AdminlogsCtrl', function ($scope,storage,$route) {
+  .controller('AdminlogsCtrl',["$scope","storage","$route", function ($scope,storage,$route) {
 
         var AC = $scope;
 
@@ -65,4 +65,4 @@ ERDBM
 
 
 
-    });
+    }]);

@@ -133,3 +133,48 @@
     }
 }
 
+#header {
+    background-color: #1a2229;
+}
+
+.input-group-addon {
+    background: #49b6d6;
+    border: none;
+    color: #eee;
+}
+.login {
+    margin: 0px 0;
+}
+
+.tc-chart-js-legend {
+    list-style-type: none;
+    padding-left: 0px;
+}
+.tc-chart-js-legend li {
+    display: block;
+    float: left;
+    clear:both;
+    padding:10px;
+}
+.tc-chart-js-legend li span {
+    width:10px;
+    height:10px;
+    display:block;
+    float:left;
+    margin-right:10px;
+}
+
+.heightrow {
+    display: table !important;
+}
+
+.heightrow [class*="col-"] {
+    float: none !important;
+    display: table-cell !important;
+    vertical-align: top !important;
+}
+
+
+.heightrow .panel-body{
+    height:100% !important;
+}

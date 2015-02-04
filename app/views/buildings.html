@@ -9,6 +9,21 @@
         <div class="panel panel-inverse" style="margin-bottom:0;">
             <div class="panel-heading">
                 <form class="form-inline">
+                    <h4 class="panel-title">Buildings
+                    </h4>
+                </form>
+            </div>
+            <div class="panel-body ">
+                <div class="col-sm-8">
+                    <canvas tc-chartjs-doughnut chart-options="options" chart-data="data"  chart-legend="donutChart1"></canvas>
+                </div>
+                <div class="col-sm-4"><div tc-chartjs-legend="" chart-legend="donutChart1" class="ng-isolate-scope"></div></div>
+            </div>
+        </div>
+        <br/>
+        <div class="panel panel-inverse" style="margin-bottom:0;">
+            <div class="panel-heading">
+                <form class="form-inline">
                     <h4 class="panel-title">Buildings Types
                         <i class="fa fa-spinner fa-spin fa-2x" ng-show="loadingData"> </i> <span ng-show="loadingData">Loading Buildings.</span>
 

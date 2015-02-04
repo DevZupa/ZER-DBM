@@ -8,8 +8,8 @@
  * Controller of the zepochRedisApp
  */
 ERDBM
-  .controller('TradersCtrl', function ($scope) {
+  .controller('TradersCtrl',[ "$scope",function ($scope) {
         $(".nav li").removeClass("active");
 
         $("#traders").addClass("active");
-  });
+  }]);

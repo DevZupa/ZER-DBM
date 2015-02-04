@@ -8,7 +8,7 @@
  * Controller of the zepochRedisApp
  */
 ERDBM
-  .controller('StoragesCtrl', function ($scope,$rootScope,$http,$location) {
+  .controller('StoragesCtrl',["$scope","$rootScope","$http","$location", function ($scope,$rootScope,$http,$location) {
         $(".nav li").removeClass("active");
 
         $("#storages").addClass("active");
@@ -20,8 +20,41 @@ ERDBM
         PC.storagesTypes = {};
         PC.storagesCount = 0;
         PC.loadingData = true;
+        PC.dataStorages = [];
 
+        $scope.options =  {
 
+            // Sets the chart to be responsive
+            responsive: true,
+
+            //Boolean - Whether we should show a stroke on each segment
+            segmentShowStroke : true,
+
+            //String - The colour of each segment stroke
+            segmentStrokeColor : '#fff',
+
+            //Number - The width of each segment stroke
+            segmentStrokeWidth : 2,
+
+            //Number - The percentage of the chart that we cut out of the middle
+            percentageInnerCutout : 50, // This is 0 for Pie charts
+
+            //Number - Amount of animation steps
+            animationSteps : 100,
+
+            //String - Animation easing effect
+            animationEasing : 'easeOutBounce',
+
+            //Boolean - Whether we animate the rotation of the Doughnut
+            animateRotate : true,
+
+            //Boolean - Whether we animate scaling the Doughnut from the centre
+            animateScale : false,
+
+            //String - A legend template
+            legendTemplate : '<ul class="tc-chart-js-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
+
+        };
 
         function getData(){
         $http.post(RS.selectedServer['serverUrl'] + 'getStorageData.php?date='+ new Date().getTime(),{"secret": String(CryptoJS.MD5(RS.selectedServer['rpw'])) , "instance": RS.selectedServer['ri'], "db" : RS.selectedServer['dbi'] }).
@@ -96,6 +129,20 @@ ERDBM
                 }
                 counter++;
             });
+
+            PC.dataStorages = [];
+            PC.tempDate = [];
+            angular.forEach(PC.storagesTypes, function (value, key) {
+                var storage = {};
+                storage.value = value.ammount;
+                storage.color = getRandomColor();
+                storage.highlight = "#aaa";
+                storage.label = value.name;
+                PC.tempDate.push(storage);
+            });
+
+            PC.dataStorages =  PC.tempDate;
+
         }
         PC.edit = edit;
         PC.seePlayer = seePlayer;
@@ -110,7 +157,14 @@ ERDBM
 
         }
 
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF'.split('');
+            var color = '#';
+            for (var i = 0; i < 6; i++ ) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
 
 
-
-    });
+    }]);

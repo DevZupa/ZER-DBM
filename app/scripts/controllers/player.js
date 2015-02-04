@@ -8,7 +8,7 @@
  * Controller of the zepochRedisApp
  */
 ERDBM
-  .controller('PlayerCtrl', function ($scope,$rootScope,$http,$location,$routeParams) {
+  .controller('PlayerCtrl',["$scope","$rootScope","$http","$location","$routeParams", function ($scope,$rootScope,$http,$location,$routeParams) {
         $(".nav li").removeClass("active");
 
         $("#players").addClass("active");
@@ -69,4 +69,4 @@ ERDBM
                 return {};
             }
         }
-  });
+  }]);

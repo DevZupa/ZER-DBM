@@ -8,7 +8,7 @@
  * Controller of the zepochRedisApp
  */
 angular.module('zepochRedisApp')
-  .controller('MapCtrl', function ($scope,storage,$http,$rootScope,$interval) {
+  .controller('MapCtrl',["$scope","storage","$http","$rootScope","$interval", function ($scope,storage,$http,$rootScope,$interval) {
         $(".nav li").removeClass("active");
 
         $("#map").addClass("active");
@@ -846,4 +846,4 @@ angular.module('zepochRedisApp')
         loadAllData();
 
 
-    });
+    }]);

@@ -8,7 +8,7 @@
  * Controller of the zepochRedisApp
  */
 ERDBM
-  .controller('SettingsCtrl', function ($scope,$rootScope,$location) {
+  .controller('SettingsCtrl',["$scope","$rootScope","$location", function ($scope,$rootScope,$location) {
         $(".nav li").removeClass("active");
 
         $("#settings").addClass("active");
@@ -52,4 +52,4 @@ ERDBM
             SC.importObject = JSON.stringify(SC.master);
         }
 
-  });
+  }]);

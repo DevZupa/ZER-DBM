@@ -9,20 +9,21 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <link href="styles/jquery-ui.min.css" rel="stylesheet" />
-    <link href="styles/myBootstrap.min.css" rel="stylesheet" />
     <link href="styles/kendo.common-material.min.css" rel="stylesheet" />
     <link href="styles/kendo.common-bootstrap.core.min.css" rel="stylesheet" />
     <link href="styles/kendo.material.min.css" rel="stylesheet" />
     <link href="styles/kendo.material.mobile.min.css" rel="stylesheet" />
     <link href="libs/leaflet.css" rel="stylesheet" />
-    <link rel="stylesheet" href="bower_components/leaflet.markercluster/dist/MarkerCluster.css" />
-    <link rel="stylesheet" href="bower_components/leaflet.markercluster/dist/MarkerCluster.Default.css" />
     <!-- bower:css -->
-    <link href="bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="bower_components/switchery/dist/switchery.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/switchery/dist/switchery.css" />
+    <link rel="stylesheet" href="bower_components/toaster/toaster.css" />
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    <link href="styles/myBootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 </head>
@@ -30,10 +31,6 @@
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-<!-- begin #page-loader -->
-<!--<div id="page-loader" class="fade in"><span class="spinner"></span></div>-->
-<!-- end #page-loader -->
-
 <!-- begin #page-container -->
 <div id="page-container" class="page-sidebar-fixed page-header-fixed">
     <!-- begin #header -->
@@ -204,9 +201,6 @@
 <script src="bower_components/json3/lib/json3.js"></script>
 <![endif]-->
 <!-- endbuild -->
-
-<!-- build:js(.) scripts/vendor.js -->
-<!-- bower:js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
@@ -216,10 +210,6 @@
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
-
-
-<!-- endbower -->
-<!-- endbuild -->
 <script src="bower_components/angularLocalStorage/src/angularLocalStorage.js"></script>
 <script src="http://cdn.kendostatic.com/2014.3.1119/js/kendo.all.min.js"></script>
 <script src="bower_components/switchery/dist/switchery.min.js"></script>
@@ -227,11 +217,12 @@
 <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 <script src="bower_components/angular-utils-pagination/dirPagination.js"></script>
-
 <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
 <script src="bower_components/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
-
+<script src="bower_components/toaster/toaster.js"></script>
+<script src="bower_components/Chart.js/Chart.js"></script>
+<script src="bower_components/tc-angular-chartjs/dist/tc-angular-chartjs.min.js"></script>
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/main.js"></script>
@@ -244,7 +235,7 @@
 <script src="scripts/controllers/vehicles.js"></script>
 <script src="scripts/controllers/buildings.js"></script>
 <script src="scripts/controllers/settings.js"></script>
-<script src="scripts/controllers/server/add.js"></script>
+<script src="scripts/controllers/add.js"></script>
 <script src="scripts/controllers/server.js"></script>
 <script src="scripts/controllers/traders.js"></script>
 <script src="scripts/controllers/map.js"></script>
@@ -252,6 +243,7 @@
 <script src="scripts/controllers/buiding.js"></script>
 <script src="scripts/controllers/storages.js"></script>
 <script src="scripts/controllers/storage.js"></script>
+<script src="scripts/controllers/login.js"></script>
 <!-- endbuild -->
 </body>
 </html>
