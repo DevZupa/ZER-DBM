@@ -60,7 +60,7 @@ foreach($vehicles as $op) {
 $vehicleData = $vehicleData . ']';
 
 
-echo $vehicleData;
+echo str_replace("<null>", "[]", $vehicleData);
 
 }else{
 echo "[wrong pass]";
