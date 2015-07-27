@@ -1,0 +1,196 @@
+
+<!-- begin breadcrumb -->
+<ol class="breadcrumb pull-right">
+    <li><a href="javascript:;">Home</a></li>
+    <li class="active"><a href="javascript:;">Settings</a></li>
+</ol>
+<!-- end breadcrumb -->
+<!-- begin page-header -->
+<h1 class="page-header">ZR - DBM Settings <small>   </small></h1>
+<!-- end page-header -->
+
+<!-- begin row -->
+<div class="row">
+
+    <div class="col-md-6">
+        <!-- begin panel -->
+        <div class="panel panel-inverse" >
+            <div class="panel-heading">
+                <div class="panel-heading-btn">
+                     </div>
+                <h4 class="panel-title">Servers</h4>
+            </div>
+            <div class="alert alert-success fade in">
+                <i class="fa fa-database fa-2x pull-left"></i>
+                <p>You can edit and delete servers here. Add a server with the top bar button.</p>
+            </div>
+            <div class="panel-body panel-form">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Server</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                        <th>Export Data</th>
+                    </tr>
+
+                    <tr ng-repeat="server in serverssettings">
+                        <td>{{$index + 1}}</td>
+                        <td>{{server.name}}</td>
+                        <td><a class="btn btn-info"  ng-click="editServer($index)" ><i class="fa fa-edit"></i> Edit </a></td>
+                        <td><a class="btn btn-danger" ng-click="deleteServer($index)" ><i class="fa fa-times"></i> Delete </a></td>
+                        <td><a class="btn btn-warning" ng-click="exportServer($index)" ><i class="fa  fa-arrow-right"></i> Export </a></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4"><input class="form-control" type="text" ng-model="importObject"/></td>
+                        <td><a class="btn btn-success" ng-click="importServer()" ><i class="fa fa-arrow-left"></i> Import </a></td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+        <div class="panel panel-inverse" >
+            <div class="panel-heading">
+                <div class="panel-heading-btn">
+                </div>
+                <h4 class="panel-title">Maps</h4>
+            </div>
+            <div class="alert alert-success fade in">
+                <i class="fa fa-globe fa-2x pull-left"></i>
+                <p>Add your own maps to this list. Be sure to have the same name as a folder with the correct tiles in the webapp this "map" folder.
+                Don't forget to define the right x and y ingame coords for the mapsizes.
+                </p>
+            </div>
+            <div class="alert alert-info fade in" style="border-radius:0px;">
+                <i class="fa fa-globe fa-2x pull-left"></i>
+                <p>Be sure your image is 8192 px width  and use a tool like Maptiler to tile it in custom squares with no Mercurator coordinates system.</p>
+            </div>
+            <div class="panel-body panel-form">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Folder & map name</th>
+                        <th>X</th>
+                        <th>Y</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tbody ng-repeat="map in maps">
+                    <tr >
+                        <td>{{$index + 1}}</td>
+                        <td><input class="form-control" type="text" ng-model="map.name"/></td>
+                        <td><input class="form-control" type="number" ng-model="map.x"/></td>
+                        <td><input class="form-control" type="number" ng-model="map.y"/></td>
+                        <td><a class="btn btn-danger" ng-click="deleteMap($index)" ><i class="fa fa-times"></i> Delete </a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Offset</td>
+                        <td><input class="form-control" type="number" ng-model="map.offsetX"/></td>
+                        <td><input class="form-control" type="number" ng-model="map.offsetY"/></td>
+                    </tr>
+                    </tbody>
+                    <tr >
+                        <td>NEW</td>
+                        <td> <input class="form-control" type="text"  ng-model="newMap.name"/></td>
+                        <td> <input class="form-control" type="number" ng-model="newMap.x"/></td>
+                        <td> <input class="form-control" type="number"  ng-model="newMap.y"/></td>
+                        <td></td>
+                    </tr>
+                    <tr >
+                        <td></td>
+                        <td>Offset</td>
+                        <td> <input class="form-control" type="number" ng-model="newMap.offsetX"/></td>
+                        <td> <input class="form-control" type="number"  ng-model="newMap.offsetY"/></td>
+                        <td><a class="btn btn-success" ng-click="saveMap()" ><i class="fa fa-plus"></i> Add </a></td>
+                    </tr>
+                </table>
+                <p>
+                </p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="col-md-6">
+        <div class="panel panel-inverse">
+            <div class="panel-heading">
+                <div class="panel-heading-btn">
+                </div>
+                <h4 class="panel-title">Global Settings</h4>
+            </div>
+            <div class="alert alert-info fade in">
+                <i class="fa fa-gear fa-2x pull-left"></i>
+                <p>Some global app settings that needs filling in. Default is always good ;)</p>
+            </div>
+            <div class="panel-body panel-form">
+                <form class="form-horizontal form-bordered">
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4" for="scluster">Cluster radius in px:</label>
+                        <div class="col-md-6 col-sm-6">
+                            <input class="form-control" type="number" id="scluster" name="scluster" ng-model="$parent.clusterRad"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4" for="maptime">Map refresh Timer:</label>
+                        <div class="col-md-6 col-sm-6">
+                            <input class="form-control" type="number" id="maptime" name="maptime" ng-model="$parent.mapRefresh"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4" for="mapleafletsize">Leaflet Size:</label>
+                        <div class="col-md-6 col-sm-6">
+                            <input class="form-control" type="number" id="mapleafletsize" name="mapleafletsize" ng-model="$parent.leafletsize"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4"></label>
+                        <div class="col-md-6 col-sm-6">
+                           Everything saves real time. No save buttons needed. </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="panel panel-inverse">
+            <div class="panel-heading">
+                <div class="panel-heading-btn">
+                </div>
+                <h4 class="panel-title">Map Icon Settings</h4>
+            </div>
+            <div class="alert alert-info fade in">
+                <i class="fa fa-file-image-o fa-2x pull-left"></i>
+                <p>Specify your map images, place the images in your image folder! </p>
+            </div>
+            <div class="panel-body panel-form">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>IMG</th>
+                        <th>Name</th>
+                        <th>Width</th>
+                        <th>Height</th>
+                        <th>File</th>
+                    </tr>
+
+                    <tr ng-repeat="icon in $parent.mapicons">
+                        <td><img ng-src='images/{{icon.image}}' style="max-width: 95%;"/></td>
+                        <td>{{icon.name}}</td>
+                        <td><input class="form-control" type="number" ng-model="icon.x"/></td>
+                        <td><input class="form-control" type="number" ng-model="icon.y"/></td>
+                        <td><input class="form-control" type="text" ng-model="icon.image"/></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

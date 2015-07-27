@@ -1,0 +1,167 @@
+<!-- begin #content -->
+<div id="" class="content-full-width">
+    <!-- begin breadcrumb -->
+    <div class="map-content">
+        <!-- end breadcrumb -->
+        <!-- begin page-header -->
+        <h1 class="page-header" style="z-index:50;padding-left:50px;margin-right:-25px;" style="z-index:10">
+
+            <div class="selectionBar-container text-right" style="z-index:5">
+                <div class="selectionBar" style="max-width:300px;">
+                    <div id="togleSettings" ng-show="togleSettings" style="z-index:12">
+                    <span class=" m-l-5 m-r-20 fa fa-group"> {{playerCount}}</span>
+                    <input ng-click="doAllMarkers()" ng-model="showPlayers" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"   />
+                    <span class=" m-l-5 m-r-20 fa fa-asterisk"></span>
+                    <input  ng-click="doAllMarkers()" ng-model="clusterPlayer" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"   />
+                    <span class=" m-l-5 m-r-20 fa fa-car"> {{vehicleCount}}</span>
+                    <input  ng-click="doAllMarkers()" ng-model="showVehicles" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"  />
+                    <span class=" m-l-5 m-r-20 fa fa-asterisk"></span>
+                    <input  ng-click="doAllMarkers()" ng-model="clusterVehicle" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"   />
+                    <span class=" m-l-5 m-r-20 fa fa-home"> {{buildingCount}}</span>
+                    <input  ng-click="doAllMarkers()" ng-model="showBuildings" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"  />
+                    <span class=" m-l-5 m-r-20 fa fa-asterisk"></span>
+                    <input  ng-click="doAllMarkers()" ng-model="clusterBuilding" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"   />
+                    <span class=" m-l-5 m-r-20 fa fa-lock"> {{lockCount}}</span>
+                    <input  ng-click="doAllMarkers()" ng-model="showLocks" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"  />
+                    <span class=" m-l-5 m-r-20 fa fa-asterisk"></span>
+                    <input  ng-click="doAllMarkers()" ng-model="clusterLock" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"   /><span class=" m-l-5 m-r-20 fa fa-tasks"> {{storageCount}}</span>
+                    <input  ng-click="doAllMarkers()" ng-model="showStorages" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"  />
+                    <span class=" m-l-5 m-r-20 fa fa-asterisk"></span>
+                    <input  ng-click="doAllMarkers()" ng-model="clusterStorage" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"   />
+                    <span class=" m-l-5 m-r-20 fa fa-asterisk"> Cluster ALL Together</span>
+                    </div>
+                    <a ng-click="togleSettings = !togleSettings;" class="btn btn-xs btn-icon btn-circle btn-danger" style="margin-right:5px;" data-click="panel-collapse"><i class="fa fa-minus"></i>
+                    </a>
+                    <a ng-click="loadAllData()"  class="btn btn-info btn-sm" > <i class="fa fa-refresh"></i> Refresh </a>
+                    </div>
+            </div>
+
+        </h1>
+    </div>
+    <div class="map">
+        <div id="zupa-map" class="height-full width-full" style="z-index:-1;"></div>
+        <div class="map-float-table width-sm hidden-xs p-15" style="overflow:hidden;" ng-show="showInfo">
+            <h4 class="m-t-0" style="color:#fff;"><i class="fa fa-user text-danger m-r-5"></i> {{selectedKind}}
+                <div class="panel-heading-btn">
+                    <a href="javascript:;" ng-click="showInfo = false;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                </div></h4>
+
+            <div data-scrollbar="true" class="height-md" style="width: 100%;height: 100%;overflow: auto;">
+                <table class="table table-inverse" style="max-width:450px;">
+
+
+                    <tr ng-show="selectedKind == 'Buildable'">
+                        <td>Name</td>
+                        <td>{{csm[0]}}</td>
+                    </tr>
+                    <tr ng-show="selectedKind == 'Buildable'">
+                        <td>Worldspace</td>
+                        <td>{{csm[1][0]}}</td>
+                    </tr>
+                    <tr ng-show="selectedKind == 'Buildable'">
+                        <td>Owner</td>
+                        <td>{{csm[3]}}</td>
+                    </tr>
+
+
+                    <tr ng-show="selectedKind == 'Vehicle'">
+                        <td>Name</td>
+                        <td>{{csm[0]}}</td>
+                    </tr>
+                    <tr ng-show="selectedKind == 'Vehicle'">
+                        <td>Worldspace</td>
+                        <td>{{csm[1][0]}}</td>
+                    </tr>
+                    <tr ng-show="selectedKind == 'Vehicle'">
+                        <td>Inventory</td>
+                        <td>{{csm[5]}}</td>
+                    </tr>
+
+
+
+
+                    <tr ng-show="selectedKind == 'Storage'">
+                        <td>Name</td>
+                        <td>{{csm[0]}}</td>
+                    </tr>
+                    <tr ng-show="selectedKind == 'Storage'">
+                        <td>Worldspace</td>
+                        <td>{{csm[1][1]}}</td>
+                    </tr>
+                    <tr ng-show="selectedKind == 'Storage'">
+                        <td>Inventory</td>
+                        <td>{{csm[3]}}</td>
+                    </tr>
+
+
+                    <tr ng-show="selectedKind == 'Lockbox'">
+                        <td>Name</td>
+                        <td>{{csm[0]}}</td>
+                    </tr>
+                    <tr ng-show="selectedKind == 'Lockbox'">
+                        <td>Worldspace</td>
+                        <td>{{csm[1][1]}}</td>
+                    </tr>
+                    <tr ng-show="selectedKind == 'Lockbox'">
+                        <td>Owner</td>
+                        <td>{{csm[5][0]}}</td>
+                    </tr>
+                    <tr ng-show="selectedKind == 'Lockbox'">
+                        <td>Code</td>
+                        <td>{{csm[6]}}</td>
+                    </tr>
+                    <tr ng-show="selectedKind == 'Lockbox'">
+                        <td>Inventory</td>
+                        <td>{{csm[3]}}</td>
+                    </tr>
+
+                    <tr ng-show="selectedKind == 'Player'">
+                        <td>Name</td>
+                        <td>{{csm[3][0]}}</td>
+                    </tr>
+                    <tr ng-show="selectedKind == 'Player'">
+                        <td>PUID</td>
+                        <td>{{spuid}}</td>
+                    </tr>
+                    <tr ng-show="selectedKind == 'Player'">
+                        <td>Apparell</td>
+                        <td>{{csm[2]}}</td>
+                    </tr>
+                    <tr ng-show="selectedKind == 'Player'">
+                        <td>Position</td>
+                        <td>{{csm[0][1]}}</td>
+                    </tr>
+                    <tr ng-show="selectedKind == 'Player'">
+                        <td>Direction</td>
+                        <td>{{csm[0][0]}}</td>
+                    </tr>
+                    <tr ng-show="selectedKind == 'Player'">
+                        <td>Data</td>
+                        <td>{{csm[4]}}</td>
+                    </tr>
+                    <tr ng-show="selectedKind == 'Player'">
+                        <td>Weapons</td>
+                        <td>{{csm[5]}}</td>
+                    </tr>
+                    <tr ng-show="selectedKind == 'Player'">
+                        <td>Toolbelt</td>
+                        <td>{{csm[6]}}</td>
+                    </tr>
+                    <tr ng-show="selectedKind == 'Player'">
+                        <td>Inventory</td>
+                        <td>{{csm[7]}}</td>
+                    </tr>
+                    <tr ng-show="selectedKind == 'Player'">
+                        <td>Vest</td>
+                        <td>{{csm[8]}}</td>
+                    </tr>
+                    <tr ng-show="selectedKind == 'Player'">
+                        <td>Backpack</td>
+                        <td>{{csm[9]}}</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,100 @@
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="page-header">Storages <small> - {{selectedServer.ip}} : {{selectedServer.port}} - {{selectedServer.name}}</small></h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-5">
+        <div class="panel panel-inverse" style="margin-bottom:0;">
+            <div class="panel-heading">
+                <form class="form-inline">
+                    <h4 class="panel-title">Storages
+                    </h4>
+                </form>
+            </div>
+            <div class="panel-body ">
+                <div class="col-sm-8">
+                    <canvas tc-chartjs-doughnut chart-options="options" chart-data="dataStorages"  chart-legend="donutChart1"></canvas>
+                </div>
+                <div class="col-sm-4"><div tc-chartjs-legend="" chart-legend="donutChart1" class="ng-isolate-scope"></div></div>
+            </div>
+        </div>
+
+        <br/>
+        <div class="panel panel-inverse" style="margin-bottom:0;">
+            <div class="panel-heading">
+                <form class="form-inline">
+                    <h4 class="panel-title">Storages Types
+                        <i class="fa fa-spinner fa-spin fa-2x" ng-show="loadingData"> </i> <span ng-show="loadingData">Loading Storages.</span>
+
+                    </h4>
+                </form>
+
+            </div>
+            <div class="panel-body panel-form">
+                <table class="table-striped table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Image</th>
+                        <th>Amount</th>
+
+                    </tr>
+                    <tr ng-repeat="vehicle in storagesTypes">
+                        <td>{{vehicle.name}}</td>
+                        <td>{{vehicle.type}}</td>
+                        <td><img src="images/lock.png" ng-show="vehicle.type == 'lock'"/><img src="images/shelve.png" ng-show="vehicle.type == 'shelve'"/><img src="images/storage.png" ng-show="vehicle.type == 'storage'"/></td>
+                        <td>{{vehicle.ammount}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-7">
+        <div class="panel panel-inverse" style="margin-bottom:0;">
+            <div class="panel-heading">
+                <form class="form-inline">
+                    <h4 class="panel-title">{{vehiclesCount}} Storages
+                        <div class="form-group m-r-10">
+                            <input type="search" class="form-control input-sm" ng-model="search"  placeholder="filter" style="margin-left:10px;">
+                            <input type="number" class="form-control input-sm" ng-model="pageSize"  placeholder="pagesize" style="margin-left:10px;" min="1" max="200">
+                        </div>
+                        <i class="fa fa-spinner fa-spin fa-2x" ng-show="loadingData"> </i> <span ng-show="loadingData">Loading Storages.</span>
+                        <span> <a ng-click="refreshData()" class="btn btn-info btn-sm" style="margin-top:10px;"> <i class="fa fa-refresh" > Refresh Data</i></a></span>
+                    </h4>
+                </form>
+
+            </div>
+            <div class="panel-body panel-form">
+                <table class="table-striped table">
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Image</th>
+                        <th>Owner</th>
+
+                        <th style="width:50px;">View</th>
+                    </tr>
+                    <tr dir-paginate="vehicle in storages | filter:search | itemsPerPage: pageSize" current-page="currentPage">
+                        <td>{{$index + 1}}</td>
+                        <td>{{vehicle.name}}</td>
+                        <td>{{vehicle.type}}</td>
+                        <td><img src="images/lock.png" ng-show="vehicle.type == 'lock'"/><img src="images/shelve.png" ng-show="vehicle.type == 'shelve'"/><img src="images/storage.png" ng-show="vehicle.type == 'storage'"/></td>
+                        <td><a ng-click="seePlayer('{{vehicle.owner}}')" class="btn btn-success m-r-5"><i class="fa fa-search"></i> {{vehicle.owner}}</a></td>
+
+                        <td><a ng-click="edit('{{vehicle.key}}')" class="btn btn-info m-r-5"><i class="fa fa-edit"></i> View</a></td>
+                    </tr>
+                </table>
+                <div style="margin:auto;text-align: center">
+                <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="bower_components/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
+</div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+

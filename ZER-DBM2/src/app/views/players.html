@@ -1,0 +1,102 @@
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="page-header">Player <small> - {{selectedServer.ip}} : {{selectedServer.port}} - {{selectedServer.name}}</small></h1>
+    </div>
+</div>
+
+<div class="row ">
+
+    <div class="col-md-6">
+        <div class="panel panel-inverse" style="margin-bottom:0;">
+            <div class="panel-heading">
+                <form class="form-inline">
+                    <h4 class="panel-title">Uniforms Top 5
+                    </h4>
+                </form>
+            </div>
+            <div class="panel-body" >
+                <div class="col-sm-8">
+                    <canvas tc-chartjs-polararea chart-options="optionsPolar" chart-data="dataUniforms" chart-legend="polarChart1"></canvas>
+                </div>
+                <div class="col-sm-4"><div tc-chartjs-legend="" chart-legend="polarChart1" class="ng-isolate-scope"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="panel panel-inverse" style="margin-bottom:0;">
+            <div class="panel-heading">
+                <form class="form-inline">
+                    <h4 class="panel-title">Sex
+                    </h4>
+                </form>
+
+            </div>
+            <div class="alert alert-warning fade in">
+                <i class="fa fa-exclamation-triangle fa-2x pull-left"></i>
+                <p>Only players that have an alive character will get shown in this list.
+                </p>
+            </div>
+            <div class="panel-body" >
+
+                <div class="col-sm-8">
+                <canvas tc-chartjs-pie chart-options="options" chart-data="data" chart-legend="pieChart1"></canvas>
+                </div>
+                <div class="col-sm-4"><div tc-chartjs-legend="" chart-legend="pieChart1" class="ng-isolate-scope"></div></div>
+        </div>
+        </div>
+    </div>
+
+
+</div>
+
+<br/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-inverse" style="margin-bottom:0;">
+            <div class="panel-heading">
+                <form class="form-inline">
+                    <h4 class="panel-title">{{playersCount}} Players
+                        <div class="form-group m-r-10">
+                            <input type="search" class="form-control input-sm" ng-model="search"  placeholder="filter" style="margin-left:10px;">
+                            <input type="number" class="form-control input-sm" ng-model="pageSize"  placeholder="pagesize" style="margin-left:10px;" min="1" max="200">
+                        </div>
+                        <i class="fa fa-spinner fa-2x fa-spin" ng-show="loadingData"></i>  <span ng-show="loadingData">Loading players.</span>
+                        <span><a ng-click="refreshData()" class="btn btn-info btn-sm" style="margin-top:10px;" > <i class="fa fa-refresh" > Refresh Data</i></a></span>
+                    </h4>
+                </form>
+            </div>
+            <div class="alert alert-warning fade in">
+                <i class="fa fa-exclamation-triangle fa-2x pull-left"></i>
+                <p>Only players that have an alive character will get shown in this list.
+                </p>
+            </div>
+            <div class="panel-body panel-form">
+                <table class="table-striped table">
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>PUID</th>
+                        <th>Sex</th>
+                        <th>Position</th>
+                        <th>Uniform</th>
+                        <th style="width:50px;">View</th>
+                    </tr>
+                    <tr dir-paginate="player in players | filter:search | itemsPerPage: pageSize" current-page="currentPage">
+                        <td>{{$index}}</td>
+                        <td>{{player.name}}</td>
+                        <td>{{player.PUID}}</td>
+                        <td><img src="images/male.png" ng-show="player.sex == 'male'"/><img src="images/female.png" ng-show="player.sex == 'female'"/></td>
+                        <td>{{player.x}} / {{player.y}}</td>
+                        <td>{{player.uniform}}</td>
+                        <td><a ng-click="edit(player.PUID)" class="btn btn-info m-r-5"><i class="fa fa-edit"></i> View</a></td>
+                    </tr>
+                </table>
+                <div style="margin:auto;text-align: center">
+                <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="bower_components/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

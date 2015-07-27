@@ -1,0 +1,93 @@
+
+<!-- begin breadcrumb -->
+<ol class="breadcrumb pull-right">
+    <li><a href="javascript:;">Home</a></li>
+    <li><a href="javascript:;">Servers</a></li>
+    <li class="active">Edit</li>
+</ol>
+<!-- end breadcrumb -->
+<!-- begin page-header -->
+<h1 class="page-header">Server <small>  </small></h1>
+<!-- end page-header -->
+
+<!-- begin row -->
+<div class="row">
+    <!-- begin col-6 -->
+    <div class="col-md-12">
+        <!-- begin panel -->
+        <div class="panel panel-inverse">
+            <div class="panel-heading">
+                <div class="panel-heading-btn">
+                </div>
+                <h4 class="panel-title">{{theserver.name}}</h4>
+            </div>
+            <div class="panel-body panel-form">
+                <form class="form-horizontal form-bordered">
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4" for="sname">Server Name * :</label>
+                        <div class="col-md-6 col-sm-6">
+                            <input class="form-control" type="text" id="sname" name="sname" placeholder="Required"  ng-model="theserver.name"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4" for="ip">IP * :</label>
+                        <div class="col-md-6 col-sm-6">
+                            <input class="form-control" type="text" id="ip" name="ip"  placeholder="Required" ng-model="theserver.ip" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4" for="Port">Port * :</label>
+                        <div class="col-md-6 col-sm-6">
+                            <input class="form-control" type="number" id="Port" name="Port"  placeholder="Required" ng-model="theserver.port"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4" for="RPort">Redis Port * :</label>
+                        <div class="col-md-6 col-sm-6">
+                            <input class="form-control" type="number" id="RPort" name="RPort"  placeholder="Required" ng-model="theserver.rp"/>    </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4" for="RPassword">Redis Password * :</label>
+                        <div class="col-md-6 col-sm-6">
+                            <input class="form-control" type="text" id="RPassword" name="RPassword" placeholder="Required" ng-model="theserver.rpw" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4" for="Risnt">Redis Server Instance * :</label>
+                        <div class="col-md-6 col-sm-6">
+                            <input class="form-control" type="text" id="Risnt" name="Risnt" placeholder="Required" ng-model="theserver.ri" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4" for="RDB">Redis DB number * :</label>
+                        <div class="col-md-6 col-sm-6">
+                            <input class="form-control" type="number" id="RDB" name="RDB" placeholder="Required" ng-model="theserver.dbi"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4" for="RPHP">PPHP server url * :</label>
+                        <div class="col-md-6 col-sm-6">
+                            <input class="form-control" type="text" id="RPHP" name="RPHP" placeholder="Required" ng-model="theserver.serverUrl" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4" for="RDB">Server Map * :</label>
+                        <div class="col-md-6 col-sm-6">
+                            <select class="form-control selectpicker" ng-model="theserver.map"  ng-options="opt.name as opt.name for opt in $parent.maps">
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4"></label>
+                        <div class="col-md-6 col-sm-6">
+                            <button type="button" class="btn btn-primary" ng-click="save()">Save Server</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- end panel -->
+    </div>
+</div>
+
