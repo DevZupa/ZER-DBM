@@ -27,7 +27,7 @@
     
     <div id="page-container" class="page-sidebar-fixed page-header-fixed">
         <!-- begin #header -->
-        <div id="header" class="header navbar navbar-inverse navbar-fixed-top">
+        <div class="header navbar navbar-fixed-top">
             <!-- begin container-fluid -->
             <div class="container-fluid">
                 <!-- begin mobile sidebar expand / collapse button -->
@@ -40,17 +40,15 @@
                     </button>
                 </div>
                 <!-- end mobile sidebar expand / collapse button -->
-
-                <ul class="nav navbar-nav navbar-left">
-                    <li ng-repeat="server in servers" >
-                        <a ng-click="changeServer($index)" class="zupa-server-button btn btn-white  btn-sm "><i class="fa fa-database"></i> {{server.name}}</a>
-                    </li>
-                    <li>
-                        <a href="#/server/add" class="zupa-server-button btn btn-white btn-sm "><i class="fa fa-plus"></i> Add Server</a>
-                    </li>
-
-                </ul>
-
+                <!--
+                      <ul class="nav navbar-nav navbar-left">
+                          <li ng-repeat="server in servers">
+                              <a ng-click="changeServer($index)" class="btn btn-primary btn-lg"><i class="fa fa-database"></i> {{server.name}}</a>
+                          </li>
+                          <li>
+                              <a href="#/server/add" class="zupa-server-button btn btn-white btn-sm "><i class="fa fa-plus"></i> Add Server</a>
+                          </li>
+                      </ul>
                 <!-- begin header navigation right -->
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown navbar-user">
