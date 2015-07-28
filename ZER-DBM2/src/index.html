@@ -27,12 +27,12 @@
     
     <div id="page-container" class="page-sidebar-fixed page-header-fixed">
         <!-- begin #header -->
-        <div class="header navbar navbar-fixed-top">
+        <div class="navbar navbar-fixed-top navbar-default">
             <!-- begin container-fluid -->
             <div class="container-fluid">
                 <!-- begin mobile sidebar expand / collapse button -->
                 <div class="navbar-header">
-                    <a href="#/" class="navbar-brand" style="text-align: center">Z-Epoch Redis DBM 0.1</a>
+                    <a href="#/" class="navbar-brand" style="text-align: center">Epoch Manager 2.0</a>
                     <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -51,13 +51,20 @@
                       </ul>
                 <!-- begin header navigation right -->
                 <ul class="nav navbar-nav navbar-right">
+                    <div class="dropdownjs">
+                        <input type="text" readonly placeholder="This is a placeholder">
+                        <ul>
+                            <li value="foobar" tabindex="0">My foobar...</li>
+                            <li value="great" selected class="selected" tabindex="0">...is great!</li>
+                        </ul>
+                    </div>
                     <li class="dropdown navbar-user">
                         <a ng-show="servers.length > 0" class="dropdown-toggle" data-toggle="dropdown">
                             <span class="fa fa-database fa-1x"> </span>
                             <span class="" style="padding-left:10px;"> {{selectedServer.name}}</span>
                         </a>
-
                     </li>
+
                 </ul>
                 <!-- end header navigation right -->
             </div>
@@ -65,38 +72,20 @@
         </div>
         <!-- end #header -->
 
-        <!-- begin #sidebar -->
-        <div id="sidebar" class="sidebar">
-            <!-- begin sidebar scrollbar -->
-            <div data-scrollbar="true" data-height="100%">
-                <!-- begin sidebar user -->
-                <ul class="z-hide nav ">
-                    <li class="nav-profile " >
-                        <div class="image">
-                            <img src="http://epochmod.com/epoch_logo.png" alt="" />
-                        </div>
-                        <div class="info">
-                            Zupa
-                            <small>Developments</small>
-                        </div>
-                    </li>
-                </ul>
-                <!-- end sidebar user -->
-                <!-- begin sidebar nav -->
+        <div class="sidebar">
+            <div>
                 <ul class="nav">
-                    <li class="z-hide nav-header">Navigation</li>
-
                    <li class="active" id="dashboard">
                        <a href="#/" >
                            <b class="fa fa-caret-right pull-right z-hide"></b>
-                           <i class="fa fa-laptop"></i>
+                           <i class="fa fa-fw fa-laptop"></i>
                            <span class="z-hide">Dashboard</span>
                        </a>
                    </li>
                      <li id="players">
                        <a href="#/players">
                            <span class=" z-hide pull-right fa fa-caret-right"></span>
-                           <i class="fa fa-users"></i>
+                           <i class="fa fa-fw fa-users"></i>
                            <span class="z-hide">Players</span>
                        </a>
                    </li >
@@ -111,7 +100,7 @@
                    <li id="vehicles">
                        <a href="#/vehicles">
                            <b class=" z-hide fa fa-caret-right pull-right"></b>
-                           <i class="fa fa-car"></i>
+                           <i class="fa fa-fw fa-car"></i>
                            <span class="z-hide">Vehicles</span>
                        </a>
 
@@ -119,7 +108,7 @@
                    <li id="buildings">
                        <a href="#/buildings">
                            <b class="z-hide fa fa-caret-right pull-right"></b>
-                           <i class="fa fa-home"></i>
+                           <i class="fa fa-fw fa-home"></i>
                            <span class="z-hide">Buildings</span>
                        </a>
 
@@ -127,7 +116,7 @@
                     <li id="storages">
                         <a href="#/storages">
                             <b class="z-hide fa fa-caret-right pull-right"></b>
-                            <i class="fa fa-lock"></i>
+                            <i class="fa fa-fw fa-lock"></i>
                             <span class="z-hide">Storages</span>
                         </a>
 
@@ -144,7 +133,7 @@
                     <li id="map">
                         <a href="#/map">
                             <b class="z-hide fa fa-caret-right pull-right"></b>
-                            <i class="fa fa-map-marker"></i>
+                            <i class="fa fa-fw fa-map-marker"></i>
                             <span class="z-hide">Map</span>
                         </a>
                     </li>
@@ -167,20 +156,25 @@
                     <li id="settings">
                         <a href="#/settings">
                             <b class="z-hide fa fa-caret-right pull-right"></b>
-                            <i class="fa fa-gears"></i>
+                            <i class="fa fa-fw fa-gears"></i>
                             <span class="z-hide">ZR-DBM Settings</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="#/settings">
+                            <b class="z-hide fa fa-caret-right pull-right"></b>
+                            <i class="fa fa-fw fa-copyright"></i>
+                            <span class="z-hide">Created by Zupa</span>
+                        </a>
+                    </li>
                 </ul>
-                <!-- end sidebar nav -->
             </div>
-            <!-- end sidebar scrollbar -->
         </div>
-        <div class="sidebar-bg"></div>
-        <!-- end #sidebar -->
-        <!-- begin #content -->
+
         <div id="content" class="content">
-            <div ng-view></div>
+            <div class="col-md-12">
+                <div ng-view></div>
+            </div>
         </div>
     </div>
 

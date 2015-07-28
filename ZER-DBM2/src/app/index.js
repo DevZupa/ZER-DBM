@@ -293,3 +293,8 @@ ERDBM.directive('passwordMatch', [function () {
         }
     };
 }]);
+
+$(document).ready(function() {
+    $(".dropdownjs").dropdown({"optionClass": "withripple"});
+    console.log('init');
+});
