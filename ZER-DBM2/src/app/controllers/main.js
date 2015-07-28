@@ -9,6 +9,7 @@
  */
 ERDBM
   .controller('MainCtrl',["$scope","$rootScope","$location","$http", function ($scope,$rootScope,$location,$http) {
+
         $(".nav li").removeClass("active");
 
         $("#dashboard").addClass("active");
@@ -25,9 +26,13 @@ ERDBM
         MC.traders = 0;
         MC.storages = 0;
 
+        console.log(RS.selectedServer['serverUrl']);
+
 
         $http.post(RS.selectedServer['serverUrl'] + 'getDashboardData.php?date='+ new Date().getTime(),{"secret": String(CryptoJS.MD5(RS.selectedServer['rpw'])) , "instance": RS.selectedServer['ri'], "db" : RS.selectedServer['dbi'] }).
             success(function(data, status, headers, config) {
+
+                console.log(data);
                 MC.unEpochorize(data);
 
                 MC.loadingData = false;

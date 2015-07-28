@@ -1,4 +1,36 @@
-.navbar-default.navbar {
-  background-color: lighten(@color3, 10%);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+.zupa {
+  .navbar-default.navbar {
+    background-color: @color3;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+    .navbar-brand {
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.95)
+    }
+    .menu-button {
+      display: inline-block;
+      float: left;
+      color: #fff;
+      font-size: 20px;
+      height: 60px;
+      line-height: 60px;
+      padding-left: 30px;
+      padding-right: 30px;
+      transition: all 1s ease;
+      &.locked {
+        transition: all 500ms ease;
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .page-header-container {
+    .clearfix();
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+    padding: 20px 0;
+    margin-bottom: 20px;
+  }
+  .breadcrumb {
+    margin: 0;
+  }
 }

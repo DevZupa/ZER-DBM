@@ -1,4 +1,6 @@
-
+<div class="row">
+<div class="page-header-container">
+    <div class="col-md-12">
     <!-- begin breadcrumb -->
     <ol class="breadcrumb pull-right">
         <li><a href="javascript:;">Home</a></li>
@@ -9,34 +11,35 @@
     <!-- begin page-header -->
     <h1 class="page-header">Add a new Server <small>  </small></h1>
     <!-- end page-header -->
+    </div>
+</div>
+</div>
 
  <div class="row">
-     <div class="col-md-12">
+     <div class="col-md-6">
     <div class="panel panel-inverse" >
         <div class="panel-heading">
             <div class="panel-heading-btn">
             </div>
             <h4 class="panel-title">Import Server</h4>
         </div>
-        <div class="alert alert-success fade in">
+        <div class="alert alert-primary fade in">
             <i class="fa fa-database fa-2x pull-left"></i>
             <p>You can import a server if you got the exported data, paste it here and press Import.</p>
         </div>
         <div class="panel-body panel-form">
             <table class="table table-striped">
                 <tr>
-                    <td ><input class="form-control" type="text" ng-model="importObject"/></td>
-                    <td><a class="btn btn-success" ng-click="importServer()" ><i class="fa fa-arrow-left"></i> Import </a></td>
+                    <td ><input class="form-control floating-label" placeholder="Import json" type="text" ng-model="importObject"/></td>
+                    <td><a class="btn btn-primary btn-raised" ng-click="importServer()" ><i class="fa fa-arrow-left"></i> Import </a></td>
                 </tr>
             </table>
         </div>
     </div>
          </div>
-</div>
-    <!-- begin row -->
-    <div class="row">
+
         <!-- begin col-6 -->
-        <div class="col-md-12">
+        <div class="col-md-6">
             <!-- begin panel -->
             <div class="panel panel-inverse">
                 <div class="panel-heading">
@@ -47,65 +50,55 @@
                 <div class="panel-body panel-form">
                     <form class="form-horizontal form-bordered">
                         <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4" for="sname">Server Name * :</label>
-                            <div class="col-md-6 col-sm-6">
-                                <input class="form-control" type="text" id="sname" name="sname" placeholder="Required"  ng-model="newServer.name"/>
+                            <div class="col-md-12">
+                                <input class="form-control floating-label" type="text" id="sname" name="sname" placeholder="Server name"  ng-model="newServer.name"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4" for="ip">IP * :</label>
-                            <div class="col-md-6 col-sm-6">
-                                <input class="form-control" type="text" id="ip" name="ip"  placeholder="Required" ng-model="newServer.ip" />
+                            <div class="col-md-12">
+                                <input class="form-control floating-label" type="text" id="ip" name="ip"  placeholder="Server ip" ng-model="newServer.ip" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4" for="Port">Port * :</label>
-                            <div class="col-md-6 col-sm-6">
-                                <input class="form-control" type="number" id="Port" name="Port"  placeholder="Required" ng-model="newServer.port"/>
+                            <div class="col-md-12">
+                                <input class="form-control floating-label" type="number" id="Port" name="Port"  placeholder="Server port (default 2302)" ng-model="newServer.port"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4" for="RPort">Redis Port * :</label>
-                            <div class="col-md-6 col-sm-6">
-                                <input class="form-control" type="number" id="RPort" name="RPort"  placeholder="Required" ng-model="newServer.redisport"/>
+                            <div class="col-md-12">
+                                <input class="form-control floating-label" type="number" name="RPort"  placeholder="Redis port (default 6379)" ng-model="newServer.redisport"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4" for="RPassword">Redis Password * :</label>
-                            <div class="col-md-6 col-sm-6">
-                                <input class="form-control" type="text" id="RPassword" name="RPassword" placeholder="Required" ng-model="newServer.pass" />
+                            <div class="col-md-12">
+                                <input class="form-control floating-label" type="text"  name="RPassword" placeholder="Redis password" ng-model="newServer.pass" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4" for="RPassword">Redis Server Instance * :</label>
-                            <div class="col-md-6 col-sm-6">
-                                <input class="form-control" type="text" id="RPassword" name="Rinstance" placeholder="Required" ng-model="newServer.instance" />
+                            <div class="col-md-12">
+                                <input class="form-control floating-label" type="text" name="Rinstance" placeholder="Epoch redis instance string" ng-model="newServer.instance" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4" for="RDB">Redis DB number * :</label>
-                            <div class="col-md-6 col-sm-6">
-                                <input class="form-control" type="number" id="RDB" name="RDB" placeholder="Required" ng-model="newServer.db"/>
+                            <div class="col-md-12">
+                                <input class="form-control floating-label" type="number" id="RDB" name="RDB" placeholder="Redis database number" ng-model="newServer.db"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4" for="RPassword">PHP server url * :</label>
-                            <div class="col-md-6 col-sm-6">
-                                <input class="form-control" type="text" id="RPassword" name="Rinstance" placeholder="Required" ng-model="newServer.serverUrl" />
+                            <div class="col-md-12">
+                                <input class="form-control floating-label" type="text" name="Rinstance" placeholder="Php server url ( default: 'server/' )" ng-model="newServer.serverUrl" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4" for="RDB">Server Map * :</label>
-                            <div class="col-md-6 col-sm-6">
-                                <select class="form-control selectpicker" ng-model="newServer.map"
+                            <div class="col-md-12">
+                                <select class="form-control selectpicker floating-label" ng-model="newServer.map" placeholder="Server map"
                                         ng-options="opt.name as opt.name for opt in $parent.maps">
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-4 col-sm-4"></label>
                             <div class="col-md-6 col-sm-6">
-                                <button type="button" class="btn btn-primary" ng-click="addServer()">Save Server</button>
+                                <button type="button" class="btn btn-primary btn-raised" ng-click="addServer()">Save Server</button>
                             </div>
                         </div>
                     </form>

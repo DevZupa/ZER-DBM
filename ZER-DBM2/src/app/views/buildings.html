@@ -1,8 +1,10 @@
 <div class="row">
+    <div class="page-header-container">
     <div class="col-md-12">
         <h1 class="page-header">Buildings <small> - {{selectedServer.ip}} : {{selectedServer.port}} - {{selectedServer.name}}</small></h1>
     </div>
 </div>
+    </div>
 
 <div class="row">
     <div class="col-md-5">
@@ -43,7 +45,7 @@
                     <tr ng-repeat="vehicle in buildingsTypes">
                         <td>{{vehicle.name}}</td>
                         <td>{{vehicle.type}}</td>
-                        <td><img src="images/door.png" ng-show="vehicle.type == 'door'"/><img src="images/walls.png" ng-show="vehicle.type == 'wall'"/></td>
+                        <td><img src="assets/images/door.png" ng-show="vehicle.type == 'door'"/><img src="assets/images/walls.png" ng-show="vehicle.type == 'wall'"/></td>
                         <td>{{vehicle.ammount}}</td>
                     </tr>
                 </table>
@@ -64,7 +66,7 @@
                             <input type="number" class="form-control input-sm" ng-model="pageSize"  placeholder="pagesize" style="margin-left:10px;" min="1" max="200">
                         </div>
                         <i class="fa fa-spinner fa-spin fa-2x" ng-show="loadingData"> </i> <span ng-show="loadingData">Loading Buildings.</span>
-                        <span> <a ng-click="refreshData()" class="btn btn-info btn-sm" style="margin-top:10px;"> <i class="fa fa-refresh" > Refresh Data</i></a></span>
+                        <span> <a ng-click="refreshData()" class="btn btn-info btn-sm btn-raised" style="margin-top:10px;"> <i class="fa fa-refresh" > Refresh Data</i></a></span>
                     </h4>
                 </form>
 
@@ -84,10 +86,10 @@
                         <td>{{$index + 1}}</td>
                         <td>{{vehicle.name}}</td>
                         <td>{{vehicle.type}}</td>
-                        <td><img src="images/door.png" ng-show="vehicle.type == 'door'"/><img src="images/walls.png" ng-show="vehicle.type == 'wall'"/></td>
-                        <td><a ng-click="seePlayer('{{vehicle.owner}}')" class="btn btn-success m-r-5"><i class="fa fa-search"></i> {{vehicle.owner}}</a></td>
+                        <td><img src="assets/images/door.png" ng-show="vehicle.type == 'door'"/><img src="assets/images/walls.png" ng-show="vehicle.type == 'wall'"/></td>
+                        <td><a ng-click="seePlayer('{{vehicle.owner}}')" class="btn btn-success m-r-5 btn-raised"><i class="fa fa-search"></i> {{vehicle.owner}}</a></td>
 
-                        <td><a ng-click="edit('{{vehicle.key}}')" class="btn btn-info m-r-5"><i class="fa fa-edit"></i> View</a></td>
+                        <td><a ng-click="edit('{{vehicle.key}}')" class="btn btn-info m-r-5 btn-raised"><i class="fa fa-edit"></i> View</a></td>
                     </tr>
                 </table>
                 <div style="margin:auto;text-align: center">

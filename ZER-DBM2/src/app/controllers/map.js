@@ -148,42 +148,42 @@ angular.module('ERDBM')
 
 
         MC.buildingIcon = L.icon({
-            iconUrl: 'images/'+RS.mapicons[0].image,
+            iconUrl: 'assets/images/'+RS.mapicons[0].image,
             iconRetinaUrl: 'images/'+RS.mapicons[0].image,
             iconSize:[RS.mapicons[0].x,RS.mapicons[0].y],
             iconAnchor: [RS.mapicons[0].x/2,RS.mapicons[0].y]
         });
 
         MC.doorIcon = L.icon({
-            iconUrl: 'images/'+RS.mapicons[1].image,
-            iconRetinaUrl: 'images/'+RS.mapicons[1].image,
+            iconUrl: 'assets/images/'+RS.mapicons[1].image,
+            iconRetinaUrl: 'assets/images/'+RS.mapicons[1].image,
             iconSize:[RS.mapicons[1].x,RS.mapicons[1].y],
             iconAnchor: [RS.mapicons[1].x/2,RS.mapicons[1].y]
         });
 
         MC.heliIcon = L.icon({
-            iconUrl:'images/'+ RS.mapicons[2].image,
-            iconRetinaUrl:'images/'+ RS.mapicons[2].image,
+            iconUrl:'assets/images/'+ RS.mapicons[2].image,
+            iconRetinaUrl:'assets/images/'+ RS.mapicons[2].image,
             iconSize:[RS.mapicons[2].x,RS.mapicons[2].y],
             iconAnchor: [RS.mapicons[2].x/2,RS.mapicons[2].y]
         });
 
         MC.shipIcon = L.icon({
-            iconUrl: 'images/'+RS.mapicons[3].image,
-            iconRetinaUrl:'images/'+ RS.mapicons[3].image,
+            iconUrl: 'assets/images/'+RS.mapicons[3].image,
+            iconRetinaUrl:'assets/images/'+ RS.mapicons[3].image,
             iconSize:[RS.mapicons[3].x,RS.mapicons[3].y],
             iconAnchor: [RS.mapicons[3].x/2,RS.mapicons[3].y]
         });
 
         MC.storageIcon = L.icon({
-            iconUrl: 'images/'+RS.mapicons[10].image,
-            iconRetinaUrl: 'images/'+RS.mapicons[10].image,
+            iconUrl: 'assets/images/'+RS.mapicons[10].image,
+            iconRetinaUrl: 'assets/images/'+RS.mapicons[10].image,
             iconSize:[RS.mapicons[6].x,RS.mapicons[10].y],
             iconAnchor: [RS.mapicons[6].x/2,RS.mapicons[10].y]
         });
         MC.tentIcon = L.icon({
-            iconUrl: 'images/'+RS.mapicons[6].image,
-            iconRetinaUrl: 'images/'+RS.mapicons[6].image,
+            iconUrl: 'assets/images/'+RS.mapicons[6].image,
+            iconRetinaUrl: 'assets/images/'+RS.mapicons[6].image,
             iconSize:[RS.mapicons[6].x,RS.mapicons[6].y],
             iconAnchor: [RS.mapicons[6].x/2,RS.mapicons[6].y]
         });
@@ -191,36 +191,36 @@ angular.module('ERDBM')
 
 
         MC.lockIcon = L.icon({
-            iconUrl: 'images/'+RS.mapicons[7].image,
-            iconRetinaUrl:'images/'+ RS.mapicons[7].image,
+            iconUrl: 'assets/images/'+RS.mapicons[7].image,
+            iconRetinaUrl:'assets/images/'+ RS.mapicons[7].image,
             iconSize:[RS.mapicons[7].x,RS.mapicons[7].y],
             iconAnchor: [RS.mapicons[7].x/2,RS.mapicons[7].y]
         });
 
         MC.atmIcon = L.icon({
-            iconUrl: 'images/'+RS.mapicons[5].image,
-            iconRetinaUrl: 'images/'+RS.mapicons[5].image,
+            iconUrl: 'assets/images/'+RS.mapicons[5].image,
+            iconRetinaUrl: 'assets/images/'+RS.mapicons[5].image,
             iconSize:[RS.mapicons[5].x,RS.mapicons[5].y],
             iconAnchor: [RS.mapicons[5].x/2,RS.mapicons[5].y]
         });
 
         MC.carIcon = L.icon({
-            iconUrl: 'images/'+RS.mapicons[4].image,
-            iconRetinaUrl: 'images/'+RS.mapicons[4].image,
+            iconUrl: 'assets/images/'+RS.mapicons[4].image,
+            iconRetinaUrl: 'assets/images/'+RS.mapicons[4].image,
             iconSize:[RS.mapicons[4].x,RS.mapicons[4].y],
             iconAnchor: [RS.mapicons[4].x/2,RS.mapicons[4].y]
         });
 
         MC.maleIcon = L.icon({
-            iconUrl: 'images/'+RS.mapicons[8].image,
-            iconRetinaUrl: 'images/'+RS.mapicons[8].image,
+            iconUrl: 'assets/images/'+RS.mapicons[8].image,
+            iconRetinaUrl: 'assets/images/'+RS.mapicons[8].image,
             iconSize:[RS.mapicons[8].x,RS.mapicons[8].y],
             iconAnchor: [RS.mapicons[8].x/2,RS.mapicons[8].y]
         });
 
         MC.femaleIcon = L.icon({
-            iconUrl: 'images/'+RS.mapicons[9].image,
-            iconRetinaUrl: 'images/'+RS.mapicons[9].image,
+            iconUrl: 'assets/images/'+RS.mapicons[9].image,
+            iconRetinaUrl: 'assets/images/'+RS.mapicons[9].image,
             iconSize:[RS.mapicons[9].x,RS.mapicons[9].y],
             iconAnchor: [RS.mapicons[9].x/2,RS.mapicons[9].y]
         });
@@ -278,7 +278,7 @@ angular.module('ERDBM')
                 MC.map.unproject([8192, 0], mapMaxZoom));
 
             MC.map.fitBounds(mapBounds);
-            L.tileLayer('map/'+MC.mapName+'/{z}/{x}/{y}.png', {
+            L.tileLayer('assets/map/'+MC.mapName+'/{z}/{x}/{y}.png', {
                 minZoom: mapMinZoom, maxZoom: mapMaxZoom,
                 bounds: mapBounds,
                 attribution: 'Zupa',

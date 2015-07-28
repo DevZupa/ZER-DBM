@@ -1,13 +1,26 @@
 body,
 html {
   height: 100%;
+  background-color: #EEFFF3;
+}
+
+a {
+  cursor: pointer;
 }
 
 .content {
-  padding-top: 80px;
+  padding-top: 60px;
   margin-left: 60px;
+  transition: margin 1s;
+  &.locked {
+    margin-left: 300px;
+    transition: margin 1s;
+  }
 }
 
 .page-header {
-  margin-top: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-transform: uppercase;
 }

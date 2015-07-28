@@ -1,0 +1,98 @@
+.dashboard-item {
+  .clearfix();
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  &.b-primary {
+    border-left: 5px solid @brand-primary;
+    .stats-icon {
+      color: @brand-primary;
+    }
+    &:hover {
+      background-color: @brand-primary;
+      color: #fff;
+      .stats-icon {
+        color: #fff;
+      }
+    }
+  }
+  &.b-secondary {
+    border-left: 5px solid @color1;
+    .stats-icon {
+      color: @color1;
+    }
+    &:hover {
+      background-color: @color1;
+      color: #fff;
+      .stats-icon {
+        color: #fff;
+      }
+    }
+  }
+  &.b-tertiary {
+    border-left: 5px solid @color5;
+    .stats-icon {
+      color: @color5;
+    }
+    &:hover {
+      background-color: @color5;
+      color: #fff;
+      .stats-icon {
+        color: #fff;
+      }
+    }
+  }
+  &.b-quaternary {
+     border-left: 5px solid @brand-success;
+    .stats-icon {
+      color: @brand-success;
+    }
+     &:hover {
+       background-color: @brand-success;
+       color: #fff;
+       .stats-icon {
+         color: #fff;
+       }
+     }
+  }
+  &.b-five {
+    border-left: 5px solid @brand-warning;
+    .stats-icon {
+      color: @brand-warning;
+    }
+    &:hover {
+      background-color: @brand-warning;
+      color: #fff;
+      .stats-icon {
+        color: #fff;
+      }
+    }
+  }
+  &.b-six {
+    border-left: 5px solid @brand-info;
+    .stats-icon {
+      color: @brand-info;
+    }
+    &:hover {
+      background-color: @brand-info;
+      color: #fff;
+      .stats-icon {
+        color: #fff;
+      }
+    }
+  }
+  .stats-icon {
+    float: left;
+    font-size: 55px;
+  }
+  .stats-info {
+    padding-left: 20px;
+    float: left;
+    text-transform: uppercase;
+    p {
+      font-size: 18px;
+    }
+  }
+}

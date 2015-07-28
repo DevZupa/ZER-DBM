@@ -1,9 +1,10 @@
 <div class="row">
+    <div class="page-header-container">
     <div class="col-md-12">
         <h1 class="page-header">Storages <small> - {{selectedServer.ip}} : {{selectedServer.port}} - {{selectedServer.name}}</small></h1>
     </div>
 </div>
-
+</div>
 <div class="row">
     <div class="col-md-5">
         <div class="panel panel-inverse" style="margin-bottom:0;">
@@ -44,7 +45,7 @@
                     <tr ng-repeat="vehicle in storagesTypes">
                         <td>{{vehicle.name}}</td>
                         <td>{{vehicle.type}}</td>
-                        <td><img src="images/lock.png" ng-show="vehicle.type == 'lock'"/><img src="images/shelve.png" ng-show="vehicle.type == 'shelve'"/><img src="images/storage.png" ng-show="vehicle.type == 'storage'"/></td>
+                        <td><img src="assets/images/lock.png" ng-show="vehicle.type == 'lock'"/><img src="assets/images/shelve.png" ng-show="vehicle.type == 'shelve'"/><img src="assets/images/storage.png" ng-show="vehicle.type == 'storage'"/></td>
                         <td>{{vehicle.ammount}}</td>
                     </tr>
                 </table>
@@ -82,10 +83,10 @@
                         <td>{{$index + 1}}</td>
                         <td>{{vehicle.name}}</td>
                         <td>{{vehicle.type}}</td>
-                        <td><img src="images/lock.png" ng-show="vehicle.type == 'lock'"/><img src="images/shelve.png" ng-show="vehicle.type == 'shelve'"/><img src="images/storage.png" ng-show="vehicle.type == 'storage'"/></td>
-                        <td><a ng-click="seePlayer('{{vehicle.owner}}')" class="btn btn-success m-r-5"><i class="fa fa-search"></i> {{vehicle.owner}}</a></td>
+                        <td><img src="assets/images/lock.png" ng-show="vehicle.type == 'lock'"/><img src="assets/images/shelve.png" ng-show="vehicle.type == 'shelve'"/><img src="assets/images/storage.png" ng-show="vehicle.type == 'storage'"/></td>
+                        <td><a ng-click="seePlayer('{{vehicle.owner}}')" class="btn btn-success m-r-5 btn-raised"><i class="fa fa-search"></i> {{vehicle.owner}}</a></td>
 
-                        <td><a ng-click="edit('{{vehicle.key}}')" class="btn btn-info m-r-5"><i class="fa fa-edit"></i> View</a></td>
+                        <td><a ng-click="edit('{{vehicle.key}}')" class="btn btn-info m-r-5 btn-raised"><i class="fa fa-edit"></i> View</a></td>
                     </tr>
                 </table>
                 <div style="margin:auto;text-align: center">

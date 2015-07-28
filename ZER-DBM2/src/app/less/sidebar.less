@@ -12,7 +12,8 @@
   z-index: 20;
   transition: width 1s;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
-  &:hover {
+  &:hover,
+  &.locked {
     transition: width 1s;
     width: 300px;
     .nav {
@@ -21,6 +22,10 @@
         transition: opacity 1s;
       }
     }
+  }
+  &.locked {
+    width: 300px;
+    transition: width 1s;
   }
   .nav {
     padding: 0;

@@ -26,7 +26,7 @@ return [
 	|
 	*/
 
-	'default' => 'mysql',
+	'default' => 'sqlite',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -48,7 +48,7 @@ return [
 
 		'sqlite' => [
 			'driver'   => 'sqlite',
-			'database' => storage_path().'/database.sqlite',
+			'database' => storage_path().'/zerdbm.sqlite',
 			'prefix'   => '',
 		],
 
@@ -118,6 +118,7 @@ return [
 			'host'     => '127.0.0.1',
 			'port'     => 6379,
 			'database' => 0,
+            'auth'     => 'zupa'
 		],
 
 	],

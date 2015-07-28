@@ -25,20 +25,16 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
-    <div id="page-container" class="page-sidebar-fixed page-header-fixed">
+    <div class="zupa">
         <!-- begin #header -->
         <div class="navbar navbar-fixed-top navbar-default">
             <!-- begin container-fluid -->
             <div class="container-fluid">
                 <!-- begin mobile sidebar expand / collapse button -->
                 <div class="navbar-header">
-                    <a href="#/" class="navbar-brand" style="text-align: center">Epoch Manager 2.0</a>
-                    <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+                    <a href="#/" class="navbar-brand">Epoch Manager 2.0</a>
                 </div>
+                <a href="javascript:void(0);" class="menu-button" ng-click="toggleMenu()"><span class="fa fa-bars"></span></a>
                 <!-- end mobile sidebar expand / collapse button -->
                 <!--
                       <ul class="nav navbar-nav navbar-left">
@@ -51,13 +47,6 @@
                       </ul>
                 <!-- begin header navigation right -->
                 <ul class="nav navbar-nav navbar-right">
-                    <div class="dropdownjs">
-                        <input type="text" readonly placeholder="This is a placeholder">
-                        <ul>
-                            <li value="foobar" tabindex="0">My foobar...</li>
-                            <li value="great" selected class="selected" tabindex="0">...is great!</li>
-                        </ul>
-                    </div>
                     <li class="dropdown navbar-user">
                         <a ng-show="servers.length > 0" class="dropdown-toggle" data-toggle="dropdown">
                             <span class="fa fa-database fa-1x"> </span>
@@ -183,6 +172,11 @@
     <!-- run `gulp inject` to automatically populate bower script dependencies -->
     <!-- endbower -->
     <!-- endbuild -->
+
+    <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+    <script src="../bower_components/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+    <script src="assets/libs/jquery.dropdown.js"></script>
 
     <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
     <!-- inject:js -->

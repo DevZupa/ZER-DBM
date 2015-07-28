@@ -118,21 +118,21 @@ ERDBM.run(["$rootScope","storage","$location","$route","Data",
 
         var globalScope = $rootScope;
 
-        globalScope.$on("$routeChangeStart", function (event, next, current) {
-            globalScope.authenticated = false;
-            Data.get('session').then(function (results) {
-                if (results.uid) {
-                    globalScope.authenticated = true;
-                    globalScope.uid = results.uid;
-                    globalScope.name = results.name;
-                    globalScope.email = results.email;
-                } else {
-                     //   if($location.path()!= "/login"){
-                      //           $location.path("/login");
-                      //  }
-                }
-            })
-        });
+        //globalScope.$on("$routeChangeStart", function (event, next, current) {
+        //    globalScope.authenticated = false;
+        //    Data.get('session').then(function (results) {
+        //        if (results.uid) {
+        //            globalScope.authenticated = true;
+        //            globalScope.uid = results.uid;
+        //            globalScope.name = results.name;
+        //            globalScope.email = results.email;
+        //        } else {
+        //             //   if($location.path()!= "/login"){
+        //              //           $location.path("/login");
+        //              //  }
+        //        }
+        //    })
+        //});
 
 
 
@@ -197,6 +197,7 @@ ERDBM.run(["$rootScope","storage","$location","$route","Data",
         globalScope.changeServer = changeServer;
         globalScope.deleteServer = deleteServer;
         globalScope.deleteMap = deleteMap;
+        globalScope.toggleMenu = toggleMenu;
 
         // define functions
         function changeServer (index){
@@ -219,6 +220,12 @@ ERDBM.run(["$rootScope","storage","$location","$route","Data",
             globalScope.maps.splice(index, 1);
         }
 
+        function toggleMenu() {
+            $('.sidebar').toggleClass('locked');
+            $('.menu-button').toggleClass('locked');
+            $('.content').toggleClass('locked');
+        }
+
         if(!globalScope.hasServers){
             if($location.path() != "/login") {
                 $location.path('/server/add');
@@ -237,7 +244,7 @@ ERDBM.factory("Data", ['$http', 'toaster',
         obj.toast = function (data) {
             toaster.pop(data.status, "", data.message, 10000, 'trustedHtml');
         }
-        obj.get = function (q) {
+        obj.get = function (q ) {
             return $http.get(serviceBase + q).then(function (results) {
                 return results.data;
             },function(results){
@@ -295,6 +302,6 @@ ERDBM.directive('passwordMatch', [function () {
 }]);
 
 $(document).ready(function() {
-    $(".dropdownjs").dropdown({"optionClass": "withripple"});
+    $.material.init();
     console.log('init');
 });

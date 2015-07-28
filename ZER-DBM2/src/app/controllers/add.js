@@ -21,7 +21,9 @@ angular.module('ERDBM')
         SAC.importServer = importServer;
 
         SAC.newServer = {
-            serverUrl : "server/"
+            serverUrl : "server/",
+            redisport : 6379,
+            port : 2302
         };
 
 

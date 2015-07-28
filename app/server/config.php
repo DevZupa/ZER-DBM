@@ -1,6 +1,6 @@
 <?php
 
-$myRedisPass = "npgforever1991";
+$myRedisPass = "zupa";
 $myRedisPort = 6379;
 $myRedisHost = '127.0.0.1';
 
