@@ -1,3 +1,4 @@
+<div class="module-settings">
 <div class="row">
     <div class="page-header-container">
         <div class="col-md-12">
@@ -14,184 +15,142 @@
     </div>
 </div>
 
-<!-- begin row -->
-<div class="row">
+    <ul class="nav nav-tabs" style="margin-bottom: 15px;">
+        <li ng-class="{active: tabs[0].active}"><a ng-click="tabs[0].active = true">Servers</a></li>
+        <li ng-class="{active: tabs[1].active}"><a ng-click="tabs[1].active = true">Maps</a></li>
+        <li ng-class="{active: tabs[2].active}"><a ng-click="tabs[2].active = true">Map options</a></li>
+        <li ng-class="{active: tabs[3].active}"><a ng-click="tabs[3].active = true">Users</a></li>
+    </ul>
+<tabset>
+    <tab active="tabs[0].active">
+        <div class="tab-content">
+            <div class="tab-intro">You can edit and delete servers here. Add a server with the top bar button.</div>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Server</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                    <th>Export Data</th>
+                </tr>
 
-    <div class="col-md-6">
-        <!-- begin panel -->
-        <div class="panel panel-inverse" >
-            <div class="panel-heading">
-                <div class="panel-heading-btn">
-                     </div>
-                <h4 class="panel-title">Servers</h4>
-            </div>
-            <div class="alert alert-info fade in">
-                <i class="fa fa-database fa-2x pull-left"></i>
-                <p>You can edit and delete servers here. Add a server with the top bar button.</p>
-            </div>
-            <div class="panel-body panel-form">
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Server</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                        <th>Export Data</th>
-                    </tr>
+                <tr ng-repeat="server in serverssettings">
+                    <td>{{$index + 1}}</td>
+                    <td>{{server.name}}</td>
+                    <td><a class="btn btn-info btn-raised"  ng-click="editServer($index)" ><i class="fa fa-edit"></i> Edit </a></td>
+                    <td><a class="btn btn-danger btn-raised" ng-click="deleteServer($index)" ><i class="fa fa-times"></i> Delete </a></td>
+                    <td><a class="btn btn-warning btn-raised" ng-click="exportServer($index)" ><i class="fa  fa-arrow-right"></i> Export </a></td>
+                </tr>
 
-                    <tr ng-repeat="server in serverssettings">
-                        <td>{{$index + 1}}</td>
-                        <td>{{server.name}}</td>
-                        <td><a class="btn btn-info btn-raised"  ng-click="editServer($index)" ><i class="fa fa-edit"></i> Edit </a></td>
-                        <td><a class="btn btn-danger btn-raised" ng-click="deleteServer($index)" ><i class="fa fa-times"></i> Delete </a></td>
-                        <td><a class="btn btn-warning btn-raised" ng-click="exportServer($index)" ><i class="fa  fa-arrow-right"></i> Export </a></td>
-                    </tr>
-
-                    <tr>
-                        <td colspan="4">
-                            <div class="form-group">
-                                <input class="form-control floating-label" type="text" ng-model="importObject" placeholder="Import json" />
-                            </div>
-                        </td>
-                        <td><a class="btn btn-success btn-raised" ng-click="importServer()" ><i class="fa fa-arrow-left"></i> Import </a></td>
-                    </tr>
-
-                </table>
-                <a class="btn btn-success btn-fab btn-raised mdi-content-add pull-right" href="#/server/add" ></a>
-            </div>
-        </div>
-
-        <div class="panel panel-inverse" >
-            <div class="panel-heading">
-                <div class="panel-heading-btn">
-                </div>
-                <h4 class="panel-title">Maps</h4>
-            </div>
-            <div class="alert alert-info fade in">
-                <i class="fa fa-globe fa-2x pull-left"></i>
-                <p>Add your own maps to this list. Be sure to have the same name as a folder with the correct tiles in the webapp this "map" folder.
-                Don't forget to define the right x and y ingame coords for the mapsizes.
-                </p>
-            </div>
-            <div class="panel-body panel-form">
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Folder & map name</th>
-                        <th>X</th>
-                        <th>Y</th>
-                        <th>Delete</th>
-                    </tr>
-                    <tbody ng-repeat="map in maps">
-                    <tr >
-                        <td>{{$index + 1}}</td>
-                        <td><input class="form-control floating-label" placeholder="Map name" type="text" ng-model="map.name"/></td>
-                        <td><input class="form-control floating-label" placeholder="X size" type="number" ng-model="map.x"/></td>
-                        <td><input class="form-control floating-label" placeholder="Y size" type="number" ng-model="map.y"/></td>
-                        <td><a class="btn btn-danger" ng-click="deleteMap($index)" ><i class="fa fa-times"></i> Delete </a></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td><input class="form-control floating-label" placeholder="X Offset" type="number" ng-model="map.offsetX"/></td>
-                        <td><input class="form-control floating-label" placeholder="Y Offset" type="number" ng-model="map.offsetY"/></td>
-                    </tr>
-                    </tbody>
-                    <tr >
-                        <td>NEW</td>
-                        <td> <input class="form-control floating-label" placeholder="Map name" type="text"  ng-model="newMap.name"/></td>
-                        <td> <input class="form-control floating-label" placeholder="X size" type="number" ng-model="newMap.x"/></td>
-                        <td> <input class="form-control floating-label" placeholder="Y size" type="number"  ng-model="newMap.y"/></td>
-                        <td></td>
-                    </tr>
-                    <tr >
-                        <td></td>
-                        <td></td>
-                        <td> <input class="form-control floating-label" placeholder="X Offset" type="number" ng-model="newMap.offsetX"/></td>
-                        <td> <input class="form-control floating-label" placeholder="Y Offset" type="number"  ng-model="newMap.offsetY"/></td>
-                        <td><a class="btn btn-success btn-fab btn-raised mdi-content-add" ng-click="saveMap()" ></a></td>
-                    </tr>
-                </table>
-                <p>
-                </p>
-            </div>
-
-        </div>
-
-
-    </div>
-
-
-    <div class="col-md-6">
-        <div class="panel panel-inverse">
-            <div class="panel-heading">
-                <div class="panel-heading-btn">
-                </div>
-                <h4 class="panel-title">Global Settings</h4>
-            </div>
-            <div class="alert alert-info fade in">
-                <i class="fa fa-gear fa-2x pull-left"></i>
-                <p>Some global app settings that needs filling in. Default is always good ;)</p>
-            </div>
-            <div class="panel-body panel-form">
-                <form class="form-horizontal form-bordered">
-                    <div class="form-group">
-
-                        <div class="col-md-6 col-sm-6">
-                            <input class="form-control floating-label" placeholder="Cluster radius in px" type="number" id="scluster" name="scluster" ng-model="$parent.clusterRad"/>
+                <tr>
+                    <td colspan="4">
+                        <div class="form-group">
+                            <input class="form-control floating-label" type="text" ng-model="importObject" placeholder="Import json" />
                         </div>
-                    </div>
-                    <div class="form-group">
+                    </td>
+                    <td><a class="btn btn-success btn-raised" ng-click="importServer()" ><i class="fa fa-arrow-left"></i> Import </a></td>
+                </tr>
 
-                        <div class="col-md-6 col-sm-6">
-                            <input class="form-control floating-label" placeholder="Map refrehs timer in seconds" type="number" id="maptime" name="maptime" ng-model="$parent.mapRefresh"/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-6 col-sm-6">
-                            <input class="form-control floating-label" placeholder="Leaflet size in px" type="number" id="mapleafletsize" name="mapleafletsize" ng-model="$parent.leafletsize"/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-6 col-sm-6">
-                           Everything saves real time. No save buttons needed. </div>
-                    </div>
-                </form>
-            </div>
+            </table>
+            <a class="btn btn-success btn-fab btn-raised mdi-content-add pull-right" href="#/server/add" ></a>
         </div>
-
-        <div class="panel panel-inverse">
-            <div class="panel-heading">
-                <div class="panel-heading-btn">
+    </tab>
+    <tab active="tabs[1].active">
+        <div class="tab-content">
+            <div class="tab-intro">Add your own maps to this list. Be sure to have the same name as a folder with the correct tiles in the webapp this "map" folder.
+                Don't forget to define the right x and y ingame coords for the mapsizes.</div>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Folder & map name</th>
+                    <th>X</th>
+                    <th>Y</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tbody ng-repeat="map in maps">
+                <tr >
+                    <td>{{$index + 1}}</td>
+                    <td><input class="form-control floating-label" placeholder="Map name" type="text" ng-model="map.name"/></td>
+                    <td><input class="form-control floating-label" placeholder="X size" type="number" ng-model="map.x"/></td>
+                    <td><input class="form-control floating-label" placeholder="Y size" type="number" ng-model="map.y"/></td>
+                    <td><a class="btn btn-danger" ng-click="deleteMap($index)" ><i class="fa fa-times"></i> Delete </a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><input class="form-control floating-label" placeholder="X Offset" type="number" ng-model="map.offsetX"/></td>
+                    <td><input class="form-control floating-label" placeholder="Y Offset" type="number" ng-model="map.offsetY"/></td>
+                </tr>
+                </tbody>
+                <tr >
+                    <td>NEW</td>
+                    <td> <input class="form-control floating-label" placeholder="Map name" type="text"  ng-model="newMap.name"/></td>
+                    <td> <input class="form-control floating-label" placeholder="X size" type="number" ng-model="newMap.x"/></td>
+                    <td> <input class="form-control floating-label" placeholder="Y size" type="number"  ng-model="newMap.y"/></td>
+                    <td></td>
+                </tr>
+                <tr >
+                    <td></td>
+                    <td></td>
+                    <td> <input class="form-control floating-label" placeholder="X Offset" type="number" ng-model="newMap.offsetX"/></td>
+                    <td> <input class="form-control floating-label" placeholder="Y Offset" type="number"  ng-model="newMap.offsetY"/></td>
+                    <td><a class="btn btn-success btn-fab btn-raised mdi-content-add" ng-click="saveMap()" ></a></td>
+                </tr>
+            </table>
+        </div>
+    </tab>
+    <tab active="tabs[2].active">
+        <div class="tab-content">
+            <div class="tab-into">Some global app settings that needs filling in. Default is always good.</div>
+            <form class="form-horizontal form-bordered">
+                <div class="form-group">
+                    <div class="col-md-6 col-sm-6">
+                        <input class="form-control floating-label" placeholder="Cluster radius in px" type="number" id="scluster" name="scluster" ng-model="$parent.clusterRad"/>
+                    </div>
                 </div>
-                <h4 class="panel-title">Map Icon Settings</h4>
+                <div class="form-group">
+                    <div class="col-md-6 col-sm-6">
+                        <input class="form-control floating-label" placeholder="Map refrehs timer in seconds" type="number" id="maptime" name="maptime" ng-model="$parent.mapRefresh"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6 col-sm-6">
+                        <input class="form-control floating-label" placeholder="Leaflet size in px" type="number" id="mapleafletsize" name="mapleafletsize" ng-model="$parent.leafletsize"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6 col-sm-6">
+                        Everything saves real time. No save buttons needed. </div>
+                </div>
+            </form>
+            <div class="tab-intro">Specify your map images, place the images in your image folder!</div>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>IMG</th>
+                    <th>Name</th>
+                    <th>Width</th>
+                    <th>Height</th>
+                    <th>File</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="icon in mapicons">
+                    <td><img ng-src='assets/images/{{icon.image}}' style="max-width: 95%;"/></td>
+                    <td>{{icon.name}}</td>
+                    <td><input class="form-control floating-label" placeholder="X px" type="number" ng-model="icon.x"/></td>
+                    <td><input class="form-control floating-label" placeholder="Y px"  type="number" ng-model="icon.y"/></td>
+                    <td><input class="form-control floating-label" placeholder="File name"  type="text" ng-model="icon.image"/></td>
+                </tr>
+                </tbody>
+            </table>
             </div>
-            <div class="alert alert-info fade in">
-                <i class="fa fa-file-image-o fa-2x pull-left"></i>
-                <p>Specify your map images, place the images in your image folder! </p>
-            </div>
-            <div class="panel-body panel-form">
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>IMG</th>
-                        <th>Name</th>
-                        <th>Width</th>
-                        <th>Height</th>
-                        <th>File</th>
-                    </tr>
-
-                    <tr ng-repeat="icon in $parent.mapicons">
-                        <td><img ng-src='assets/images/{{icon.image}}' style="max-width: 95%;"/></td>
-                        <td>{{icon.name}}</td>
-                        <td><input class="form-control floating-label" placeholder="X px" type="number" ng-model="icon.x"/></td>
-                        <td><input class="form-control floating-label" placeholder="Y px"  type="number" ng-model="icon.y"/></td>
-                        <td><input class="form-control floating-label" placeholder="File name"  type="text" ng-model="icon.image"/></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
+    </tab>
+    <tab active="tabs[3].active">
+       4
+    </tab>
+</tabset>
 </div>

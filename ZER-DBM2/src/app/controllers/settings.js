@@ -17,6 +17,14 @@ ERDBM
         var SC = $scope;
         var RC = $rootScope;
 
+        SC.tabs = [
+            { active: true },
+            { active: false },
+            { active: false },
+            { active: false }
+        ];
+
+
         SC.serverssettings = RC.servers;
 
         SC.importObject = "";
