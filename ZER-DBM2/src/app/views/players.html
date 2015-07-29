@@ -6,55 +6,31 @@
 </div></div>
 
 <div class="row ">
-
     <div class="col-md-6">
-        <div class="panel panel-inverse" style="margin-bottom:0;">
-            <div class="panel-heading">
-                <form class="form-inline">
-                    <h4 class="panel-title">Uniforms Top 5
-                    </h4>
-                </form>
+        <div class="info-item b-primary">
+            <h4 class="panel-title">Top Uniforms
+            </h4>
+            <div class="col-sm-8">
+                <canvas tc-chartjs-polararea chart-options="optionsPolar" chart-data="dataUniforms" chart-legend="polarChart1"></canvas>
             </div>
-            <div class="panel-body" >
-                <div class="col-sm-8">
-                    <canvas tc-chartjs-polararea chart-options="optionsPolar" chart-data="dataUniforms" chart-legend="polarChart1"></canvas>
-                </div>
-                <div class="col-sm-4"><div tc-chartjs-legend="" chart-legend="polarChart1" class="ng-isolate-scope"></div></div>
-            </div>
+            <div class="col-sm-4"><div tc-chartjs-legend="" chart-legend="polarChart1" class="ng-isolate-scope"></div></div>
         </div>
     </div>
 
     <div class="col-md-6">
-        <div class="panel panel-inverse" style="margin-bottom:0;">
-            <div class="panel-heading">
-                <form class="form-inline">
-                    <h4 class="panel-title">Sex
-                    </h4>
-                </form>
-
+        <div class="info-item b-secondary">
+            <h4 class="panel-title">Genders
+            </h4>
+            <div class="col-sm-8">
+            <canvas tc-chartjs-pie chart-options="options" chart-data="data" chart-legend="pieChart1"></canvas>
             </div>
-            <div class="alert alert-info fade in">
-                <i class="fa fa-exclamation-triangle fa-2x pull-left"></i>
-                <p>Only players that have an alive character will get shown in this list.
-                </p>
-            </div>
-            <div class="panel-body" >
-
-                <div class="col-sm-8">
-                <canvas tc-chartjs-pie chart-options="options" chart-data="data" chart-legend="pieChart1"></canvas>
-                </div>
-                <div class="col-sm-4"><div tc-chartjs-legend="" chart-legend="pieChart1" class="ng-isolate-scope"></div></div>
-        </div>
+            <div class="col-sm-4"><div tc-chartjs-legend="" chart-legend="pieChart1" class="ng-isolate-scope"></div></div>
         </div>
     </div>
-
-
 </div>
-
-<br/>
 <div class="row">
     <div class="col-md-12">
-        <div class="panel panel-inverse" style="margin-bottom:0;">
+        <div class="panel panel-inverse">
             <div class="panel-heading">
                 <form class="form-inline">
                     <h4 class="panel-title">{{playersCount}} Players

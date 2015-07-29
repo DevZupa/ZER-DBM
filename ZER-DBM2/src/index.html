@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
+    <link href="assets/libs/leaflet.css" rel="stylesheet" />
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
     <link rel="stylesheet" href="app/vendor.css">
     <!-- bower:css -->
@@ -35,6 +36,8 @@
                     <a href="#/" class="navbar-brand">Epoch Manager 2.0</a>
                 </div>
                 <a href="javascript:void(0);" class="menu-button" ng-click="toggleMenu()"><span class="fa fa-bars"></span></a>
+                <a href="javascript:void(0);" class="lock-button" ng-click="lockMenu()"><span class="fa fa-unlock"></span></a>
+
                 <!-- end mobile sidebar expand / collapse button -->
                 <!--
                       <ul class="nav navbar-nav navbar-left">

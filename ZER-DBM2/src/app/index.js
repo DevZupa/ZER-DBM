@@ -198,6 +198,7 @@ ERDBM.run(["$rootScope","storage","$location","$route","Data",
         globalScope.deleteServer = deleteServer;
         globalScope.deleteMap = deleteMap;
         globalScope.toggleMenu = toggleMenu;
+        globalScope.lockMenu = lockMenu;
 
         // define functions
         function changeServer (index){
@@ -224,6 +225,10 @@ ERDBM.run(["$rootScope","storage","$location","$route","Data",
             $('.sidebar').toggleClass('locked');
             $('.menu-button').toggleClass('locked');
             $('.content').toggleClass('locked');
+        }
+        function lockMenu() {
+            $('.sidebar').toggleClass('no-hover');
+            $('.lock-button').toggleClass('no-hover');
         }
 
         if(!globalScope.hasServers){

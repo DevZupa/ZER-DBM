@@ -8,24 +8,21 @@
  * Controller of the ERDBM
  */
 angular.module('ERDBM')
-  .controller('MapCtrl',["$scope","storage","$http","$rootScope","$interval", function ($scope,storage,$http,$rootScope,$interval) {
-        $(".nav li").removeClass("active");
-
-        $("#map").addClass("active");
-
+  .controller('MapCtrl',['$scope','storage','$http','$rootScope','$interval', function ($scope,storage,$http,$rootScope,$interval) {
+        
         var MC = $scope;
         var RS = $rootScope;
 
 
         MC.map = null;
 
-        MC.serverURL = RS.selectedServer['serverUrl'];
-	    MC.mapName = RS.selectedServer['map'];
+        MC.serverURL = RS.selectedServer.serverUrl;
+	    MC.mapName = RS.selectedServer.map;
 
-		MC.secretCode = CryptoJS.MD5(RS.selectedServer['rpw']);
+		MC.secretCode = CryptoJS.MD5(RS.selectedServer.rpw);
 
-		MC.instance = RS.selectedServer['ri'];
-	    MC.db = RS.selectedServer['dbi'];
+		MC.instance = RS.selectedServer.ri;
+	    MC.db = RS.selectedServer.dbi;
 
         MC.mapsizeX = 0;
         MC.mapsizeY = 0;
@@ -45,8 +42,8 @@ angular.module('ERDBM')
         MC.leafletsize = RS.leafletsize;
 
         MC.csm = [];
-        MC.spuid = "";
-        MC.selectedKind = "Player";
+        MC.spuid = '';
+        MC.selectedKind = 'Player';
 
         MC.togleSettings = true;
 
@@ -75,41 +72,41 @@ angular.module('ERDBM')
         storage.bind(MC, 'clusterLock', {defaultValue: false});
         storage.bind(MC, 'clusterStorage', {defaultValue: false});
 
+        MC.showVehicles = true;
 
-
-        MC.$watch("clusterAllTogether", function(newValue, oldValue) {
-            doAllMarkers();
-        });
-
-        MC.$watch("clusterPlayer", function(newValue, oldValue) {
-            doAllMarkers();
-        });
-        MC.$watch("clusterVehicle", function(newValue, oldValue) {
-            doAllMarkers();
-        });
-        MC.$watch("clusterBuilding", function(newValue, oldValue) {
-            doAllMarkers();
-        });
-        MC.$watch("clusterLock", function(newValue, oldValue) {
-            doAllMarkers();
-        });
-        MC.$watch("clusterStorage", function(newValue, oldValue) {
+        MC.$watch('clusterAllTogether', function(newValue, oldValue) {
             doAllMarkers();
         });
 
-        MC.$watch("showPlayers", function(newValue, oldValue) {
+        MC.$watch('clusterPlayer', function(newValue, oldValue) {
             doAllMarkers();
         });
-        MC.$watch("showVehicles", function(newValue, oldValue) {
+        MC.$watch('clusterVehicle', function(newValue, oldValue) {
             doAllMarkers();
         });
-        MC.$watch("showBuildings", function(newValue, oldValue) {
+        MC.$watch('clusterBuilding', function(newValue, oldValue) {
             doAllMarkers();
         });
-        MC.$watch("showLocks", function(newValue, oldValue) {
+        MC.$watch('clusterLock', function(newValue, oldValue) {
             doAllMarkers();
         });
-        MC.$watch("showStorages", function(newValue, oldValue) {
+        MC.$watch('clusterStorage', function(newValue, oldValue) {
+            doAllMarkers();
+        });
+
+        MC.$watch('showPlayers', function(newValue, oldValue) {
+            doAllMarkers();
+        });
+        MC.$watch('showVehicles', function(newValue, oldValue) {
+            doAllMarkers();
+        });
+        MC.$watch('showBuildings', function(newValue, oldValue) {
+            doAllMarkers();
+        });
+        MC.$watch('showLocks', function(newValue, oldValue) {
+            doAllMarkers();
+        });
+        MC.$watch('showStorages', function(newValue, oldValue) {
             doAllMarkers();
         });
 
@@ -228,35 +225,35 @@ angular.module('ERDBM')
         function fillDataWindow(type, id) {
             MC.showInfo = true;
 
-            if(type == 1) {
-                MC.selectedKind = "Player";
+            if(type === 1) {
+                MC.selectedKind = 'Player';
                 MC.csm = MC.players[id];
                 MC.spuid = MC.onlinePlayers[id];
             }
 
-            if(type == 2) {
-                MC.selectedKind = "Vehicle";
+            if(type === 2) {
+                MC.selectedKind = 'Vehicle';
                 MC.csm = MC.vehicles[id];
-                MC.spuid = "";
+                MC.spuid = '';
             }
 
-            if(type == 3) {
-                MC.selectedKind = "Buildable";
+            if(type === 3) {
+                MC.selectedKind = 'Buildable';
                 MC.csm = MC.buildings[id];
-                MC.spuid = "";
+                MC.spuid = '';
             }
 
-            if(type == 4) {
-                MC.selectedKind = "Lockbox";
+            if(type === 4) {
+                MC.selectedKind = 'Lockbox';
                 MC.csm = MC.locks[id];
                 console.log(MC.csm);
-                MC.spuid = "";
+                MC.spuid = '';
             }
 
-            if(type == 5) {
-                MC.selectedKind = "Storage";
+            if(type === 5) {
+                MC.selectedKind = 'Storage';
                 MC.csm = MC.storage[id];
-                MC.spuid = "";
+                MC.spuid = '';
             }
 
 
@@ -346,7 +343,7 @@ angular.module('ERDBM')
                         if (typeof value[0] !== 'undefined') {
                             if (typeof value[1] !== 'undefined') {
                                 if (typeof value[1][0] !== 'undefined') {
-                                    if(value[0] != "LockBoxProxy_EPOCH"){
+                                    if(value[0] != 'LockBoxProxy_EPOCH'){
                                         MC.storage.push(value);
                                     }else{
                                         MC.locks.push(value);
@@ -455,7 +452,7 @@ angular.module('ERDBM')
                     var y = MC.leafletsize - ((ygame - MC.offsetY)  / MC.mapsizeY * MC.leafletsize);
 
                     var marker = null;
-                    if( JSON.stringify(value).indexOf("Epoch_Male_F") > -1) {
+                    if( JSON.stringify(value).indexOf('Epoch_Male_F') > -1) {
                          marker = L.marker(MC.map.unproject([x, y],MC.map.getMaxZoom()),{icon: MC.maleIcon});
                     }else{
                          marker = L.marker(MC.map.unproject([x, y],MC.map.getMaxZoom()),{icon: MC.femaleIcon});
@@ -522,11 +519,11 @@ angular.module('ERDBM')
 
                     var marker = null;
 
-                    if(value[0].indexOf("heli") > -1 || value[0].indexOf("mosquito") > -1 || value[0].indexOf("Heli") > -1)
+                    if(value[0].indexOf('heli') > -1 || value[0].indexOf('mosquito') > -1 || value[0].indexOf('Heli') > -1)
                     {
                         marker = L.marker(MC.map.unproject([x, y],MC.map.getMaxZoom()),{icon: MC.heliIcon});
                     }else{
-                        if(value[0].indexOf("boat") > -1 || value[0].indexOf("Boat") > -1 || value[0].indexOf("Ship") > -1 || value[0].indexOf("ship") > -1 || value[0].indexOf("jetski") > -1)
+                        if(value[0].indexOf('boat') > -1 || value[0].indexOf('Boat') > -1 || value[0].indexOf('Ship') > -1 || value[0].indexOf('ship') > -1 || value[0].indexOf('jetski') > -1)
                         {
                             marker = L.marker(MC.map.unproject([x, y],MC.map.getMaxZoom()),{icon: MC.shipIcon});
                         }else {
@@ -596,7 +593,7 @@ angular.module('ERDBM')
                     var y = MC.leafletsize - ((ygame - MC.offsetY)  / MC.mapsizeY * MC.leafletsize);
 
                     var marker = null;
-                    if(value[0].indexOf("door") > -1 || value[0].indexOf("Door") > -1 || value[0].indexOf("garage") > -1 || value[0].indexOf("Garage") > -1) {
+                    if(value[0].indexOf('door') > -1 || value[0].indexOf('Door') > -1 || value[0].indexOf('garage') > -1 || value[0].indexOf('Garage') > -1) {
                         marker = L.marker(MC.map.unproject([x, y], MC.map.getMaxZoom()), {icon: MC.doorIcon});
                     }else{
                         marker = L.marker(MC.map.unproject([x, y], MC.map.getMaxZoom()), {icon: MC.buildingIcon});
@@ -721,7 +718,7 @@ angular.module('ERDBM')
                         var x = (xgame - MC.offsetX) / MC.mapsizeX * MC.leafletsize ;
                         var y = MC.leafletsize - ((ygame - MC.offsetY) / MC.mapsizeY * MC.leafletsize);
 
-                        if(value[0].indexOf("StorageShelf_EPOCH") > -1 ) {
+                        if(value[0].indexOf('StorageShelf_EPOCH') > -1 ) {
                             var marker = L.marker(MC.map.unproject([x, y], MC.map.getMaxZoom()), {icon: MC.storageIcon});
                         }else{
                             var marker = L.marker(MC.map.unproject([x, y], MC.map.getMaxZoom()), {icon: MC.tentIcon});
@@ -768,7 +765,7 @@ angular.module('ERDBM')
                 MC.playerCount = MC.onlinePlayers.length;
             }).
             error(function(data, status, headers, config) {
-                //    alert("Could not connect to php backend - Online Players");
+                //    alert('Could not connect to php backend - Online Players');
             });
 			}
         function getPlayersData() {
@@ -779,7 +776,7 @@ angular.module('ERDBM')
                 removePlayerMarkers();
             }).
             error(function(data, status, headers, config) {
-                //   alert("Could not connect to php backend - Players Data");
+                //   alert('Could not connect to php backend - Players Data');
             });
 			}
         function getVehicleData(){
@@ -791,11 +788,11 @@ angular.module('ERDBM')
                 fillVehicleMarkers();
             }).
             error(function(data, status, headers, config) {
-               // alert("Could not connect to php backend - Vehicles Data");
+               // alert('Could not connect to php backend - Vehicles Data');
             });
         }
         function getBuildingData(){
-          $http.post(MC.serverURL + 'getBuildingData.php?date='+ new Date().getTime(),{"secret": String(MC.secretCode) , "instance": MC.instance, "db" : MC.db }).
+          $http.post(MC.serverURL + 'getBuildingData.php?date='+ new Date().getTime(),{'secret': String(MC.secretCode) , 'instance': MC.instance, 'db' : MC.db }).
             success(function(data, status, headers, config) {
                 MC.buildings = [];
                 MC.buildings = data;
@@ -804,7 +801,7 @@ angular.module('ERDBM')
                 fillBuildingMarkers();
             }).
             error(function(data, status, headers, config) {
-                //  alert("Could not connect to php backend - Vehicles Data");
+                //  alert('Could not connect to php backend - Vehicles Data');
             });
 
 
@@ -821,7 +818,7 @@ angular.module('ERDBM')
                 fillLockMarkers();
             }).
             error(function(data, status, headers, config) {
-                //  alert("Could not connect to php backend - Vehicles Data");
+                //  alert('Could not connect to php backend - Vehicles Data');
             });
 			}
 

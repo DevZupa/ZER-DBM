@@ -7,21 +7,17 @@
 
 <div class="row">
     <div class="col-md-5">
-        <div class="panel panel-primary" style="margin-bottom:0;">
-            <div class="panel-heading">
-                <form class="form-inline">
-                    <h4 class="panel-title">Vehicles
-                    </h4>
-                </form>
+        <div class="info-item b-primary">
+            <h4 class="panel-title">
+                Vehicles
+            </h4>
+            <div class="col-sm-8">
+                <canvas tc-chartjs-doughnut chart-options="options" chart-data="data"  chart-legend="donutChart1"></canvas>
             </div>
-            <div class="panel-body ">
-                <div class="col-sm-8">
-                    <canvas tc-chartjs-doughnut chart-options="options" chart-data="data"  chart-legend="donutChart1"></canvas>
-                </div>
-                <div class="col-sm-4"><div tc-chartjs-legend="" chart-legend="donutChart1" class="ng-isolate-scope"></div></div>
+            <div class="col-sm-4">
+                <div tc-chartjs-legend="" chart-legend="donutChart1" class="ng-isolate-scope"></div>
             </div>
         </div>
-        <br/>
         <div class="panel panel-inverse" style="margin-bottom:0;">
             <div class="panel-heading">
                 <form class="form-inline">
