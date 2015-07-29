@@ -9,7 +9,15 @@
  */
 angular.module('ERDBM')
   .controller('MapCtrl',['$scope','storage','$http','$rootScope','$interval', function ($scope,storage,$http,$rootScope,$interval) {
-        
+
+        $('.content-full-width').height(window.innerHeight - 60);
+
+        $( window ).resize(function() {
+            $('.content-full-width').height(window.innerHeight - 60);
+        });
+
+
+
         var MC = $scope;
         var RS = $rootScope;
 

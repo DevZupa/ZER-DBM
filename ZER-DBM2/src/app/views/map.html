@@ -1,44 +1,86 @@
 <!-- begin #content -->
 <div id="" class="content-full-width">
-    <!-- begin breadcrumb -->
-    <!--<div class="map-content">-->
-        <!--&lt;!&ndash; end breadcrumb &ndash;&gt;-->
-        <!--&lt;!&ndash; begin page-header &ndash;&gt;-->
-        <!--<h1 class="page-header" style="z-index:50;padding-left:50px;margin-right:-25px;" style="z-index:10">-->
 
-            <!--<div class="selectionBar-container text-right" style="z-index:5">-->
-                <!--<div class="selectionBar" style="max-width:300px;">-->
-                    <!--<div id="togleSettings" ng-show="togleSettings" style="z-index:12">-->
-                    <!--<span class=" m-l-5 m-r-20 fa fa-group"> {{playerCount}}</span>-->
-                    <!--<input ng-click="doAllMarkers()" ng-model="showPlayers" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"   />-->
-                    <!--<span class=" m-l-5 m-r-20 fa fa-asterisk"></span>-->
-                    <!--<input  ng-click="doAllMarkers()" ng-model="clusterPlayer" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"   />-->
-                    <!--<span class=" m-l-5 m-r-20 fa fa-car"> {{vehicleCount}}</span>-->
-                    <!--<input  ng-click="doAllMarkers()" ng-model="showVehicles" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"  />-->
-                    <!--<span class=" m-l-5 m-r-20 fa fa-asterisk"></span>-->
-                    <!--<input  ng-click="doAllMarkers()" ng-model="clusterVehicle" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"   />-->
-                    <!--<span class=" m-l-5 m-r-20 fa fa-home"> {{buildingCount}}</span>-->
-                    <!--<input  ng-click="doAllMarkers()" ng-model="showBuildings" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"  />-->
-                    <!--<span class=" m-l-5 m-r-20 fa fa-asterisk"></span>-->
-                    <!--<input  ng-click="doAllMarkers()" ng-model="clusterBuilding" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"   />-->
-                    <!--<span class=" m-l-5 m-r-20 fa fa-lock"> {{lockCount}}</span>-->
-                    <!--<input  ng-click="doAllMarkers()" ng-model="showLocks" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"  />-->
-                    <!--<span class=" m-l-5 m-r-20 fa fa-asterisk"></span>-->
-                    <!--<input  ng-click="doAllMarkers()" ng-model="clusterLock" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"   /><span class=" m-l-5 m-r-20 fa fa-tasks"> {{storageCount}}</span>-->
-                    <!--<input  ng-click="doAllMarkers()" ng-model="showStorages" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"  />-->
-                    <!--<span class=" m-l-5 m-r-20 fa fa-asterisk"></span>-->
-                    <!--<input  ng-click="doAllMarkers()" ng-model="clusterStorage" type="checkbox" class="js-switch" ui-switch="{ color: 'rgb(100, 189, 99)', secondaryColor: '#ff5b57' }"   />-->
-                    <!--<span class=" m-l-5 m-r-20 fa fa-asterisk"> Cluster ALL Together</span>-->
-                    <!--</div>-->
-                    <!--<a ng-click="togleSettings = !togleSettings;" class="btn btn-xs btn-icon btn-circle btn-danger" style="margin-right:5px;" data-click="panel-collapse"><i class="fa fa-minus"></i>-->
-                    <!--</a>-->
-                    <!--<a ng-click="loadAllData()"  class="btn btn-info btn-sm" > <i class="fa fa-refresh"></i> Refresh </a>-->
-                    <!--</div>-->
-            <!--</div>-->
+    <div class="map-filter">
+        <!-- end breadcrumb -->
+        <!-- begin page-header -->
+            <div class="selectionBar-container text-right">
+                <div class="selectionBar">
 
-        <!--</h1>-->
-    <!--</div>-->
-    <div class="map">
+                    <span class="fa fa-group setting-icon"></span>
+                    <span class="setting-ammount">{{playerCount}}</span>
+                    <div class="togglebutton">
+                        <label>
+                            <input type="checkbox" checked="" ng-click="doAllMarkers()" ng-model="showPlayers">
+                        </label>
+                    </div>
+                    <div class="togglebutton">
+                        <label>
+                            <input type="checkbox" checked="" ng-click="doAllMarkers()" ng-model="clusterPlayer">
+                        </label>
+                    </div>
+
+                    <span class="fa fa-car setting-icon"></span>
+                    <span class="setting-ammount">{{vehicleCount}}</span>
+                    <div class="togglebutton">
+                        <label>
+                            <input type="checkbox" checked="" ng-click="doAllMarkers()" ng-model="showVehicles">
+                        </label>
+                    </div>
+                    <div class="togglebutton">
+                        <label>
+                            <input type="checkbox" checked="" ng-click="doAllMarkers()" ng-model="clusterVehicle">
+                        </label>
+                    </div>
+
+                    <span class="fa fa-home setting-icon"></span>
+                    <span class="setting-ammount">{{buildingCount}}</span>
+                    <div class="togglebutton">
+                        <label>
+                            <input type="checkbox" checked="" ng-click="doAllMarkers()" ng-model="showBuildings">
+                        </label>
+                    </div>
+                    <div class="togglebutton">
+                        <label>
+                            <input type="checkbox" checked="" ng-click="doAllMarkers()" ng-model="clusterBuilding">
+                        </label>
+                    </div>
+
+                    <span class="fa fa-lock setting-icon"></span>
+                    <span class="setting-ammount">{{lockCount}}</span>
+                    <div class="togglebutton">
+                        <label>
+                            <input type="checkbox" checked="" ng-click="doAllMarkers()" ng-model="showLocks">
+                        </label>
+                    </div>
+                    <div class="togglebutton">
+                        <label>
+                            <input type="checkbox" checked="" ng-click="doAllMarkers()" ng-model="clusterLock">
+                        </label>
+                    </div>
+
+
+                    <span class="fa fa-tasks setting-icon"></span>
+                    <span class="setting-ammount">{{storageCount}}</span>
+                    <div class="togglebutton">
+                        <label>
+                            <input type="checkbox" checked="" ng-click="doAllMarkers()" ng-model="showStorages">
+                        </label>
+                    </div>
+                    <div class="togglebutton">
+                        <label>
+                            <input type="checkbox" checked="" ng-click="doAllMarkers()" ng-model="clusterStorage">
+                        </label>
+                    </div>
+
+                    <div class="refresh-date">
+                        <a ng-click="loadAllData()" class="btn btn-primary btn-sm" ><i class="fa fa-refresh"></i></a>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+    <div class="zupa-map">
         <div id="zupa-map" class="leaflet-map height-full width-full"></div>
         <div class="map-float-table width-sm hidden-xs p-15" style="overflow:hidden;" ng-show="showInfo">
             <h4 class="m-t-0" style="color:#fff;"><i class="fa fa-user text-danger m-r-5"></i> {{selectedKind}}
