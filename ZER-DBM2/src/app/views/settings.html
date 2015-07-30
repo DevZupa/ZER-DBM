@@ -24,34 +24,29 @@
 <tabset>
     <tab active="tabs[0].active">
         <div class="tab-content">
-            <div class="tab-intro">You can edit and delete servers here. Add a server with the top bar button.</div>
+            <div class="tab-intro"></div>
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>#</th>
-                    <th>Server</th>
+                    <th><span class="fa fa-server"></span></th>
+                    <th>Name</th>
+                    <th>Map</th>
+                    <th>Ip:Port</th>
+                    <th>Redis</th>
+                    <th>Instance</th>
                     <th>Edit</th>
                     <th>Delete</th>
-                    <th>Export Data</th>
                 </tr>
-
                 <tr ng-repeat="server in serverssettings">
                     <td>{{$index + 1}}</td>
                     <td>{{server.name}}</td>
+                    <td>{{server.map}}</td>
+                    <td>{{server.ip}}:{{server.port}}</td>
+                    <td>{{server.ip}}:{{server.rp}}</td>
+                    <td>{{server.dbi}} > {{server.ri}}</td>
                     <td><a class="btn btn-info btn-raised"  ng-click="editServer($index)" ><i class="fa fa-edit"></i> Edit </a></td>
                     <td><a class="btn btn-danger btn-raised" ng-click="deleteServer($index)" ><i class="fa fa-times"></i> Delete </a></td>
-                    <td><a class="btn btn-warning btn-raised" ng-click="exportServer($index)" ><i class="fa  fa-arrow-right"></i> Export </a></td>
                 </tr>
-
-                <tr>
-                    <td colspan="4">
-                        <div class="form-group">
-                            <input class="form-control floating-label" type="text" ng-model="importObject" placeholder="Import json" />
-                        </div>
-                    </td>
-                    <td><a class="btn btn-success btn-raised" ng-click="importServer()" ><i class="fa fa-arrow-left"></i> Import </a></td>
-                </tr>
-
             </table>
             <a class="btn btn-success btn-fab btn-raised mdi-content-add pull-right" href="#/server/add" ></a>
         </div>
@@ -68,6 +63,7 @@
                     <th>X</th>
                     <th>Y</th>
                     <th>Delete</th>
+                    <th>Save</th>
                 </tr>
                 </thead>
                 <tbody ng-repeat="map in maps">
@@ -77,8 +73,11 @@
                     <td><input class="form-control floating-label" placeholder="X size" type="number" ng-model="map.x"/></td>
                     <td><input class="form-control floating-label" placeholder="Y size" type="number" ng-model="map.y"/></td>
                     <td><a class="btn btn-danger" ng-click="deleteMap($index)" ><i class="fa fa-times"></i> Delete </a></td>
+                    <td><a class="btn btn-success" ng-click="saveMap($index)" ><i class="fa fa-save"></i> Save </a></td>
                 </tr>
                 <tr>
+                    <td></td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td><input class="form-control floating-label" placeholder="X Offset" type="number" ng-model="map.offsetX"/></td>
@@ -91,12 +90,14 @@
                     <td> <input class="form-control floating-label" placeholder="X size" type="number" ng-model="newMap.x"/></td>
                     <td> <input class="form-control floating-label" placeholder="Y size" type="number"  ng-model="newMap.y"/></td>
                     <td></td>
+                    <td></td>
                 </tr>
                 <tr >
                     <td></td>
                     <td></td>
                     <td> <input class="form-control floating-label" placeholder="X Offset" type="number" ng-model="newMap.offsetX"/></td>
                     <td> <input class="form-control floating-label" placeholder="Y Offset" type="number"  ng-model="newMap.offsetY"/></td>
+                    <td></td>
                     <td><a class="btn btn-success btn-fab btn-raised mdi-content-add" ng-click="saveMap()" ></a></td>
                 </tr>
             </table>
@@ -108,17 +109,17 @@
             <form class="form-horizontal form-bordered">
                 <div class="form-group">
                     <div class="col-md-6 col-sm-6">
-                        <input class="form-control floating-label" placeholder="Cluster radius in px" type="number" id="scluster" name="scluster" ng-model="$parent.clusterRad"/>
+                        <input class="form-control floating-label" placeholder="Cluster radius in px" type="number" id="scluster" name="scluster" ng-model="clusterRad"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-md-6 col-sm-6">
-                        <input class="form-control floating-label" placeholder="Map refrehs timer in seconds" type="number" id="maptime" name="maptime" ng-model="$parent.mapRefresh"/>
+                        <input class="form-control floating-label" placeholder="Map refrehs timer in seconds" type="number" id="maptime" name="maptime" ng-model="mapRefresh"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-md-6 col-sm-6">
-                        <input class="form-control floating-label" placeholder="Leaflet size in px" type="number" id="mapleafletsize" name="mapleafletsize" ng-model="$parent.leafletsize"/>
+                        <input class="form-control floating-label" placeholder="Leaflet size in px" type="number" id="mapleafletsize" name="mapleafletsize" ng-model="leafletsize"/>
                     </div>
                 </div>
                 <div class="form-group">

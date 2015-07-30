@@ -7,7 +7,7 @@
  * # PlayerCtrl
  * Controller of the ERDBM
  */
-ERDBM
+angular.module('ERDBM')
   .controller('StorageCtrl',["$scope","$rootScope","$http","$location","$routeParams", function ($scope,$rootScope,$http,$location,$routeParams) {
         $(".nav li").removeClass("active");
 

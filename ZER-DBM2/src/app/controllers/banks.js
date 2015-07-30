@@ -7,7 +7,7 @@
  * # BanksCtrl
  * Controller of the ERDBM
  */
-ERDBM
+angular.module('ERDBM')
   .controller('BanksCtrl',["$scope", function ($scope) {
         $(".nav li").removeClass("active");
 

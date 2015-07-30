@@ -7,7 +7,8 @@
  * # DeathlogsCtrl
  * Controller of the ERDBM
  */
-ERDBM.controller('DeathlogsCtrl', ["$scope","storage","$route","$rootScope", function ($scope,storage,$route,$rootScope) {
+angular.module('ERDBM')
+    .controller('DeathlogsCtrl', ["$scope","storage","$route","$rootScope", function ($scope,storage,$route,$rootScope) {
 
     var DC = $scope;
 

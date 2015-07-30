@@ -7,12 +7,8 @@
  * # PlayersCtrl
  * Controller of the ERDBM
  */
-ERDBM
+angular.module('ERDBM')
   .controller('PlayersCtrl',["$scope","$timeout","$rootScope","$http","$location", function ($scope,$timeout,$rootScope,$http,$location) {
-        $(".nav li").removeClass("active");
-
-        $("#players").addClass("active");
-
         var PC = $scope;
         var RS = $rootScope;
 

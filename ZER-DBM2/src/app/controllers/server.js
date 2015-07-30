@@ -7,7 +7,7 @@
  * # ServerCtrl
  * Controller of the ERDBM
  */
-ERDBM
+angular.module('ERDBM')
   .controller('ServerCtrl',["$scope","$rootScope","$location","$routeParams", function ($scope,$rootScope,$location,$routeParams) {
         $(".nav li").removeClass("active");
 

@@ -50,11 +50,10 @@
                       </ul>
                 <!-- begin header navigation right -->
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown navbar-user">
-                        <a ng-show="servers.length > 0" class="dropdown-toggle" data-toggle="dropdown">
-                            <span class="fa fa-database fa-1x"> </span>
-                            <span class="" style="padding-left:10px;"> {{selectedServer.name}}</span>
-                        </a>
+                    <li class="dropdown navbar-server">
+                        <select class="form-control floating-label dark-bg" placeholder="Selected server" ng-model="selectedServer" ng-options="server.name for server in servers">
+
+                        </select>
                     </li>
 
                 </ul>

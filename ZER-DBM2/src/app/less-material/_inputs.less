@@ -49,7 +49,6 @@ fieldset[disabled] .form-control:disabled, .form-control-wrapper .form-control:d
 
 .form-control-wrapper {
   position: relative;
-
   .floating-label {
     color: #7E7E7E;
     font-size: 14px;
@@ -60,6 +59,16 @@ fieldset[disabled] .form-control:disabled, .form-control-wrapper .form-control:d
     transition: 0.2s ease all;
     opacity: 0;
   }
+  .form-control.dark-bg:focus ~ .floating-label {
+    color: #fff;
+  }
+  .form-control.dark-bg  ~ .floating-label {
+    color: #ddd;
+  }
+  .form-control.dark-bg {
+    color: #fff;
+  }
+
   .form-control:focus ~ .floating-label,
   .form-control:not(.empty) ~ .floating-label {
     top: -10px;
@@ -69,6 +78,7 @@ fieldset[disabled] .form-control:disabled, .form-control-wrapper .form-control:d
   .form-control:focus ~ .floating-label {
     color: @primary;
   }
+
   .form-control:not(.empty):invalid ~ .floating-label, .form-control.focus:invalid ~ .floating-label {
     color: @input-danger;
   }

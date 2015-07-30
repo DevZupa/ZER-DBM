@@ -7,7 +7,7 @@
  * # TradersCtrl
  * Controller of the ERDBM
  */
-ERDBM
+angular.module('ERDBM')
   .controller('TradersCtrl',[ "$scope",function ($scope) {
         $(".nav li").removeClass("active");
 

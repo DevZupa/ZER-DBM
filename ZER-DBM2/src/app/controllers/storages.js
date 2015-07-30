@@ -7,7 +7,7 @@
  * # VehiclesCtrl
  * Controller of the ERDBM
  */
-ERDBM
+angular.module('ERDBM')
   .controller('StoragesCtrl',["$scope","$rootScope","$http","$location", function ($scope,$rootScope,$http,$location) {
         $(".nav li").removeClass("active");
 

@@ -7,7 +7,7 @@
  * # AboutCtrl
  * Controller of the ERDBM
  */
-ERDBM
+angular.module('ERDBM')
   .controller('AuthCtrl',["$scope", function ($scope) {
 
 

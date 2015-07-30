@@ -7,7 +7,7 @@
  * # AdminlogsCtrl
  * Controller of the ERDBM
  */
-ERDBM
+angular.module('ERDBM')
   .controller('AdminlogsCtrl',["$scope","storage","$route", function ($scope,storage,$route) {
 
         var AC = $scope;

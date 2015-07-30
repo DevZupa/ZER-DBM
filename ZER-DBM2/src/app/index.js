@@ -16,7 +16,6 @@ var ERDBM = angular
     'ngSanitize',
     'ngTouch',
     'angularLocalStorage',
-    'NgSwitchery',
     'ui.bootstrap',
     'angularUtils.directives.dirPagination',
     'toaster',
@@ -308,5 +307,6 @@ ERDBM.directive('passwordMatch', [function () {
 
 $(document).ready(function() {
     $.material.init();
+    $(".dropdownjs").dropdownJS({ "autoinit" : ".dropdownjs" });
     console.log('init');
 });
