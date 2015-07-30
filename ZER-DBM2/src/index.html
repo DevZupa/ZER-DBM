@@ -35,8 +35,12 @@
                 <div class="navbar-header">
                     <a href="#/" class="navbar-brand">Epoch Manager 2.0</a>
                 </div>
-                <a href="javascript:void(0);" class="menu-button" ng-click="toggleMenu()"><span class="fa fa-bars"></span></a>
-                <a href="javascript:void(0);" class="lock-button" ng-click="lockMenu()"><span class="fa fa-unlock"></span></a>
+                <a href="javascript:void(0);" class="menu-button" ng-click="toggleMenu()">
+                    <span class="fa fa-bars"></span>
+                </a>
+                <a href="javascript:void(0);" class="lock-button" ng-click="lockMenu()">
+                    <span class="fa fa-unlock"></span>
+                </a>
 
                 <!-- end mobile sidebar expand / collapse button -->
                 <!--
@@ -50,12 +54,13 @@
                       </ul>
                 <!-- begin header navigation right -->
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown navbar-server">
-                        <select class="form-control floating-label dark-bg" placeholder="Selected server" ng-model="selectedServer" ng-options="server.name for server in servers">
-
+                    <li class="navbar-server">
+                        <select class="form-control floating-label dark-bg"
+                                placeholder="Selected server"
+                                ng-model="selectedServer"
+                                ng-options="server.name for server in servers">
                         </select>
                     </li>
-
                 </ul>
                 <!-- end header navigation right -->
             </div>

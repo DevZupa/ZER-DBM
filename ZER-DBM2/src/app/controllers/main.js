@@ -41,6 +41,18 @@ angular.module('ERDBM')
                 alert("Can't get dashboard data.");
             });
 
+        $http.get(RS.selectedServer['serverUrl'] + 'getDashboardData.php?date='+ new Date().getTime(),{"secret": String(CryptoJS.MD5(RS.selectedServer['rpw'])) , "instance": RS.selectedServer['ri'], "db" : RS.selectedServer['dbi'] }).
+            success(function(data, status, headers, config) {
+
+                console.log(data);
+                MC.unEpochorize(data);
+
+                MC.loadingData = false;
+            }).error(function(error){
+                MC.loadingData = false;
+                alert("Can't get dashboard data.");
+            });
+
         MC.unEpochorize = unEpochorize;
 
         function unEpochorize(data){
