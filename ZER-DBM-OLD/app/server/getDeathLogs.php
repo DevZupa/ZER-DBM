@@ -1,0 +1,48 @@
+<?php
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept');
+/**
+ * Created by PhpStorm.
+ * User: jwindmolders
+ * Date: 9/12/2014
+ * Time: 11:06
+ */
+error_reporting(0);
+ini_set('display_errors',0);
+
+$postdata = file_get_contents("php://input");
+$request = json_decode($postdata);
+
+$password = $request -> secret;
+$instance = $request -> instance;
+$db = $request -> db;
+
+require 'Predis/Autoloader.php';
+
+require 'config.php';
+
+
+if ( md5($myRedisPass) == $password ) {
+
+Predis\Autoloader::register();
+
+$client = new Predis\Client([
+    'host'   => $myRedisHost,
+    'password' => $myRedisPass,
+	'port' => $myRedisPort,
+	'database' => $db
+]);
+
+
+$vehicleData = '[';
+
+$firstLoop = true;
+
+$deathlogs =  $client-> get("deathlog-LOG");
+
+
+echo $deathlogs;
+
+}else{
+echo "[wrong pass]";
+}
