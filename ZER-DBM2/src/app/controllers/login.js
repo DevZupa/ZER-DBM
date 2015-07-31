@@ -8,39 +8,31 @@
  * Controller of the ERDBM
  */
 angular.module('ERDBM')
-  .controller('AuthCtrl',["$scope", function ($scope) {
+  .controller('AuthCtrl',['$scope' , '$http', '$rootScope' , function ($scope, $http, $rootScope) {
 
 
-        $scope.login = {};
-        $scope.signup = {};
+
+
+        $scope.isLoading = false;
+
+
+        $scope.login = $rootScope.credentials;
+
         $scope.doLogin = function (customer) {
-            Data.post('login', {
-                customer: customer
-            }).then(function (results) {
-                Data.toast(results);
-                if (results.status == "success") {
-                    $location.path('dashboard');
-                }
-            });
-        };
-        $scope.signup = {email:'',password:'',name:'',phone:'',address:''};
-        $scope.signUp = function (customer) {
-            Data.post('signUp', {
-                customer: customer
-            }).then(function (results) {
-                Data.toast(results);
-                if (results.status == "success") {
-                    $location.path('dashboard');
-                }
-            });
-        };
-        $scope.logout = function () {
-            Data.get('logout').then(function (results) {
-                Data.toast(results);
-                $location.path('login');
-            });
-        }
+            $scope.isLoading = true;
+
+            $http.post(MC.serverURL + 'login?token=' + login.token + '&date=' + new Date().getTime(),{secret: String(MC.secretCode) , instance: MC.instance, db : MC.db }).
+                success(function(data, status, headers, config) {
+                    console.log(data);
 
 
+                    $scope.isLoading = false;                }).
+                error(function(data, status, headers, config) {
+                    alert('Could not reach the server correctly.');
+                    $scope.isLoading = false;
+                });
+
+
+        };
 
   }]);

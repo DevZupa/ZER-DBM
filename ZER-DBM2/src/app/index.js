@@ -133,11 +133,14 @@ ERDBM.run(["$rootScope","storage","$location","$route","Data",
         //    })
         //});
 
-
+        globalScope.backend = 'http://jarysdp.be.dev/laravel/public/index.php/';
 
         globalScope.players = [];
         globalScope.vehicles = [];
         globalScope.vehiclesTypes = {};
+
+
+
 
         // bind localstorage to global var.
         storage.bind(globalScope,'servers',{defaultValue: []});
@@ -151,6 +154,8 @@ ERDBM.run(["$rootScope","storage","$location","$route","Data",
         storage.bind(globalScope,'imageStorage',{defaultValue: 'images/storage.png'});
         storage.bind(globalScope,'serverLink',{defaultValue: ""});
         storage.bind(globalScope,'clusterRad',{defaultValue: 30});
+
+        storage.bind(globalScope,'credentials',{defaultValue: {name : '' ,password: '',token: '',permissions: {}}});
 
         globalScope.defaultMaps = [
             {name: "chernarus", x:15400, y:15400, offsetX : 0, offsetY:0},
