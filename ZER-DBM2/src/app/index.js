@@ -115,30 +115,17 @@ ERDBM.config(["$routeProvider",function ($routeProvider) {
 ERDBM.run(["$rootScope","storage","$location","$route","Data",
     function($rootScope,storage,$location,$route,Data) {
 
+
+
         var globalScope = $rootScope;
 
-        //globalScope.$on("$routeChangeStart", function (event, next, current) {
-        //    globalScope.authenticated = false;
-        //    Data.get('session').then(function (results) {
-        //        if (results.uid) {
-        //            globalScope.authenticated = true;
-        //            globalScope.uid = results.uid;
-        //            globalScope.name = results.name;
-        //            globalScope.email = results.email;
-        //        } else {
-        //             //   if($location.path()!= "/login"){
-        //              //           $location.path("/login");
-        //              //  }
-        //        }
-        //    })
-        //});
+
 
         globalScope.backend = 'http://jarysdp.be.dev/laravel/public/index.php/';
 
         globalScope.players = [];
         globalScope.vehicles = [];
         globalScope.vehiclesTypes = {};
-
 
 
 
@@ -155,7 +142,23 @@ ERDBM.run(["$rootScope","storage","$location","$route","Data",
         storage.bind(globalScope,'serverLink',{defaultValue: ""});
         storage.bind(globalScope,'clusterRad',{defaultValue: 30});
 
-        storage.bind(globalScope,'credentials',{defaultValue: {name : '' ,password: '',token: '',permissions: {}}});
+        storage.bind(globalScope,'credentials',{defaultValue: {loggedin: false, name : '' ,password: '',token: '',permissions: {}}});
+
+
+
+        globalScope.$on("$routeChangeStart", function (event, next, current) {
+
+            //if(!globalScope.credentials.loggedin) {
+            //    $('.body').addClass('login');
+            //    if ($location.path() != "/login") {
+            //        $location.path("/login");
+            //    }
+            //}else {
+            //    $('.body').removeClass('login');
+            //}
+        });
+
+
 
         globalScope.defaultMaps = [
             {name: "chernarus", x:15400, y:15400, offsetX : 0, offsetY:0},

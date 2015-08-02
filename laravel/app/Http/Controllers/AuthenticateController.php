@@ -41,6 +41,19 @@ class AuthenticateController extends Controller
         return response()->json(array('success'=>'true', 'message' => 'User created'));
     }
 
+
+    public function createAdmin(Request $request) {
+        $admin = new User;
+
+        $admin->name = 'admin';
+        $admin->password = 'zupa';
+        $admin->email = 'admin@mail.com';
+
+        $admin->save();
+
+        return response()->json(array('success'=>'true', 'message' => 'Admin created'));
+    }
+
     public function logout(Request $request) {
         // grab credentials from the request
         $credentials = $request->only('email', 'password');
