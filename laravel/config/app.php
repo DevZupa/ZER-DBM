@@ -145,6 +145,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
+        Barryvdh\Cors\ServiceProvider::class,
     ],
 
     /*

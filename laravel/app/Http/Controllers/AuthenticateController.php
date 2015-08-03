@@ -12,8 +12,14 @@ class AuthenticateController extends Controller
 {
     public function authenticate(Request $request)
     {
-        // grab credentials from the request
-        $credentials = $request->only('name', 'password');
+        $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
+
+        $credentials = json_decode($request->getContent(), true);
+
+       // var_dump($credentials);die;
+
+        $credentials['email'] = 'admin@mail.be';
+
 
         try {
             // attempt to verify the credentials and create a token for the user
