@@ -8,7 +8,7 @@
  * Controller of the ERDBM
  */
 angular.module('ERDBM')
-  .controller('AuthCtrl',['$scope' , '$http', '$rootScope' , function ($scope, $http, $rootScope) {
+  .controller('AuthCtrl',['$scope' , '$http', '$rootScope','md5' , function ($scope, $http, $rootScope, md5) {
 
         $scope.isLoading = false;
 
@@ -29,9 +29,8 @@ angular.module('ERDBM')
             console.log('test');
             $scope.isLoading = true;
 
-            console.log($scope.login);
 
-            $http.post($scope.serverUrl + 'login?date=' + new Date().getTime(), { name : $scope.login.name , password : $scope.login.password}).
+            $http.post($scope.serverUrl + 'login?date=' + new Date().getTime(), { name : $scope.login.name , password : md5.createHash($scope.login.password) }).
                 success(function(data, status, headers, config) {
                     console.log(data);
 

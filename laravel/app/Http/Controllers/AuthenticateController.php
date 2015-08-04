@@ -16,8 +16,6 @@ class AuthenticateController extends Controller
 
         $credentials = json_decode($request->getContent(), true);
 
-       // var_dump($credentials);die;
-
         $credentials['email'] = 'admin@mail.be';
 
 
@@ -52,7 +50,7 @@ class AuthenticateController extends Controller
         $admin = new User;
 
         $admin->name = 'admin';
-        $admin->password = 'zupa';
+        $admin->password = md5('zupa');
         $admin->email = 'admin@mail.com';
 
         $admin->save();

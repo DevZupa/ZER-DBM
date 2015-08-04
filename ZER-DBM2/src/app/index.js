@@ -19,7 +19,8 @@ var ERDBM = angular
     'ui.bootstrap',
     'angularUtils.directives.dirPagination',
     'toaster',
-    'tc.chartjs'
+    'tc.chartjs',
+    'angular-md5'
   ]);
 ERDBM.config(["$routeProvider",function ($routeProvider) {
     $routeProvider
