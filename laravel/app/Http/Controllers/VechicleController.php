@@ -1,6 +1,8 @@
 <?php namespace App\Http\Controllers;
 
 use App\Server;
+use Illuminate\Http\Request;
+use Redis;
 
 class VehicleController extends Controller
 {
@@ -49,4 +51,8 @@ class VehicleController extends Controller
 
     }
 
+    public function getVehicleById (Request $request)
+    {
+
+    }
 }
